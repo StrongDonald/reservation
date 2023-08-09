@@ -17,7 +17,7 @@ function HomeIcon(props: SvgIconProps) {
 
 function Navbar() {
   return (
-    <nav className="UNavbar">
+    <div className="UNavbar">
       <div className="UNavbar_content">
         <div className="UNavbar_content_logo">
             <Link to="/">
@@ -44,7 +44,7 @@ function Navbar() {
           <div>新規会員登録</div>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 }
 

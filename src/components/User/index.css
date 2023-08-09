@@ -155,7 +155,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 451px;
+  padding-bottom: 210px;
   display: flex;
 }
 .userLogin .userLogin_content .userLogin_part {
@@ -293,7 +293,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 526px;
+  padding-bottom: 285px;
   display: flex;
 }
 .userRegister .userRegister_content .userRegister_part {
@@ -382,7 +382,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 526px;
+  padding-bottom: 285px;
   display: flex;
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part {
@@ -436,7 +436,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 606px;
+  padding-bottom: 365px;
   display: flex;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part {
@@ -512,7 +512,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 606px;
+  padding-bottom: 365px;
   display: flex;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part {
@@ -1381,5 +1381,133 @@ table, th, td {
   padding: 10px 20px;
   border: none;
   margin-left: 30px;
+  border-radius: 5px;
+}
+
+.Newpass {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Newpass .Newpass_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 338px;
+}
+.Newpass .Newpass_content .Newpass_part {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  padding: 30px 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text div {
+  width: 10px;
+  height: 25px;
+  border-left: 3px solid #0045FF;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text p {
+  font-size: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_letter {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass p {
+  font-size: 15px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass input {
+  margin-left: 150px;
+  width: 300px;
+  height: 30px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm p {
+  font-size: 15px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm input {
+  margin-left: 90px;
+  width: 300px;
+  height: 30px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_btn {
+  margin-top: 50px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_btn button {
+  padding: 20px 10px;
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border: none;
+  border-radius: 5px;
+}
+
+.Newpassfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Newpassfinish .Newpassfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 448px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  padding: 30px 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text div {
+  width: 10px;
+  height: 25px;
+  border-left: 3px solid #0045FF;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text p {
+  font-size: 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_letter {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_btn {
+  margin-top: 50px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_btn button {
+  padding: 15px 30px;
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border: none;
   border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */

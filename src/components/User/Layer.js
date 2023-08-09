@@ -28,7 +28,7 @@ function Layer() {
           </Box>
         </Link>
         <span>></span>
-        <h2 class="pageTitle">
+        <h2 className="pageTitle">
           <span>ログイン</span>
         </h2>
       </div>
