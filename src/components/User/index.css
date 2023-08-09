@@ -1,0 +1,1385 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 1px;
+}
+@media (max-width: 1366px) {
+  html,
+  body {
+    font-size: 0.0732064422vw;
+  }
+}
+@media (max-width: 767px) {
+  html,
+  body {
+    font-size: 0.2666666667vw;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid rgb(202, 199, 199);
+  border-collapse: collapse;
+}
+
+.UNavbar {
+  width: 100%;
+  background: white;
+  height: 100px;
+  z-index: 999;
+}
+@media (max-width: 1366px) {
+  .UNavbar {
+    height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .UNavbar {
+    height: 80px;
+  }
+}
+.UNavbar .UNavbar_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 30px 110px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+.UNavbar .UNavbar_content .UNavbar_content_logo {
+  margin-right: 390rem;
+}
+@media (max-width: 1382px) {
+  .UNavbar .UNavbar_content .UNavbar_content_logo {
+    margin-right: 360rem;
+  }
+}
+@media (max-width: 1275px) {
+  .UNavbar .UNavbar_content .UNavbar_content_logo {
+    margin-right: 180rem;
+  }
+}
+.UNavbar .UNavbar_content .UNavbar_content_logo img {
+  width: 250px;
+  height: 35px;
+}
+.UNavbar .UNavbar_content .ruleCss img {
+  height: 40px;
+  width: 40px;
+}
+.UNavbar .UNavbar_content .line {
+  height: 50px;
+  width: 10px;
+  border-left: 1px solid black;
+  margin-left: 30px;
+  margin-top: -5px;
+}
+.UNavbar .UNavbar_content .nav_login div {
+  font-size: 20px;
+  color: #0045FF;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.UNavbar .UNavbar_content .nav_letter {
+  font-size: 20px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.UNavbar .UNavbar_content .nav_btn {
+  width: 150px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  background-color: #0045FF;
+  border-radius: 10px;
+}
+.UNavbar .UNavbar_content .nav_btn div {
+  font-size: 20px;
+  color: white;
+  margin: auto;
+}
+
+.ULayer {
+  width: 100%;
+  background: #00B3FF;
+  height: 80px;
+}
+.ULayer .ULayer_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 20px 110px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+.ULayer .ULayer_content .homeIcon {
+  margin-top: 8px;
+}
+.ULayer .ULayer_content .pageTitle {
+  margin-left: 5px;
+  font-size: 30px;
+  color: white;
+}
+.ULayer .ULayer_content span {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.userLogin {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.userLogin .userLogin_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 451px;
+  display: flex;
+}
+.userLogin .userLogin_content .userLogin_part {
+  background-color: white;
+  width: 460px;
+  height: 475px;
+  margin: auto;
+  padding: 30px 25px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_text {
+  display: flex;
+  justify-content: start;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_text div {
+  height: 30px;
+  width: 10px;
+  border-left: 2px solid #00B3FF;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_text p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_ID {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  align-items: center;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_ID p {
+  text-align: center;
+  font-size: 15px;
+  margin-right: 20px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_ID input {
+  height: 30px;
+  width: 300px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_Pass {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  align-items: center;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_Pass p {
+  text-align: center;
+  font-size: 15px;
+  margin-right: 20px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_Pass input {
+  height: 30px;
+  width: 300px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_btn {
+  margin: auto;
+  margin-top: 50px;
+  align-items: center;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_btn button {
+  padding: 13px 15px;
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border: none;
+  border-radius: 5px;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_line {
+  margin-top: 40px;
+  border-top: 1px solid gray;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_passlost {
+  display: flex;
+  justify-content: start;
+  margin-top: 50px;
+  align-items: center;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_passlost p {
+  font-size: 15px;
+  color: #00B3FF;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_passlost span {
+  font-size: 25px;
+  margin-top: -5px;
+  margin-left: 5px;
+  color: #0045FF;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_register {
+  display: flex;
+  justify-content: start;
+  margin-top: 30px;
+  align-items: center;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_register p {
+  font-size: 15px;
+  color: #00B3FF;
+}
+.userLogin .userLogin_content .userLogin_part .userLogin_part_register span {
+  font-size: 25px;
+  margin-top: -5px;
+  margin-left: 5px;
+  color: #0045FF;
+}
+
+.userFooter {
+  width: 100%;
+  background: white;
+  height: 88px;
+}
+.userFooter .userFooter_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.userFooter .userFooter_content p {
+  font-size: 15px;
+  margin-right: 10px;
+}
+.userFooter .userFooter_content img {
+  width: 180px;
+  height: 50px;
+}
+
+.userRegister {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.userRegister .userRegister_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 526px;
+  display: flex;
+}
+.userRegister .userRegister_content .userRegister_part {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  padding: 30px 25px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_title {
+  display: flex;
+  justify-content: start;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_title div {
+  height: 30px;
+  width: 10px;
+  border-left: 2px solid #00B3FF;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_text {
+  margin-top: 10px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_text p {
+  width: 100%;
+  font-size: 15px;
+  text-align: start;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_table {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_table .userRegister_part_table_emailaddress_label {
+  background-color: #f4f7f6;
+  width: 30%;
+  height: 60px;
+  font-size: 15px;
+  margin: 0;
+  text-align: start;
+  padding-left: 10px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_table .userRegister_part_table_emailaddress_type {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_table .userRegister_part_table_emailaddress_type input {
+  height: 30px;
+  margin-left: 10px;
+  width: 300px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_btngroup {
+  margin-top: 35px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_btngroup .userRegister_part_back {
+  font-size: 15px;
+  padding: 13px 28px;
+  background-color: rgb(114, 114, 114);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.userRegister .userRegister_content .userRegister_part .userRegister_part_btngroup .userRegister_part_register {
+  font-size: 15px;
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  background-color: #0045FF;
+  margin-left: 30px;
+}
+
+.userRegisterfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.userRegisterfinish .userRegisterfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 526px;
+  display: flex;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  padding: 30px 25px;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_title {
+  display: flex;
+  justify-content: start;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_title div {
+  height: 30px;
+  width: 10px;
+  border-left: 2px solid #00B3FF;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_text {
+  margin-top: 10px;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_text p {
+  width: 100%;
+  font-size: 15px;
+  text-align: start;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_btngroup {
+  margin-top: 35px;
+}
+.userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_btngroup .userRegisterfinish_part_back {
+  font-size: 15px;
+  padding: 13px 28px;
+  background-color: #0045FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.userPassreminder {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.userPassreminder .userPassreminder_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 606px;
+  display: flex;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part {
+  background-color: white;
+  width: 600px;
+  height: 320px;
+  margin: auto;
+  padding: 30px 25px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_title {
+  display: flex;
+  justify-content: start;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_title div {
+  height: 30px;
+  width: 10px;
+  border-left: 2px solid #00B3FF;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_text {
+  margin-top: 10px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_text p {
+  width: 100%;
+  font-size: 15px;
+  text-align: start;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans p {
+  font-size: 15px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans input {
+  margin-left: 30px;
+  width: 300px;
+  height: 30px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_btngroup {
+  margin-top: 35px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_btngroup .userPassreminder_part_back {
+  font-size: 15px;
+  padding: 13px 28px;
+  background-color: #727272;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_btngroup .userPassreminder_part_receive {
+  font-size: 15px;
+  padding: 13px 28px;
+  margin-left: 30px;
+  background-color: #0045FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.userPasswordinform {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.userPasswordinform .userPasswordinform_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 606px;
+  display: flex;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part {
+  background-color: white;
+  width: 600px;
+  height: 320px;
+  margin: auto;
+  padding: 30px 25px;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_title {
+  display: flex;
+  justify-content: start;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_title div {
+  height: 30px;
+  width: 10px;
+  border-left: 2px solid #00B3FF;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_text {
+  margin-top: 10px;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_text p {
+  width: 100%;
+  font-size: 14px;
+  text-align: start;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_btngroup {
+  margin-top: 35px;
+}
+.userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_btngroup .userPasswordinform_part_back {
+  font-size: 15px;
+  padding: 13px 28px;
+  background-color: #0045FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.Useradd {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Useradd .Useradd_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 60px;
+}
+.Useradd .Useradd_content .Useradd_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30px;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_firststep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_firststep_circle .Useradd_content_Header_firststep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_firststep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #0045FF;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_firststep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #0045FF;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_secondstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_secondstep_circle .Useradd_content_Header_secondstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_secondstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_secondstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_thirdstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_thirdstep_circle .Useradd_content_Header_thirdstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_thirdstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_Header .Useradd_content_Header_thirdstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Useradd .Useradd_content .Useradd_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 50px 20px;
+  background-color: white;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_title .Useradd_content_information_title_symbol {
+  width: 8px;
+  height: 20px;
+  border-left: 2px solid #0045FF;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_title .Useradd_content_information_title_text {
+  font-size: 20px;
+  margin-top: -5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname {
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname .Useradd_content_information_content_partname_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname .Useradd_content_information_content_partname_content .Useradd_content_information_content_partname_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname .Useradd_content_information_content_partname_content .Useradd_content_information_content_partname_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 7px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname .Useradd_content_information_content_partname_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  width: 70%;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_partname .Useradd_content_information_content_partname_input .Useradd_content_information_content_partname_inputtag {
+  width: 300px;
+  height: 30px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name {
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_content .Useradd_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_content .Useradd_content_information_content_name_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 7px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  width: 70%;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_input p {
+  font-size: 15px;
+  margin-right: 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_name .Useradd_content_information_content_name_input .Useradd_content_information_content_name_inputtag {
+  width: 150px;
+  height: 30px;
+  margin-right: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum {
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_content .Useradd_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_content .Useradd_content_information_content_phonenum_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 7px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  width: 70%;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_input p {
+  font-size: 15px;
+  margin-right: 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_phonenum .Useradd_content_information_content_phonenum_input .Useradd_content_information_content_phonenum_inputtag {
+  width: 75px;
+  height: 30px;
+  margin-right: 7px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address {
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_content .Useradd_content_information_content_address_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_content .Useradd_content_information_content_address_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 7px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input {
+  padding: 7px 10px;
+  width: 70%;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box1 .Useradd_content_information_content_address_input_box1_label {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box1 .Useradd_content_information_content_address_input_box1_addressinput {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box1 .Useradd_content_information_content_address_input_box1_addressinput .Useradd_content_information_content_address_input_box1_addressinput_tag {
+  width: 150px;
+  height: 30px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box1 .Useradd_content_information_content_address_input_box1_addressinput .Useradd_content_information_content_address_input_box1_addressinput_btn {
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border-radius: 40px;
+  margin-left: 25px;
+  border: none;
+  padding: 8px 25px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box2 .Useradd_content_information_content_address_input_box2_label {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box2 .Useradd_content_information_content_address_input_box2_select {
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: start;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box3 .Useradd_content_information_content_address_input_box3_label {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box3 .Useradd_content_information_content_address_input_box3_tag {
+  width: 300px;
+  height: 30px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: start;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box4 .Useradd_content_information_content_address_input_box4_label {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_address .Useradd_content_information_content_address_input .Useradd_content_information_content_address_input_box4 .Useradd_content_information_content_address_input_box4_tag {
+  width: 300px;
+  height: 30px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: start;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_emailaddress {
+  display: flex;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_emailaddress .Useradd_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_emailaddress .Useradd_content_information_content_emailaddress_content .Useradd_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_emailaddress .Useradd_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  width: 70%;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_content .Useradd_content_information_content_emailaddress .Useradd_content_information_content_emailaddress_input .Useradd_content_information_content_emailaddress_inputtag {
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor {
+  margin-top: 50px;
+  display: flex;
+  justify-content: start;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor p {
+  width: 10px;
+  height: 18px;
+  margin-top: 2px;
+  border-left: 2px solid #0045FF;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor .Useradd_content_information_personalInfor_text {
+  font-size: 15px;
+  font-weight: bold;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_textarea {
+  margin-top: 20px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_textarea div {
+  width: 100%;
+  height: 300px;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px groove gray;
+  overflow-y: scroll;
+  text-align: start;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_textbox {
+  margin-top: 30px;
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_textbox input {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_textbox p {
+  margin-left: 5px;
+  font-size: 15px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_btn {
+  margin-top: 50px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_btn .Useradd_content_information_personalInfor_btn_back {
+  font-size: 15px;
+  color: white;
+  background-color: #727272;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.Useradd .Useradd_content .Useradd_content_information .Useradd_content_information_personalInfor_btn .Useradd_content_information_personalInfor_btn_next {
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.Userconf {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Userconf .Userconf_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 132px;
+}
+.Userconf .Userconf_content .Userconf_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30px;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_firststep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_firststep_circle .Userconf_content_Header_firststep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_firststep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_firststep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_secondstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_secondstep_circle .Userconf_content_Header_secondstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_secondstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #0045FF;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_secondstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #0045FF;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_thirdstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_thirdstep_circle .Userconf_content_Header_thirdstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_thirdstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_Header .Userconf_content_Header_thirdstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Userconf .Userconf_content .Userconf_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 50px 20px;
+  background-color: white;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_title .Userconf_content_information_title_symbol {
+  width: 8px;
+  height: 20px;
+  border-left: 2px solid #0045FF;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_title .Userconf_content_information_title_text {
+  font-size: 20px;
+  margin-top: -5px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_partname .Userconf_content_information_content_partname_title {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10px 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_partname .Userconf_content_information_content_partname_title .Userconf_content_information_content_partname_title_txt {
+  color: #727272;
+  font-size: 15px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_partname .Userconf_content_information_content_partname_content {
+  padding: 0 10px;
+  width: 70%;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_partname .Userconf_content_information_content_partname_content .Userconf_content_information_content_partname_content_txt {
+  height: 30px;
+  font-size: 15px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_name .Userconf_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10px 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_name .Userconf_content_information_content_name_content .Userconf_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_name .Userconf_content_information_content_name_input {
+  padding: 0 10px;
+  width: 70%;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_name .Userconf_content_information_content_name_input p {
+  font-size: 15px;
+  margin-right: 10px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_phonenum .Userconf_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10px 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_phonenum .Userconf_content_information_content_phonenum_content .Userconf_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_phonenum .Userconf_content_information_content_phonenum_input {
+  padding: 0 10px;
+  width: 70%;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_phonenum .Userconf_content_information_content_phonenum_input p {
+  font-size: 15px;
+  margin-right: 10px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_address .Userconf_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10px 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_address .Userconf_content_information_content_address_content p {
+  color: #727272;
+  font-size: 15px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_address .Userconf_content_information_content_address_input {
+  padding: 15px 10px;
+  width: 70%;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_address .Userconf_content_information_content_address_input .Userconf_content_information_content_address_input_box1 p {
+  font-size: 15px;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_emailaddress {
+  display: flex;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_emailaddress .Userconf_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_emailaddress .Userconf_content_information_content_emailaddress_content .Userconf_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_emailaddress .Userconf_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px;
+  width: 70%;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_content .Userconf_content_information_content_emailaddress .Userconf_content_information_content_emailaddress_input .Userconf_content_information_content_emailaddress_inputtag {
+  font-size: 15px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor {
+  margin-top: 50px;
+  display: flex;
+  justify-content: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor p {
+  width: 10px;
+  height: 18px;
+  margin-top: 2px;
+  border-left: 2px solid #0045FF;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor .Userconf_content_information_personalInfor_text {
+  font-size: 15px;
+  font-weight: bold;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_textarea {
+  margin-top: 20px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_textarea div {
+  width: 100%;
+  height: 300px;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px groove gray;
+  overflow-y: scroll;
+  text-align: start;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_textbox {
+  margin-top: 30px;
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_textbox input {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_textbox p {
+  margin-left: 5px;
+  font-size: 15px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_btn {
+  margin-top: 50px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_btn .Userconf_content_information_personalInfor_btn_back {
+  font-size: 15px;
+  color: white;
+  background-color: #727272;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.Userconf .Userconf_content .Userconf_content_information .Userconf_content_information_personalInfor_btn .Userconf_content_information_personalInfor_btn_next {
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.Useraddfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Useraddfinish .Useraddfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 588px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_firststep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_firststep_circle .Useraddfinish_content_Header_firststep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_firststep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_firststep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_secondstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_secondstep_circle .Useraddfinish_content_Header_secondstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_secondstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_secondstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #727272;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_thirdstep_circle {
+  width: 40px;
+  height: 80px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_thirdstep_circle .Useraddfinish_content_Header_thirdstep_circle_num {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_thirdstep_circle p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #0045FF;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header .Useraddfinish_content_Header_thirdstep_line {
+  width: 240px;
+  height: 3px;
+  margin-top: -20px;
+  background-color: #0045FF;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_information .Useraddfinish_content_information_title {
+  width: 100%;
+  height: auto;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_information .Useraddfinish_content_information_title p {
+  text-align: start;
+  font-size: 15px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_information .Useraddfinish_content_information_personalInfor_btn {
+  margin-top: 50px;
+}
+.Useraddfinish .Useraddfinish_content .Useraddfinish_content_information .Useraddfinish_content_information_personalInfor_btn .Useraddfinish_content_information_personalInfor_btn_next {
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 30px;
+  border-radius: 5px;
+}/*# sourceMappingURL=index.css.map */
