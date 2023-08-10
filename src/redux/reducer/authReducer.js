@@ -1,10 +1,16 @@
-const initialization = { Title: "ログイン" };
+const initialization = { Title: "ログイン",isAuthenticated: 0 };
 
 function reducer(state = initialization, action) {
   switch (action.type) {
     case "login":
       return {
         Title: "",
+        isAuthenticated: 1,
+      };
+      case "logout":
+      return {
+        Title: ">ログイン",
+        isAuthenticated: 0,
       };
     case "front":
       return {
