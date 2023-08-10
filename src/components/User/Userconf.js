@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./index.css";
 
 function Userconf() {
+  const dispatch = useDispatch();
+
   return (
     <nav className="Userconf">
       <div className="Userconf_content">
@@ -44,22 +47,25 @@ function Userconf() {
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">BP牧塌</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  BP牧塌
+                </p>
               </td>
             </tr>
 
             <tr className="Userconf_content_information_content_partname">
               <td className="Userconf_content_information_content_partname_title">
                 <p className="Userconf_content_information_content_partname_title_txt">
-                役職名
+                  役職名
                 </p>
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">代表取婦役</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  代表取婦役
+                </p>
               </td>
             </tr>
-
 
             <tr className="Userconf_content_information_content_name">
               <td className="Userconf_content_information_content_name_content">
@@ -69,7 +75,9 @@ function Userconf() {
               </td>
 
               <td className="Userconf_content_information_content_name_input">
-                <p className="Userconf_content_information_content_name_inputtag" >纬术 大梅</p>
+                <p className="Userconf_content_information_content_name_inputtag">
+                  纬术 大梅
+                </p>
               </td>
             </tr>
 
@@ -81,15 +89,15 @@ function Userconf() {
               </td>
 
               <td className="Userconf_content_information_content_phonenum_input">
-                <p className="Userconf_content_information_content_phonenum_inputtag">000-0000-0000</p>
+                <p className="Userconf_content_information_content_phonenum_inputtag">
+                  000-0000-0000
+                </p>
               </td>
             </tr>
 
             <tr className="Userconf_content_information_content_address">
               <td className="Userconf_content_information_content_address_content">
-                <p>
-                    住所
-                </p>
+                <p>住所</p>
               </td>
 
               <td className="Userconf_content_information_content_address_input">
@@ -103,65 +111,80 @@ function Userconf() {
               </td>
             </tr>
 
-
             <tr className="Userconf_content_information_content_partname">
               <td className="Userconf_content_information_content_partname_title">
                 <p className="Userconf_content_information_content_partname_title_txt">
-                総飼養頭数  
+                  総飼養頭数
                 </p>
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">150</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  150
+                </p>
               </td>
             </tr>
 
             <tr className="Userconf_content_information_content_partname">
               <td className="Userconf_content_information_content_partname_title">
                 <p className="Userconf_content_information_content_partname_title_txt">
-                メールアドレス 
+                  メールアドレス
                 </p>
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">daiki@bp-one.jp</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  daiki@bp-one.jp
+                </p>
               </td>
             </tr>
 
             <tr className="Userconf_content_information_content_partname">
               <td className="Userconf_content_information_content_partname_title">
                 <p className="Userconf_content_information_content_partname_title_txt">
-                ログインID
+                  ログインID
                 </p>
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">d-suzuki36x</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  d-suzuki36x
+                </p>
               </td>
             </tr>
 
             <tr className="Userconf_content_information_content_partname">
               <td className="Userconf_content_information_content_partname_title">
                 <p className="Userconf_content_information_content_partname_title_txt">
-                パスワード
+                  パスワード
                 </p>
               </td>
 
               <td className="Userconf_content_information_content_partname_content">
-                <p className="Userconf_content_information_content_partname_content_txt">********</p>
+                <p className="Userconf_content_information_content_partname_content_txt">
+                  ********
+                </p>
               </td>
             </tr>
           </table>
 
           <div className="Userconf_content_information_personalInfor_btn">
-            <Link to = "/user/add"><button className="Userconf_content_information_personalInfor_btn_back">
-              戻る
-            </button>
+            <Link
+              to="/user/add"
+              onClick={() =>
+                dispatch({
+                  type: "useraddFinish",
+                })
+              }
+            >
+              <button className="Userconf_content_information_personalInfor_btn_back">
+                戻る
+              </button>
             </Link>
-            <Link to = "/user/add-finish">
-                <button className="Userconf_content_information_personalInfor_btn_next">
+            <Link to="/user/add-finish">
+              <button className="Userconf_content_information_personalInfor_btn_next">
                 会員情報を登録する
-                </button>
+              </button>
             </Link>
           </div>
         </div>

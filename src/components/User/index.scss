@@ -80,7 +80,7 @@ table, th, td {
         display: flex;
         justify-content: start;
         .UNavbar_content_logo {
-            margin-right: 390rem;
+            margin-right: 530rem;
             @include pc_c {
                 margin-right: 360rem;
             }
@@ -93,45 +93,41 @@ table, th, td {
             }
         }
         .ruleCss {
-            img {
-                height: 40px;
-                width: 40px;
-            }
+            margin-top: 10px;
         }
         .line {
-            height: 50px;
+            height: 40px;
             width: 10px; 
             border-left: 1px solid black;
-            margin-left: 30px;
-            margin-top: -5px;
+            margin-left: 25px;
+            margin-top: 5px;
         }
         .nav_login {
             div {
-                font-size: 20px;
+                font-size: 15px;
                 color: #0045FF;
-                margin-left: 20px;
-                margin-top: 5px;
+                margin-left: 10px;
+                margin-top: 15px;
+                font-weight: bold;
             }
         }
         .nav_letter {
-            font-size: 20px;
+            font-size: 15px;
             color: black;
             margin-left: 20px;
-            margin-top: 5px;
+            margin-top: 15px;
+            font-weight: bold;
         }
         .nav_btn {
-            width: 150px;
-            height: 60px;
             margin-left: 20px;
-            margin-top: -10px;
             display: flex;
             align-items: center;
             background-color: #0045FF;
-            border-radius: 10px;
+            border-radius: 5px;
+            padding: 25px 20px;
             div {
-                font-size: 20px;
+                font-size: 15px;
                 color: white;
-                margin: auto;
             }
         }
     }
@@ -156,8 +152,9 @@ table, th, td {
             margin-left: 5px;
             font-size: 30px;
             color: white;
+            color: #0045FF;
         }
-        span {
+        .ULayer_content_arrow {
             font-size: 25px;
             margin-top: 5px;
         }
@@ -186,12 +183,14 @@ table, th, td {
                 display: flex;
                 justify-content: start;
                 div {
-                    height: 30px;
+                    margin-top: 5px;
+                    height: 20px;
                     width: 10px;
-                    border-left: 2px solid #00B3FF;
+                    border-left: 2px solid #0045FF
                 }
 
                 p {
+                    color: #727272;
                     font-size: 20px;
                     font-weight: bold;
                 }
@@ -205,6 +204,7 @@ table, th, td {
                 p {
                     text-align: center;
                     font-size: 15px;
+                    color: #727272;
                     margin-right: 20px;
                 }
 
@@ -222,6 +222,7 @@ table, th, td {
                 p {
                     text-align: center;
                     font-size: 15px;
+                    color: #727272;
                     margin-right: 20px;
                 }
 
@@ -239,6 +240,7 @@ table, th, td {
                 button {
                     padding: 13px 15px;
                     font-size: 15px;
+                    font-weight: bold;
                     color: white;
                     background-color: #0045FF;
                     border: none;
@@ -335,13 +337,15 @@ table, th, td {
                 display: flex;
                 justify-content: start;
                 div {
-                    height: 30px;
+                    margin-top: 5px;
+                    height: 20px;
                     width: 10px;
-                    border-left: 2px solid #00B3FF;
+                    border-left: 2px solid #0045FF
                 }
 
                 p {
                     font-size: 20px;
+                    color:#727272;
                     font-weight: bold;
                 }
             }
@@ -351,6 +355,7 @@ table, th, td {
                 p {
                     width: 100%;
                     font-size: 15px;
+                    color: #727272;
                     text-align: start;
                 }
             }
@@ -365,6 +370,7 @@ table, th, td {
                     width: 30%;
                     height: 60px;
                     font-size: 15px;
+                    color: #727272;
                     margin: 0;
                     text-align: start;
                     padding-left: 10px;
@@ -390,6 +396,7 @@ table, th, td {
 
                 .userRegister_part_back {
                     font-size: 15px;
+                    font-weight: bold;
                     padding: 13px 28px;
                     background-color: rgb(114, 114, 114);
                     color: white;
@@ -399,6 +406,7 @@ table, th, td {
 
                 .userRegister_part_register {
                     font-size: 15px;
+                    font-weight: bold;
                     color: white;
                     border: none;
                     padding: 13px 28px;
@@ -433,12 +441,14 @@ table, th, td {
                 display: flex;
                 justify-content: start;
                 div {
-                    height: 30px;
+                    margin-top: 5px;
+                    height: 20px;
                     width: 10px;
-                    border-left: 2px solid #00B3FF;
+                    border-left: 2px solid #0045FF
                 }
 
                 p {
+                    color: #727272;
                     font-size: 20px;
                     font-weight: bold;
                 }
@@ -448,6 +458,7 @@ table, th, td {
                 margin-top: 10px;
                 p {
                     width: 100%;
+                    color: #727272;
                     font-size: 15px;
                     text-align: start;
                 }
@@ -458,6 +469,7 @@ table, th, td {
 
                 .userRegisterfinish_part_back {
                     font-size: 15px;
+                    font-weight: bold;
                     padding: 13px 28px;
                     background-color: #0045FF;
                     color: white;
@@ -492,12 +504,14 @@ table, th, td {
                 display: flex;
                 justify-content: start;
                 div {
-                    height: 30px;
+                    margin-top: 5px;
+                    height: 20px;
                     width: 10px;
-                    border-left: 2px solid #00B3FF;
+                    border-left: 2px solid #0045FF
                 }
 
                 p {
+                    color: #727272;
                     font-size: 20px;
                     font-weight: bold;
                 }
@@ -508,6 +522,7 @@ table, th, td {
                 p {
                     width: 100%;
                     font-size: 15px;
+                    color:#727272;
                     text-align: start;
                 }
             }
@@ -518,6 +533,7 @@ table, th, td {
                 justify-content:flex-start;
                 p {
                     font-size: 15px;
+                    color: #727272;
                 }
                 input {
                     margin-left: 30px;
@@ -531,6 +547,7 @@ table, th, td {
 
                 .userPassreminder_part_back {
                     font-size: 15px;
+                    font-weight: bold;
                     padding: 13px 28px;
                     background-color: #727272;
                     color: white;
@@ -540,6 +557,7 @@ table, th, td {
 
                 .userPassreminder_part_receive {
                     font-size: 15px;
+                    font-weight: bold;
                     padding: 13px 28px;
                     margin-left: 30px;
                     background-color: #0045FF;
@@ -574,13 +592,15 @@ table, th, td {
                 display: flex;
                 justify-content: start;
                 div {
-                    height: 30px;
+                    margin-top: 5px;
+                    height: 20px;
                     width: 10px;
-                    border-left: 2px solid #00B3FF;
+                    border-left: 2px solid #0045FF
                 }
 
                 p {
                     font-size: 20px;
+                    color: #727272;
                     font-weight: bold;
                 }
             }
@@ -590,6 +610,7 @@ table, th, td {
                 p {
                     width: 100%;
                     font-size: 14px;
+                    color: #727272;
                     text-align: start;
                 }
             }
@@ -599,6 +620,7 @@ table, th, td {
 
                 .userPasswordinform_part_back {
                     font-size: 15px;
+                    font-weight: bold;
                     padding: 13px 28px;
                     background-color: #0045FF;
                     color: white;

@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./index.css";
 
 function Registerfinish() {
+  const dispatch = useDispatch();
+
   return (
     <nav className="userRegisterfinish">
       <div className="userRegisterfinish_content">
@@ -18,7 +21,14 @@ function Registerfinish() {
           </div>
 
           <div className="userRegisterfinish_part_btngroup">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() =>
+                dispatch({
+                  type: "front",
+                })
+              }
+            >
               <button className="userRegisterfinish_part_back">
                 TOPへ戻る
               </button>
