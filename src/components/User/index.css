@@ -63,7 +63,7 @@ table, th, td {
   justify-content: start;
 }
 .UNavbar .UNavbar_content .UNavbar_content_logo {
-  margin-right: 390rem;
+  margin-right: 530rem;
 }
 @media (max-width: 1382px) {
   .UNavbar .UNavbar_content .UNavbar_content_logo {
@@ -79,43 +79,41 @@ table, th, td {
   width: 250px;
   height: 35px;
 }
-.UNavbar .UNavbar_content .ruleCss img {
-  height: 40px;
-  width: 40px;
+.UNavbar .UNavbar_content .ruleCss {
+  margin-top: 10px;
 }
 .UNavbar .UNavbar_content .line {
-  height: 50px;
+  height: 40px;
   width: 10px;
   border-left: 1px solid black;
-  margin-left: 30px;
-  margin-top: -5px;
+  margin-left: 25px;
+  margin-top: 5px;
 }
 .UNavbar .UNavbar_content .nav_login div {
-  font-size: 20px;
+  font-size: 15px;
   color: #0045FF;
-  margin-left: 20px;
-  margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 .UNavbar .UNavbar_content .nav_letter {
-  font-size: 20px;
+  font-size: 15px;
   color: black;
   margin-left: 20px;
-  margin-top: 5px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 .UNavbar .UNavbar_content .nav_btn {
-  width: 150px;
-  height: 60px;
   margin-left: 20px;
-  margin-top: -10px;
   display: flex;
   align-items: center;
   background-color: #0045FF;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 25px 20px;
 }
 .UNavbar .UNavbar_content .nav_btn div {
-  font-size: 20px;
+  font-size: 15px;
   color: white;
-  margin: auto;
 }
 
 .ULayer {
@@ -138,8 +136,9 @@ table, th, td {
   margin-left: 5px;
   font-size: 30px;
   color: white;
+  color: #0045FF;
 }
-.ULayer .ULayer_content span {
+.ULayer .ULayer_content .ULayer_content_arrow {
   font-size: 25px;
   margin-top: 5px;
 }
@@ -155,7 +154,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 451px;
+  padding-bottom: 210px;
   display: flex;
 }
 .userLogin .userLogin_content .userLogin_part {
@@ -170,11 +169,13 @@ table, th, td {
   justify-content: start;
 }
 .userLogin .userLogin_content .userLogin_part .userLogin_part_text div {
-  height: 30px;
+  margin-top: 5px;
+  height: 20px;
   width: 10px;
-  border-left: 2px solid #00B3FF;
+  border-left: 2px solid #0045FF;
 }
 .userLogin .userLogin_content .userLogin_part .userLogin_part_text p {
+  color: #727272;
   font-size: 20px;
   font-weight: bold;
 }
@@ -187,6 +188,7 @@ table, th, td {
 .userLogin .userLogin_content .userLogin_part .userLogin_part_ID p {
   text-align: center;
   font-size: 15px;
+  color: #727272;
   margin-right: 20px;
 }
 .userLogin .userLogin_content .userLogin_part .userLogin_part_ID input {
@@ -202,6 +204,7 @@ table, th, td {
 .userLogin .userLogin_content .userLogin_part .userLogin_part_Pass p {
   text-align: center;
   font-size: 15px;
+  color: #727272;
   margin-right: 20px;
 }
 .userLogin .userLogin_content .userLogin_part .userLogin_part_Pass input {
@@ -216,6 +219,7 @@ table, th, td {
 .userLogin .userLogin_content .userLogin_part .userLogin_part_btn button {
   padding: 13px 15px;
   font-size: 15px;
+  font-weight: bold;
   color: white;
   background-color: #0045FF;
   border: none;
@@ -293,7 +297,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 526px;
+  padding-bottom: 285px;
   display: flex;
 }
 .userRegister .userRegister_content .userRegister_part {
@@ -308,12 +312,14 @@ table, th, td {
   justify-content: start;
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_title div {
-  height: 30px;
+  margin-top: 5px;
+  height: 20px;
   width: 10px;
-  border-left: 2px solid #00B3FF;
+  border-left: 2px solid #0045FF;
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_title p {
   font-size: 20px;
+  color: #727272;
   font-weight: bold;
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_text {
@@ -322,6 +328,7 @@ table, th, td {
 .userRegister .userRegister_content .userRegister_part .userRegister_part_text p {
   width: 100%;
   font-size: 15px;
+  color: #727272;
   text-align: start;
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_table {
@@ -334,6 +341,7 @@ table, th, td {
   width: 30%;
   height: 60px;
   font-size: 15px;
+  color: #727272;
   margin: 0;
   text-align: start;
   padding-left: 10px;
@@ -356,6 +364,7 @@ table, th, td {
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_btngroup .userRegister_part_back {
   font-size: 15px;
+  font-weight: bold;
   padding: 13px 28px;
   background-color: rgb(114, 114, 114);
   color: white;
@@ -364,6 +373,7 @@ table, th, td {
 }
 .userRegister .userRegister_content .userRegister_part .userRegister_part_btngroup .userRegister_part_register {
   font-size: 15px;
+  font-weight: bold;
   color: white;
   border: none;
   padding: 13px 28px;
@@ -382,7 +392,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 526px;
+  padding-bottom: 285px;
   display: flex;
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part {
@@ -397,11 +407,13 @@ table, th, td {
   justify-content: start;
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_title div {
-  height: 30px;
+  margin-top: 5px;
+  height: 20px;
   width: 10px;
-  border-left: 2px solid #00B3FF;
+  border-left: 2px solid #0045FF;
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_title p {
+  color: #727272;
   font-size: 20px;
   font-weight: bold;
 }
@@ -410,6 +422,7 @@ table, th, td {
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_text p {
   width: 100%;
+  color: #727272;
   font-size: 15px;
   text-align: start;
 }
@@ -418,6 +431,7 @@ table, th, td {
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part .userRegisterfinish_part_btngroup .userRegisterfinish_part_back {
   font-size: 15px;
+  font-weight: bold;
   padding: 13px 28px;
   background-color: #0045FF;
   color: white;
@@ -436,7 +450,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 606px;
+  padding-bottom: 365px;
   display: flex;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part {
@@ -451,11 +465,13 @@ table, th, td {
   justify-content: start;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_title div {
-  height: 30px;
+  margin-top: 5px;
+  height: 20px;
   width: 10px;
-  border-left: 2px solid #00B3FF;
+  border-left: 2px solid #0045FF;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_title p {
+  color: #727272;
   font-size: 20px;
   font-weight: bold;
 }
@@ -465,6 +481,7 @@ table, th, td {
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_text p {
   width: 100%;
   font-size: 15px;
+  color: #727272;
   text-align: start;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans {
@@ -474,6 +491,7 @@ table, th, td {
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans p {
   font-size: 15px;
+  color: #727272;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_emailTrans input {
   margin-left: 30px;
@@ -485,6 +503,7 @@ table, th, td {
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_btngroup .userPassreminder_part_back {
   font-size: 15px;
+  font-weight: bold;
   padding: 13px 28px;
   background-color: #727272;
   color: white;
@@ -493,6 +512,7 @@ table, th, td {
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part .userPassreminder_part_btngroup .userPassreminder_part_receive {
   font-size: 15px;
+  font-weight: bold;
   padding: 13px 28px;
   margin-left: 30px;
   background-color: #0045FF;
@@ -512,7 +532,7 @@ table, th, td {
   padding: 10px 110px;
   height: 100%;
   margin: auto;
-  padding-bottom: 606px;
+  padding-bottom: 365px;
   display: flex;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part {
@@ -527,12 +547,14 @@ table, th, td {
   justify-content: start;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_title div {
-  height: 30px;
+  margin-top: 5px;
+  height: 20px;
   width: 10px;
-  border-left: 2px solid #00B3FF;
+  border-left: 2px solid #0045FF;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_title p {
   font-size: 20px;
+  color: #727272;
   font-weight: bold;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_text {
@@ -541,6 +563,7 @@ table, th, td {
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_text p {
   width: 100%;
   font-size: 14px;
+  color: #727272;
   text-align: start;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_btngroup {
@@ -548,6 +571,7 @@ table, th, td {
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part .userPasswordinform_part_btngroup .userPasswordinform_part_back {
   font-size: 15px;
+  font-weight: bold;
   padding: 13px 28px;
   background-color: #0045FF;
   color: white;
@@ -1381,5 +1405,133 @@ table, th, td {
   padding: 10px 20px;
   border: none;
   margin-left: 30px;
+  border-radius: 5px;
+}
+
+.Newpass {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Newpass .Newpass_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 338px;
+}
+.Newpass .Newpass_content .Newpass_part {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  padding: 30px 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text div {
+  width: 10px;
+  height: 25px;
+  border-left: 3px solid #0045FF;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_text p {
+  font-size: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_letter {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass p {
+  font-size: 15px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Pass input {
+  margin-left: 150px;
+  width: 300px;
+  height: 30px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm p {
+  font-size: 15px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_Passconfirm input {
+  margin-left: 90px;
+  width: 300px;
+  height: 30px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_btn {
+  margin-top: 50px;
+}
+.Newpass .Newpass_content .Newpass_part .Newpass_part_btn button {
+  padding: 20px 10px;
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border: none;
+  border-radius: 5px;
+}
+
+.Newpassfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Newpassfinish .Newpassfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10px 110px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 448px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  padding: 30px 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text div {
+  width: 10px;
+  height: 25px;
+  border-left: 3px solid #0045FF;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_text p {
+  font-size: 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_letter {
+  font-size: 15px;
+  text-align: start;
+  margin-top: 20px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_btn {
+  margin-top: 50px;
+}
+.Newpassfinish .Newpassfinish_content .Newpassfinish_part .Newpassfinish_part_btn button {
+  padding: 15px 30px;
+  font-size: 15px;
+  color: white;
+  background-color: #0045FF;
+  border: none;
   border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */

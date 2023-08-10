@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./index.css";
 
 function Login() {
+  const dispatch = useDispatch();
+
   return (
     <nav className="userLogin">
       <div className="userLogin_content">
@@ -24,7 +27,15 @@ function Login() {
 
           <div className="userLogin_part_btn">
             <Link to="/user/login">
-              <button>ログイン</button>
+              <button
+                onClick={() =>
+                  dispatch({
+                    type: "login",
+                  })
+                }
+              >
+                ログイン
+              </button>
             </Link>
           </div>
 
@@ -32,14 +43,30 @@ function Login() {
 
           <div className="userLogin_part_passlost">
             <Link to="user/passRecover">
-              <p>パスワードを忘れた方はこちら</p>
+              <p
+                onClick={() =>
+                  dispatch({
+                    type: "passRecover",
+                  })
+                }
+              >
+                パスワードを忘れた方はこちら
+              </p>
             </Link>
             <span>></span>
           </div>
 
           <div className="userLogin_part_register">
             <Link to="/user/register">
-              <p>新規会員登録</p>
+              <p
+                onClick={() =>
+                  dispatch({
+                    type: "register",
+                  })
+                }
+              >
+                新規会員登録
+              </p>
             </Link>
             <span>></span>
           </div>

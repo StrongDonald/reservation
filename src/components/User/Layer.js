@@ -1,4 +1,4 @@
-import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./index.css";
 import Box from "@mui/material/Box";
@@ -12,7 +12,9 @@ function HomeIcon(props: SvgIconProps) {
   );
 }
 
-function Layer() {
+const Layer = () => {
+  const stData = useSelector(state => state);
+
   return (
     <div className="ULayer">
       <div className="ULayer_content ">
@@ -27,9 +29,8 @@ function Layer() {
             <HomeIcon sx={{ color: "#0045FF", fontSize: 30 }} />
           </Box>
         </Link>
-        <span>></span>
-        <h2 class="pageTitle">
-          <span>ログイン</span>
+        <h2 className="pageTitle">
+          <span>{stData.auth.Title}</span>
         </h2>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./index.css";
 import logo from "../../img/Logo.png";
 
@@ -16,13 +17,22 @@ function HomeIcon(props: SvgIconProps) {
 }
 
 function Navbar() {
+  const dispatch = useDispatch();
+
   return (
-    <nav className="UNavbar">
+    <div className="UNavbar">
       <div className="UNavbar_content">
         <div className="UNavbar_content_logo">
-            <Link to="/">
-                <img src={logo} alt="Logo" />
-            </Link>
+          <Link
+            to="/"
+            onClick={() =>
+              dispatch({
+                type: "front",
+              })
+            }
+          >
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <Link className="ruleCss" to="/">
           <Box
@@ -32,19 +42,27 @@ function Navbar() {
               },
             }}
           >
-            <DescriptionOutlinedIcon sx={{ color: "#0045FF", fontSize: 40 }} />
+            <DescriptionOutlinedIcon sx={{ color: "#0045FF", fontSize: 30 }} />
           </Box>
         </Link>
         <div className="line"></div>
-        <Link className="nav_login" to="/">
+        <Link className="nav_login" to="/" onClick={() =>
+              dispatch({
+                type: "login",
+              })
+            }>
           <div>ログイン</div>
         </Link>
         <div className="nav_letter">もしくは</div>
-        <Link className="nav_btn" to="/user/register">
+        <Link className="nav_btn" to="/user/register" onClick={() =>
+              dispatch({
+                type: "register",
+              })
+            }>
           <div>新規会員登録</div>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 }
 
