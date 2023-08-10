@@ -78,56 +78,92 @@ table, th, td {
         margin: auto;
         height: 100%;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         .UNavbar_content_logo {
-            margin-right: 530rem;
-            @include pc_c {
-                margin-right: 360rem;
-            }
-            @include pc_d {
-                margin-right: 180rem;
-            }
             img {
                 width: 250px;
                 height: 35px;
             }
         }
-        .ruleCss {
-            margin-top: 10px;
-        }
-        .line {
-            height: 40px;
-            width: 10px; 
-            border-left: 1px solid black;
-            margin-left: 25px;
-            margin-top: 5px;
-        }
-        .nav_login {
-            div {
+        .UNavbar_content_icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .ruleCss {
+                margin-top: 10px;
+            }
+            .line {
+                height: 40px;
+                width: 10px; 
+                border-left: 1px solid black;
+                margin-left: 25px;
+                margin-top: 5px;
+            }
+            .nav_login {
+                div {
+                    font-size: 15px;
+                    color: #0045FF;
+                    margin-left: 10px;
+                    margin-top: 15px;
+                    font-weight: bold;
+                }
+            }
+            .nav_letter {
                 font-size: 15px;
-                color: #0045FF;
-                margin-left: 10px;
+                color: black;
+                margin-left: 20px;
                 margin-top: 15px;
                 font-weight: bold;
             }
+            .nav_btn {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                background-color: #0045FF;
+                border-radius: 5px;
+                padding: 15px 15px;
+                div {
+                    font-size: 15px;
+                    color: white;
+                }
+            }
         }
-        .nav_letter {
-            font-size: 15px;
-            color: black;
-            margin-left: 20px;
-            margin-top: 15px;
-            font-weight: bold;
+    }
+}
+
+.user_logoutnav {
+    width: 100%;
+    background:white;
+    height: 100px;
+    z-index: 999;
+    @include pc {
+        height: 100px;
+    }
+    @include sp {
+        height: 80px;
+    }
+    .user_logoutnav_content{
+        position: relative;
+        max-width: $pc;
+        padding: 30px 110px;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .user_logoutnav_content_logo {
+            img {
+                width: 250px;
+                height: 35px;
+            }
         }
-        .nav_btn {
-            margin-left: 20px;
+
+        .user_logoutnav_content_icons {
             display: flex;
+            justify-content: center;
             align-items: center;
-            background-color: #0045FF;
-            border-radius: 5px;
-            padding: 25px 20px;
-            div {
-                font-size: 15px;
-                color: white;
+            .navIcons {
+                margin-top: 20px;
+                margin-left: 20px;
             }
         }
     }
