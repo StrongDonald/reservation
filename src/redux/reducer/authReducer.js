@@ -1,4 +1,4 @@
-const initialization = { Title: "ログイン",isAuthenticated: 0 };
+const initialization = { Title: "ログイン", isAuthenticated: 0 };
 
 function reducer(state = initialization, action) {
   switch (action.type) {
@@ -7,7 +7,7 @@ function reducer(state = initialization, action) {
         Title: "",
         isAuthenticated: 1,
       };
-      case "logout":
+    case "logout":
       return {
         Title: ">ログイン",
         isAuthenticated: 0,
@@ -20,25 +20,30 @@ function reducer(state = initialization, action) {
       return {
         Title: ">メールアドレス登録",
       };
-      case "passinform":
+    case "passinform":
       return {
         Title: ">パスワードリマインダー完了",
       };
-      case "registerFinish":
+    case "registerFinish":
       return {
         Title: ">メールアドレス登録完了",
       };
-      case "newpassFinish":
+    case "newpassFinish":
       return {
         Title: ">パスワード再設定 完了",
       };
-      case "useraddFinish":
+    case "useraddFinish":
       return {
         Title: ">会員登録",
       };
     case "passRecover":
       return {
         Title: ">パスワードリマインダー",
+      };
+    case "rsvStatus":
+      return {
+        Title: ">予約状況",
+        isAuthenticated: 1,
       };
     default:
       return "No";

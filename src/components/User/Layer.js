@@ -2,15 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./index.css";
 import Box from "@mui/material/Box";
-import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
-
-function HomeIcon(props: SvgIconProps) {
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  );
-}
+import HomeIcon from '@mui/icons-material/Home';
 
 const Layer = () => {
   const stData = useSelector(state => state);
