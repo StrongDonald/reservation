@@ -5,20 +5,12 @@ import "./index.css";
 import logo from "../../img/Logo.png";
 
 import Box from "@mui/material/Box";
-import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import EmailIcon from "@mui/icons-material/Email";
 import HistoryIcon from "@mui/icons-material/History";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 
-function HomeIcon(props: SvgIconProps) {
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  );
-}
 
 function Navbar() {
   const dispatch = useDispatch();

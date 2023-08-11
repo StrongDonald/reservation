@@ -1,0 +1,310 @@
+$pc: 1366px;
+$sp: 767px; // SP
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+// @font-face {
+//     font-family: "Helvetica";
+//     src: url(../font/Helvetica.ttf);
+// }
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 1px;
+  @include pc {
+      font-size: 0.0732064421669107vw;
+  }
+  @include sp {
+    font-size: 0.2666666666666667vw;
+  }
+}
+
+a {
+text-decoration: none !important;
+}
+
+img {
+width: 100%;
+}
+
+table, th, td {
+    border: 1px solid rgb(202, 199, 199);
+    border-collapse: collapse;
+}
+
+.UserHome {
+    width: 100%;
+    background: #00B3FF;
+    height: 100%;
+    .UserHome_content {
+        max-width: $pc;
+        height: 100%;
+        margin: auto;
+        padding-bottom: 105rem;
+        .UserHome_background {
+            height: 360rem;
+            width: 1120rem;
+            margin: auto;
+        }
+
+        .UserHome_content_box {
+            margin: auto;
+            margin-top: 30rem;
+            background-color: white;
+            padding: 30rem 20rem;
+            width: 1120rem;
+            .UserHome_content_box_firstline {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .UserHome_content_box_firstline_title {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    div {
+                        width: 10rem;
+                        height: 20rem;
+                        border-left: 2px solid #0045FF
+                    }
+
+                    p {
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-align: start;
+                        color: #727272;
+                    }
+                }
+            }
+
+            .UserHome_content_box_secondline {
+                margin-top: 10rem;
+                .UserHome_content_box_secondline_p {
+                    font-size: 15rem;
+                    text-align: start;
+                    color: #727272;
+                }
+
+                .UserHome_content_box_secondline_content {
+                    margin-top: 10rem;
+                    width: 300rem;
+                    height: 30rem;
+                    border: 2px solid #0045FF;
+                    border-radius: 5px;
+                    padding: 15rem 10rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        font-size: 15rem;
+                        color: #0045FF;
+                    }
+                    span {
+                        font-size: 15rem;
+                        color: #0045FF;
+                    }
+                }
+            }
+
+            .UserHome_content_box_thirdline {
+                .UserHome_content_box_thirdline_reset {
+                    font-size: 15rem;
+                    color: white;
+                    background-color: #727272;
+                    padding: 10rem 15rem;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                .UserHome_content_box_thirdline_view {
+                    font-size: 15rem;
+                    color: white;
+                    background-color: #0045FF;
+                    padding: 10rem 15rem;
+                    border: none;
+                    border-radius: 5px;
+                    margin-left: 15rem;
+                }
+            }
+        }
+    }
+}
+
+.undisplay {
+    display: none;
+}
+
+.gap {
+    padding-bottom: 225rem !important;
+}
+
+.Reservationstatus {
+    width: 100%;
+    background: #00B3FF;
+    height: 100%;
+    .Reservationstatus_content {
+        max-width: $pc;
+        height: 100%;
+        margin: auto;
+        padding: 10rem 110rem;
+        padding-bottom: 100rem;
+
+        .Resevationstatus_content_form {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 40rem 30rem;
+            background-color: white;
+
+            .undisplay {
+                display: none;
+            }
+            .display {
+                display: block;
+            }
+
+            .Resevationstatus_content_form_nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .Resevationstatus_content_form_nav_calendar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    .Resevationstatus_content_form_nav_calendar_body {
+                        border: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 130px;
+                        .re_span {
+                            font-size: 20rem;
+                            color: #727272;
+                            font-weight: bold;
+                            margin-left: 5rem;
+                            margin-right: -5rem;
+                        }
+                        margin-left: -10rem;
+                    }
+                }
+
+                .Resevationstatus_content_form_nav_filter {
+                    font-size: 15rem;
+                    width: 300rem;
+                    height: 30rem;
+                }
+            }
+
+            .Resevationstatus_content_form_calendar {
+                width: 1088rem;
+                height: auto;
+                border: 2px solid #dddfde;
+
+                .Resevationstatus_content_form_calendar_colors {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    font-size: 13px;
+                    color: #727272;
+                    padding: 7px 7px;
+
+                    .rsv_color1 {background-color: #727272; width: 20px; height: 13px;}
+                    .rsv_color2 {background-color: yellow; width: 20px; height: 13px;}
+                    .rsv_color3 {background-color: rgba(255, 183, 0, 0.413); width: 20px; height: 13px;}
+                    .rsv_color4 {background-color: #59f63657; width: 20px; height: 13px;}
+                    .rsv_color5 {background-color: #06c9df6f; width: 20px; height: 13px;}
+                    .rsv_color6 {background-color: #0c84f47a; width: 20px; height: 13px;}
+                    .rsv_color7 {background-color: #8524fb6c; width: 20px; height: 13px;}
+                    .rsv_color8 {background-color: #ef15777f; width: 20px; height: 13px;}
+
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    thead {
+                        tr {
+                            th {
+                                background-color: #dddfde;
+                                width: 14.28571428571429rem;
+                                font-size: 15px;
+                                padding: 15px 0;
+                                color: #727272;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                .calendar_date {
+                                    font-size: 15px;
+                                    padding: 10px 10px;
+                                    text-align: start;
+                                }
+                                .space_box {
+                                    width: 100%;
+                                    height: 30rem;
+                                }
+                                .rsv_box {
+                                    width: 100%;
+                                    height: auto;
+                                    font-size: 10px;
+                                    .undisplay {
+                                        display: none;
+                                    }
+                                    .display {
+                                        display: block;
+                                    }
+                                    .rsv_1 {
+                                        background-color:rgba(255, 183, 0, 0.413);
+                                    }
+                                    .rsv_2 {
+                                        background-color: #59f63657;
+                                    }
+                                    .rsv_3 {
+                                        background-color: #06c9df6f;
+                                    }
+                                    .rsv_4 {
+                                        background-color: #0c84f47a;
+                                    }
+                                    .rsv_5 {
+                                        background-color: #8524fb6c;
+                                    }
+                                    .rsv_6 {
+                                        background-color: #ef15777f;
+                                        margin-bottom: 20rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

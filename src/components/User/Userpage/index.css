@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-size: 1px;
+}
+@media (max-width: 1366px) {
+  html,
+  body {
+    font-size: 0.0732064422vw;
+  }
+}
+@media (max-width: 767px) {
+  html,
+  body {
+    font-size: 0.2666666667vw;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid rgb(202, 199, 199);
+  border-collapse: collapse;
+}
+
+.UserHome {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.UserHome .UserHome_content {
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 105rem;
+}
+.UserHome .UserHome_content .UserHome_background {
+  height: 360rem;
+  width: 1120rem;
+  margin: auto;
+}
+.UserHome .UserHome_content .UserHome_content_box {
+  margin: auto;
+  margin-top: 30rem;
+  background-color: white;
+  padding: 30rem 20rem;
+  width: 1120rem;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_firstline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_firstline .UserHome_content_box_firstline_title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_firstline .UserHome_content_box_firstline_title div {
+  width: 10rem;
+  height: 20rem;
+  border-left: 2px solid #0045FF;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_firstline .UserHome_content_box_firstline_title p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: start;
+  color: #727272;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_secondline {
+  margin-top: 10rem;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_secondline .UserHome_content_box_secondline_p {
+  font-size: 15rem;
+  text-align: start;
+  color: #727272;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_secondline .UserHome_content_box_secondline_content {
+  margin-top: 10rem;
+  width: 300rem;
+  height: 30rem;
+  border: 2px solid #0045FF;
+  border-radius: 5px;
+  padding: 15rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_secondline .UserHome_content_box_secondline_content p {
+  font-size: 15rem;
+  color: #0045FF;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_secondline .UserHome_content_box_secondline_content span {
+  font-size: 15rem;
+  color: #0045FF;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_thirdline .UserHome_content_box_thirdline_reset {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 15rem;
+  border: none;
+  border-radius: 5px;
+}
+.UserHome .UserHome_content .UserHome_content_box .UserHome_content_box_thirdline .UserHome_content_box_thirdline_view {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 15rem;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15rem;
+}
+
+.undisplay {
+  display: none;
+}
+
+.gap {
+  padding-bottom: 225rem !important;
+}
+
+.Reservationstatus {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Reservationstatus .Reservationstatus_content {
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+  padding: 10rem 110rem;
+  padding-bottom: 100rem;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 40rem 30rem;
+  background-color: white;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .undisplay {
+  display: none;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .display {
+  display: block;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_nav .Resevationstatus_content_form_nav_calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_nav .Resevationstatus_content_form_nav_calendar .Resevationstatus_content_form_nav_calendar_body {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  margin-left: -10rem;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_nav .Resevationstatus_content_form_nav_calendar .Resevationstatus_content_form_nav_calendar_body .re_span {
+  font-size: 20rem;
+  color: #727272;
+  font-weight: bold;
+  margin-left: 5rem;
+  margin-right: -5rem;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_nav .Resevationstatus_content_form_nav_filter {
+  font-size: 15rem;
+  width: 300rem;
+  height: 30rem;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar {
+  width: 1088rem;
+  height: auto;
+  border: 2px solid #dddfde;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 13px;
+  color: #727272;
+  padding: 7px 7px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color1 {
+  background-color: #727272;
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color2 {
+  background-color: yellow;
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color3 {
+  background-color: rgba(255, 183, 0, 0.413);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color4 {
+  background-color: rgba(89, 246, 54, 0.3411764706);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color5 {
+  background-color: rgba(6, 201, 223, 0.4352941176);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color6 {
+  background-color: rgba(12, 132, 244, 0.4784313725);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color7 {
+  background-color: rgba(133, 36, 251, 0.4235294118);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors .rsv_color8 {
+  background-color: rgba(239, 21, 119, 0.4980392157);
+  width: 20px;
+  height: 13px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar .Resevationstatus_content_form_calendar_colors p {
+  margin: 0 10px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table thead tr th {
+  background-color: #dddfde;
+  width: 14.2857142857rem;
+  font-size: 15px;
+  padding: 15px 0;
+  color: #727272;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .calendar_date {
+  font-size: 15px;
+  padding: 10px 10px;
+  text-align: start;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .space_box {
+  width: 100%;
+  height: 30rem;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box {
+  width: 100%;
+  height: auto;
+  font-size: 10px;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .undisplay {
+  display: none;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .display {
+  display: block;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_1 {
+  background-color: rgba(255, 183, 0, 0.413);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_2 {
+  background-color: rgba(89, 246, 54, 0.3411764706);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_3 {
+  background-color: rgba(6, 201, 223, 0.4352941176);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_4 {
+  background-color: rgba(12, 132, 244, 0.4784313725);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_5 {
+  background-color: rgba(133, 36, 251, 0.4235294118);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_6 {
+  background-color: rgba(239, 21, 119, 0.4980392157);
+  margin-bottom: 20rem;
+}/*# sourceMappingURL=index.css.map */

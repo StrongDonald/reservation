@@ -18,6 +18,9 @@ import Useraddfinish from "./components/User/Useraddfinish";
 import Newpass from "./components/User/Newpass";
 import Newpassfinish from "./components/User/Newpassfinish";
 
+import UserHome from "./components/User/Userpage/UserHome";
+import Reservationstatus from "./components/User/Userpage/Reservationstatus";
+
 function App() {
   return (
     <Provider store={store}>
@@ -36,6 +39,9 @@ function App() {
             <Route exact path="/user/add-finish" element={<Useraddfinish />} />
             <Route exact path="/user/newpass" element={<Newpass />} />
             <Route exact path="/user/newpass/finish" element={<Newpassfinish />} />
+
+            <Route exact path="/user/login" element={<UserHome />} />
+            <Route exact path="/user/rsvStatus" element={<Reservationstatus />} />
           </Routes>
           <Footer />
         </div>
