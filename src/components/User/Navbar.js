@@ -20,10 +20,10 @@ function Navbar() {
       <div className="user_logoutnav_content">
         <div className="user_logoutnav_content_logo">
           <Link
-            to="/"
+            to="/user/login"
             onClick={() =>
               dispatch({
-                type: "front",
+                type: "login-front",
               })
             }
           >
@@ -32,7 +32,12 @@ function Navbar() {
         </div>
 
         <div className="user_logoutnav_content_icons">
-          <Link className="navIcons" to="/">
+          <Link className="navIcons" to="/user/infor"
+            onClick={() =>
+              dispatch({
+                type: "user-infor",
+              })
+            }>
             <Box
               sx={{
                 "& > :not(style)": {
@@ -56,7 +61,12 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link className="navIcons" to="/">
+          <Link className="navIcons" to="/user/message"
+            onClick={() =>
+              dispatch({
+                type: "user-sendemail",
+              })
+            }>
             <Box
               sx={{
                 "& > :not(style)": {
@@ -68,7 +78,12 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link className="navIcons" to="/">
+          <Link className="navIcons" to="/user/rule"
+            onClick={() =>
+              dispatch({
+                type: "userRule",
+              })
+            }>
             <Box
               sx={{
                 "& > :not(style)": {
@@ -141,7 +156,7 @@ function Navbar() {
             to="/"
             onClick={() =>
               dispatch({
-                type: "login",
+                type: "front",
               })
             }
           >

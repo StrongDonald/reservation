@@ -295,4 +295,845 @@ table, th, td {
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_6 {
   background-color: rgba(239, 21, 119, 0.4980392157);
   margin-bottom: 20rem;
+}
+
+.Rule {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Rule .Rule_content {
+  max-width: 1366px;
+  height: 100%;
+  padding: 10rem 110rem;
+  padding-bottom: 50rem;
+  margin: auto;
+}
+.Rule .Rule_content .Rule_content_box {
+  background-color: white;
+  padding: 40rem 20rem;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_title div {
+  height: 20rem;
+  width: 10rem;
+  margin-top: 3rem;
+  border-left: 2px solid #0045FF;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_title p {
+  font-size: 20rem;
+  font-weight: bold;
+  color: #727272;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_text {
+  font-size: 15rem;
+  margin-top: 30rem;
+  color: #727272;
+  text-align: start;
+  padding: 10rem 10rem;
+  border: 1px groove #727272;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_btn {
+  margin-top: 50rem;
+}
+.Rule .Rule_content .Rule_content_box .Rule_content_btn button {
+  font-size: 15rem;
+  color: white;
+  padding: 15rem 15rem;
+  margin: auto;
+  background-color: #0045FF;
+  border: none;
+  border-radius: 5px;
+}
+
+.Userinfor {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Userinfor .Userinfor_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 132rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20rem;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_title .Userinfor_content_information_title_symbol {
+  width: 8rem;
+  height: 20rem;
+  border-left: 2rem solid #0045FF;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_title .Userinfor_content_information_title_text {
+  font-size: 20rem;
+  margin-top: -5rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_title {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_title .Userinfor_content_information_content_partname_title_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_content {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_content .Userinfor_content_information_content_partname_content_txt {
+  height: 30rem;
+  font-size: 15rem;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_content .Userinfor_content_information_content_partname_content_btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_partname .Userinfor_content_information_content_partname_content .Userinfor_content_information_content_partname_content_btn button {
+  background-color: #0045FF;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_name .Userinfor_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_name .Userinfor_content_information_content_name_content .Userinfor_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_name .Userinfor_content_information_content_name_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_name .Userinfor_content_information_content_name_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_phonenum .Userinfor_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_phonenum .Userinfor_content_information_content_phonenum_content .Userinfor_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_phonenum .Userinfor_content_information_content_phonenum_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_phonenum .Userinfor_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_address .Userinfor_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_address .Userinfor_content_information_content_address_content p {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_address .Userinfor_content_information_content_address_input {
+  padding: 15rem 10rem;
+  width: 70%;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_address .Userinfor_content_information_content_address_input .Userinfor_content_information_content_address_input_box1 p {
+  font-size: 15rem;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_emailaddress {
+  display: flex;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_emailaddress .Userinfor_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_emailaddress .Userinfor_content_information_content_emailaddress_content .Userinfor_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_emailaddress .Userinfor_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_content .Userinfor_content_information_content_emailaddress .Userinfor_content_information_content_emailaddress_input .Userinfor_content_information_content_emailaddress_inputtag {
+  font-size: 15rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor {
+  margin-top: 50rem;
+  display: flex;
+  justify-content: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor p {
+  width: 10rem;
+  height: 18rem;
+  margin-top: 2rem;
+  border-left: 2rem solid #0045FF;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor .Userinfor_content_information_personalInfor_text {
+  font-size: 15rem;
+  font-weight: bold;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_textarea {
+  margin-top: 20rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_textarea div {
+  width: 100%;
+  height: 300rem;
+  padding: 10rem 10rem;
+  font-size: 15rem;
+  border: 1rem groove gray;
+  overflow-y: scroll;
+  text-align: start;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_textbox {
+  margin-top: 30rem;
+  width: 200rem;
+  margin: auto;
+  margin-top: 30rem;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_textbox input {
+  width: 15rem;
+  height: 15rem;
+  margin-left: 10rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_textbox p {
+  margin-left: 5rem;
+  font-size: 15rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_btn .Userinfor_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.Userinfor .Userinfor_content .Userinfor_content_information .Userinfor_content_information_personalInfor_btn .Userinfor_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.Sendemail {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Sendemail .Sendemail_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 60rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_firststep_circle {
+  width: 40rem;
+  height: 80rem;
+  position: relative;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_firststep_circle .Sendemail_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  margin-top: 10rem;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_firststep_circle .Sendemail_content_Header_firststep_circle_label {
+  position: absolute;
+  left: -30rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  width: 100rem;
+  color: #0045FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_secondstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_secondstep_circle .Sendemail_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+  margin-top: 10rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_secondstep_circle .Sendemail_content_Header_secondstep_circle_label {
+  margin-top: 10rem;
+  font-size: 15rem;
+  position: absolute;
+  left: -30rem;
+  width: 100rem;
+  color: #727272;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_thirdstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_thirdstep_circle .Sendemail_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_thirdstep_circle .Sendemail_content_Header_thirdstep_circle_label {
+  margin-top: 10rem;
+  font-size: 15rem;
+  position: absolute;
+  left: -30rem;
+  width: 100rem;
+  color: #727272;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sendemail .Sendemail_content .Sendemail_content_Header .Sendemail_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 40rem;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname {
+  display: flex;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname .Sendemail_content_information_content_partname_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname .Sendemail_content_information_content_partname_content .Sendemail_content_information_content_partname_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname .Sendemail_content_information_content_partname_content .Sendemail_content_information_content_partname_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12rem;
+  padding: 5rem 7rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname .Sendemail_content_information_content_partname_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_partname .Sendemail_content_information_content_partname_input .Sendemail_content_information_content_partname_inputtag {
+  width: 300rem;
+  height: 30rem;
+  font-size: 15rem;
+  padding-left: 5rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name {
+  display: flex;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name .Sendemail_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name .Sendemail_content_information_content_name_content .Sendemail_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name .Sendemail_content_information_content_name_content .Sendemail_content_information_content_name_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12rem;
+  padding: 5rem 7rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name .Sendemail_content_information_content_name_input {
+  padding: 10rem 10rem;
+  width: 70%;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_name .Sendemail_content_information_content_name_input textarea {
+  width: 100%;
+  height: 250rem;
+  padding: 10rem 5rem;
+  font-size: 15rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum {
+  display: flex;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_content .Sendemail_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_content .Sendemail_content_information_content_phonenum_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12rem;
+  padding: 5rem 7rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_content .Sendemail_content_information_content_phonenum .Sendemail_content_information_content_phonenum_input .Sendemail_content_information_content_phonenum_inputtag {
+  width: 75rem;
+  height: 30rem;
+  margin-right: 7rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_personalInfor_btn .Sendemail_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.Sendemail .Sendemail_content .Sendemail_content_information .Sendemail_content_information_personalInfor_btn .Sendemail_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.Sendemail_conf {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Sendemail_conf .Sendemail_conf_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 293rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_firststep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_firststep_circle .Sendemail_conf_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_firststep_circle .Sendemail_conf_content_Header_firststep_circle_label {
+  position: absolute;
+  left: -30rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  width: 100rem;
+  color: #727272;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_secondstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_secondstep_circle .Sendemail_conf_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_secondstep_circle .Sendemail_conf_content_Header_secondstep_circle_label {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #0045FF;
+  width: 100rem;
+  position: absolute;
+  left: -30rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_thirdstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_thirdstep_circle .Sendemail_conf_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_thirdstep_circle .Sendemail_conf_content_Header_thirdstep_circle_label {
+  position: absolute;
+  left: -30rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+  width: 100rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_Header .Sendemail_conf_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 40rem;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_title .Sendemail_conf_content_information_title_symbol {
+  width: 8rem;
+  height: 20rem;
+  border-left: 2rem solid #0045FF;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_title .Sendemail_conf_content_information_title_text {
+  font-size: 20rem;
+  margin-top: -5rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_partname .Sendemail_conf_content_information_content_partname_title {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_partname .Sendemail_conf_content_information_content_partname_title .Sendemail_conf_content_information_content_partname_title_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_partname .Sendemail_conf_content_information_content_partname_content {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_partname .Sendemail_conf_content_information_content_partname_content .Sendemail_conf_content_information_content_partname_content_txt {
+  height: 30rem;
+  font-size: 15rem;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_name .Sendemail_conf_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_name .Sendemail_conf_content_information_content_name_content .Sendemail_conf_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_name .Sendemail_conf_content_information_content_name_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_name .Sendemail_conf_content_information_content_name_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_phonenum .Sendemail_conf_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_phonenum .Sendemail_conf_content_information_content_phonenum_content .Sendemail_conf_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_phonenum .Sendemail_conf_content_information_content_phonenum_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_phonenum .Sendemail_conf_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_address .Sendemail_conf_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_address .Sendemail_conf_content_information_content_address_content p {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_address .Sendemail_conf_content_information_content_address_input {
+  padding: 15rem 10rem;
+  width: 70%;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_address .Sendemail_conf_content_information_content_address_input .Sendemail_conf_content_information_content_address_input_box1 p {
+  font-size: 15rem;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_emailaddress {
+  display: flex;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_emailaddress .Sendemail_conf_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_emailaddress .Sendemail_conf_content_information_content_emailaddress_content .Sendemail_conf_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_emailaddress .Sendemail_conf_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_content .Sendemail_conf_content_information_content_emailaddress .Sendemail_conf_content_information_content_emailaddress_input .Sendemail_conf_content_information_content_emailaddress_inputtag {
+  font-size: 15rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor {
+  margin-top: 50rem;
+  display: flex;
+  justify-content: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor p {
+  width: 10rem;
+  height: 18rem;
+  margin-top: 2rem;
+  border-left: 2rem solid #0045FF;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor .Sendemail_conf_content_information_personalInfor_text {
+  font-size: 15rem;
+  font-weight: bold;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_textarea {
+  margin-top: 20rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_textarea div {
+  width: 100%;
+  height: 300rem;
+  padding: 10rem 10rem;
+  font-size: 15rem;
+  border: 1rem groove gray;
+  overflow-y: scroll;
+  text-align: start;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_textbox {
+  margin-top: 30rem;
+  width: 200rem;
+  margin: auto;
+  margin-top: 30rem;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_textbox input {
+  width: 15rem;
+  height: 15rem;
+  margin-left: 10rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_textbox p {
+  margin-left: 5rem;
+  font-size: 15rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_btn .Sendemail_conf_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.Sendemail_conf .Sendemail_conf_content .Sendemail_conf_content_information .Sendemail_conf_content_information_personalInfor_btn .Sendemail_conf_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */

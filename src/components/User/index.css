@@ -161,11 +161,10 @@ table, th, td {
   display: flex;
 }
 .ULayer .ULayer_content .homeIcon {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 .ULayer .ULayer_content .pageTitle {
-  margin-left: 5rem;
-  font-size: 30rem;
+  font-size: 20rem;
   color: white;
   color: #0045FF;
 }
@@ -185,7 +184,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 210rem;
+  padding-bottom: 230rem;
   display: flex;
 }
 .userLogin .userLogin_content .userLogin_part {
@@ -328,7 +327,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 285rem;
+  padding-bottom: 305rem;
   display: flex;
 }
 .userRegister .userRegister_content .userRegister_part {
@@ -423,7 +422,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 285rem;
+  padding-bottom: 305rem;
   display: flex;
 }
 .userRegisterfinish .userRegisterfinish_content .userRegisterfinish_part {
@@ -481,7 +480,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 365rem;
+  padding-bottom: 385rem;
   display: flex;
 }
 .userPassreminder .userPassreminder_content .userPassreminder_part {
@@ -563,7 +562,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 365rem;
+  padding-bottom: 385rem;
   display: flex;
 }
 .userPasswordinform .userPasswordinform_content .userPasswordinform_part {
@@ -1323,7 +1322,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 588rem;
+  padding-bottom: 366rem;
 }
 .Useraddfinish .Useraddfinish_content .Useraddfinish_content_Header {
   width: 100%;
@@ -1450,7 +1449,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 338rem;
+  padding-bottom: 358rem;
 }
 .Newpass .Newpass_content .Newpass_part {
   width: 70%;
@@ -1528,7 +1527,7 @@ table, th, td {
   padding: 10rem 110rem;
   height: 100%;
   margin: auto;
-  padding-bottom: 448rem;
+  padding-bottom: 468rem;
 }
 .Newpassfinish .Newpassfinish_content .Newpassfinish_part {
   width: 70%;
