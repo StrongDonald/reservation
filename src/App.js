@@ -19,7 +19,11 @@ import Newpass from "./components/User/Newpass";
 import Newpassfinish from "./components/User/Newpassfinish";
 
 import UserHome from "./components/User/Userpage/UserHome";
+import Rule from "./components/User/Userpage/Rule";
+import Userinfor from "./components/User/Userpage/Userinfor";
 import Reservationstatus from "./components/User/Userpage/Reservationstatus";
+import Usermessage from "./components/User/Userpage/Usermessage";
+import Sendemailconf from "./components/User/Userpage/Sendemail_conf";
 
 function App() {
   return (
@@ -41,6 +45,10 @@ function App() {
             <Route exact path="/user/newpass/finish" element={<Newpassfinish />} />
 
             <Route exact path="/user/login" element={<UserHome />} />
+            <Route exact path="/user/infor" element={<Userinfor />} />
+            <Route exact path="/user/rule" element={<Rule />} />
+            <Route exact path="/user/message" element={<Usermessage />} />
+            <Route exact path="/user/sendemail-conf" element={<Sendemailconf />} />
             <Route exact path="/user/rsvStatus" element={<Reservationstatus />} />
           </Routes>
           <Footer />

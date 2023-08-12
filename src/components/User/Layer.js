@@ -18,7 +18,7 @@ const Layer = () => {
               },
             }}
           >
-            <HomeIcon sx={{ color: "#0045FF", fontSize: 30 }} />
+            <HomeIcon sx={{ color: "#0045FF", fontSize: 20 }} />
           </Box>
         </Link>
         <h2 className="pageTitle">

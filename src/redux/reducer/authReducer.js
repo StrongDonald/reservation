@@ -16,6 +16,32 @@ function reducer(state = initialization, action) {
       return {
         Title: ">ログイン",
       };
+    case "login-front":
+      return {
+        isAuthenticated: 1,
+        Title: "",
+      };
+    case "user-sendemail":
+    return {
+      isAuthenticated: 1,
+      Title: ">お問い合わせ",
+    };
+    case "login-register":
+      return {
+        isAuthenticated: 1,
+        Title: ">会員編集",
+      };
+      case "login-passChange":
+      return {
+        isAuthenticated: 1,
+        Title: ">パスワード変更",
+      };
+    case "user-infor":
+    return {
+      isAuthenticated: 1,
+      Title: ">会員詳細",
+    };
+      
     case "register":
       return {
         Title: ">メールアドレス登録",
@@ -45,6 +71,16 @@ function reducer(state = initialization, action) {
         Title: ">予約状況",
         isAuthenticated: 1,
       };
+    case "userRule":
+    return {
+      Title: ">利用規約",
+      isAuthenticated: 1,
+    };
+    case "userFront":
+    return {
+      Title: "",
+      isAuthenticated: 1,
+    };
     default:
       return "No";
   }
