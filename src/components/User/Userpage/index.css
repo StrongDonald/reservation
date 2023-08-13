@@ -1136,4 +1136,149 @@ table, th, td {
   border: none;
   margin-left: 30rem;
   border-radius: 5px;
+}
+
+.Sendemailfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Sendemailfinish .Sendemailfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 366rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_firststep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_firststep_circle .Sendemailfinish_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_firststep_circle .Sendemailfinish_content_Header_firststep_circle_label {
+  position: absolute;
+  left: -30rem;
+  width: 100rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_secondstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_secondstep_circle .Sendemailfinish_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  margin-top: 10rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_secondstep_circle .Sendemailfinish_content_Header_secondstep_circle_label {
+  position: absolute;
+  left: -30rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  width: 100rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_thirdstep_circle {
+  position: relative;
+  width: 40rem;
+  height: 80rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_thirdstep_circle .Sendemailfinish_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  margin-top: 10rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_thirdstep_circle .Sendemailfinish_content_Header_thirdstep_circle_label {
+  position: absolute;
+  left: -30rem;
+  margin-top: 10rem;
+  font-size: 15rem;
+  width: 100rem;
+  font-size: 15rem;
+  color: #0045FF;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_Header .Sendemailfinish_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 40rem;
+  padding: 50rem 20rem;
+  background-color: #ffffff;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information .Sendemailfinish_content_information_title {
+  width: 100%;
+  height: auto;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information .Sendemailfinish_content_information_title p {
+  text-align: start;
+  font-size: 15rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information .Sendemailfinish_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information .Sendemailfinish_content_information_personalInfor_btn .Sendemailfinish_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */

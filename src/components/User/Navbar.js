@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
 import logo from "../../img/Logo.png";
 
+import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
@@ -32,90 +33,120 @@ function Navbar() {
         </div>
 
         <div className="user_logoutnav_content_icons">
-          <Link className="navIcons" to="/user/infor"
-            onClick={() =>
-              dispatch({
-                type: "user-infor",
-              })
-            }>
-            <Box
-              sx={{
-                "& > :not(style)": {
-                  m: 0,
-                },
-              }}
-            >
-              <PermIdentityIcon sx={{ color: "#0045FF", fontSize: 30 }} />
-            </Box>
-          </Link>
+            <Tooltip
+                title={<h1 style={{ fontSize: "15px" }}>マイページ</h1>}
+                placement="bottom"
+                className="tooltip"
+              >
+              <Link className="navIcons" to="/user/infor"
+                onClick={() =>
+                  dispatch({
+                    type: "user-infor",
+                  })
+                }>
+                <Box
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <PermIdentityIcon sx={{ color: "#0045FF", fontSize: 30 }} />
+                </Box>
+              </Link>
+          </Tooltip>
 
-          <Link className="navIcons" to="/">
-            <Box
-              sx={{
-                "& > :not(style)": {
-                  m: 0,
-                },
-              }}
+            <Tooltip
+              title={<h1 style={{ fontSize: "15px" }}>予約履歴</h1>}
+              placement="bottom"
+              className="tooltip"
             >
-              <HistoryIcon sx={{ color: "#0045FF", fontSize: 30 }} />
-            </Box>
-          </Link>
+            <Link className="navIcons" to="/">
+              <Box
+                sx={{
+                  "& > :not(style)": {
+                    m: 0,
+                  },
+                }}
+              >
+                <HistoryIcon sx={{ color: "#0045FF", fontSize: 30 }} />
+              </Box>
+            </Link>
+          </Tooltip>
 
-          <Link className="navIcons" to="/user/message"
-            onClick={() =>
-              dispatch({
-                type: "user-sendemail",
-              })
-            }>
-            <Box
-              sx={{
-                "& > :not(style)": {
-                  m: 0,
-                },
-              }}
-            >
-              <EmailIcon sx={{ color: "#0045FF", fontSize: 30 }} />
-            </Box>
-          </Link>
+            <Tooltip
+                title={<h1 style={{ fontSize: "15px" }}>お問い合わせ</h1>}
+                placement="bottom"
+                className="tooltip"
+              >
+            <Link className="navIcons" to="/user/message"
+              onClick={() =>
+                dispatch({
+                  type: "user-sendemail",
+                })
+              }>
+              <Box
+                sx={{
+                  "& > :not(style)": {
+                    m: 0,
+                  },
+                }}
+              >
+                <EmailIcon sx={{ color: "#0045FF", fontSize: 30 }} />
+              </Box>
+            </Link>
+          </Tooltip>
 
-          <Link className="navIcons" to="/user/rule"
-            onClick={() =>
-              dispatch({
-                type: "userRule",
-              })
-            }>
-            <Box
-              sx={{
-                "& > :not(style)": {
-                  m: 0,
-                },
-              }}
+            <Tooltip
+              title={<h1 style={{ fontSize: "15px" }}>利用規約</h1>}
+              placement="bottom"
+              className="tooltip"
             >
-              <DescriptionOutlinedIcon
-                sx={{ color: "#0045FF", fontSize: 30 }}
-              />
-            </Box>
-          </Link>
+              <Link className="navIcons" to="/user/rule"
+                onClick={() =>
+                  dispatch({
+                    type: "userRule",
+                  })
+                }>
+                <Box
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <DescriptionOutlinedIcon
+                    sx={{ color: "#0045FF", fontSize: 30 }}
+                  />
+                </Box>
+              </Link>
+          </Tooltip>
 
-          <Link
-            className="navIcons"
-            to="/"
-            onClick={() =>
-              dispatch({
-                type: "logout",
-              })
-            }
-          >
-            <Box
-              sx={{
-                "& > :not(style)": {
-                  m: 0,
-                },
-              }}
+            <Tooltip
+                title={<h1 style={{ fontSize: "15px" }}>ログアウト</h1>}
+                placement="bottom"
+                className="tooltip"
+              >
+            <Link
+              className="navIcons"
+              to="/"
+              onClick={() =>
+                dispatch({
+                  type: "logout",
+                })
+              }
             >
-              <ExitToAppIcon sx={{ color: "#0045FF", fontSize: 30 }} />
-            </Box>
-          </Link>
+              <Box
+                sx={{
+                  "& > :not(style)": {
+                    m: 0,
+                  },
+                }}
+              >
+                <ExitToAppIcon sx={{ color: "#0045FF", fontSize: 30 }} />
+              </Box>
+            </Link>
+          </Tooltip>
         </div>
       </div>
     </div>
