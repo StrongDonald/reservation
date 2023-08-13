@@ -15,6 +15,7 @@ function reducer(state = initialization, action) {
     case "front":
       return {
         Title: ">ログイン",
+        isAuthenticated: 0,
       };
     case "login-front":
       return {
