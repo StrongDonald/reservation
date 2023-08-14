@@ -61,7 +61,12 @@ function Navbar() {
               placement="bottom"
               className="tooltip"
             >
-            <Link className="navIcons" to="/">
+            <Link className="navIcons" to="/user/reservationHistory"
+              onClick={() =>
+                dispatch({
+                  type: "reservationhistory",
+                })
+              }>
               <Box
                 sx={{
                   "& > :not(style)": {

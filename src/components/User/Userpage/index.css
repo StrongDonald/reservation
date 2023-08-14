@@ -33,8 +33,8 @@ img {
 }
 
 table, th, td {
-  border: 1px solid rgb(202, 199, 199);
   border-collapse: collapse;
+  border: 1rem solid #dddfde;
 }
 
 .UserHome {
@@ -270,6 +270,7 @@ table, th, td {
   width: 100%;
   height: auto;
   font-size: 10px;
+  padding-bottom: 10rem;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .undisplay {
   display: none;
@@ -279,22 +280,57 @@ table, th, td {
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_1 {
   background-color: rgba(255, 183, 0, 0.413);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_2 {
   background-color: rgba(89, 246, 54, 0.3411764706);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_3 {
   background-color: rgba(6, 201, 223, 0.4352941176);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_4 {
   background-color: rgba(12, 132, 244, 0.4784313725);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_5 {
   background-color: rgba(133, 36, 251, 0.4235294118);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
 }
 .Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_6 {
   background-color: rgba(239, 21, 119, 0.4980392157);
-  margin-bottom: 20rem;
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_1:hover {
+  background-color: rgba(255, 183, 0, 0.259);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_2:hover {
+  background-color: rgba(89, 246, 54, 0.2274509804);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_3:hover {
+  background-color: rgba(6, 201, 223, 0.2705882353);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_4:hover {
+  background-color: rgba(12, 132, 244, 0.2745098039);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_5:hover {
+  background-color: rgba(133, 36, 251, 0.2666666667);
+}
+.Reservationstatus .Reservationstatus_content .Resevationstatus_content_form .Resevationstatus_content_form_calendar table tbody tr td .rsv_box .rsv_6:hover {
+  background-color: rgba(239, 21, 119, 0.3254901961);
 }
 
 .Rule {
@@ -1274,6 +1310,1258 @@ table, th, td {
   margin-top: 50rem;
 }
 .Sendemailfinish .Sendemailfinish_content .Sendemailfinish_content_information .Sendemailfinish_content_information_personalInfor_btn .Sendemailfinish_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.ReservationSet {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.ReservationSet .ReservationSet_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 60rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_firststep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_firststep_circle .ReservationSet_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_firststep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #0045FF;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_secondstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_secondstep_circle .ReservationSet_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_secondstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_thirdstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_thirdstep_circle .ReservationSet_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_thirdstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_Header .ReservationSet_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20rem;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_title .ReservationSet_content_information_title_symbol {
+  width: 8rem;
+  height: 20rem;
+  border-left: 2rem solid #0045FF;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_title .ReservationSet_content_information_title_text {
+  font-size: 20rem;
+  margin-top: -5rem;
+  font-weight: bold;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content {
+  margin-top: 30rem;
+  width: 100%;
+  height: auto;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname {
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_content {
+  width: 25%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_content .ReservationSet_content_information_content_partname_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_content .ReservationSet_content_information_content_partname_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12rem;
+  font-weight: bold;
+  padding: 5rem 7rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 100%;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_input .ReservationSet_content_information_content_partname_inputtag {
+  font-size: 15rem;
+  font-weight: bold;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_partname .ReservationSet_content_information_content_partname_input .addTag {
+  border: 1px solid #727272;
+  border-radius: 3rem;
+  width: 200rem;
+  height: 30rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_name {
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_name .ReservationSet_content_information_content_name_content {
+  width: 25%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_name .ReservationSet_content_information_content_name_content .ReservationSet_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_name .ReservationSet_content_information_content_name_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 100%;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_name .ReservationSet_content_information_content_name_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  font-weight: bold;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_phonenum {
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_phonenum .ReservationSet_content_information_content_phonenum_content {
+  width: 25%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_phonenum .ReservationSet_content_information_content_phonenum_content .ReservationSet_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_phonenum .ReservationSet_content_information_content_phonenum_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 100%;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_phonenum .ReservationSet_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  font-weight: bold;
+  margin-right: 10rem;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_address {
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_address .ReservationSet_content_information_content_address_content {
+  width: 25%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_address .ReservationSet_content_information_content_address_content .ReservationSet_content_information_content_address_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_address .ReservationSet_content_information_content_address_input {
+  padding: 7rem 10rem;
+  width: 100%;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_address .ReservationSet_content_information_content_address_input textarea {
+  width: 100%;
+  height: 130rem;
+  border: 1px solid #727272;
+  border-radius: 3px;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress {
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress .ReservationSet_content_information_content_emailaddress_content {
+  width: 25%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress .ReservationSet_content_information_content_emailaddress_content .ReservationSet_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress .ReservationSet_content_information_content_emailaddress_content .ReservationSet_content_information_content_emailaddress_content_require {
+  background-color: red;
+  color: white;
+  font-size: 12rem;
+  font-weight: bold;
+  padding: 5rem 7rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress .ReservationSet_content_information_content_emailaddress_input {
+  padding: 10rem 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_content .ReservationSet_content_information_content_emailaddress .ReservationSet_content_information_content_emailaddress_input select {
+  width: 100rem;
+  height: 30rem;
+  border-radius: 3rem;
+  border: 1px solid #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor {
+  margin-top: 50rem;
+  display: flex;
+  justify-content: start;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor p {
+  width: 8rem;
+  height: 20rem;
+  margin-top: 5rem;
+  border-left: 2rem solid #0045FF;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor .ReservationSet_content_information_personalInfor_text {
+  font-size: 20rem;
+  font-weight: bold;
+  color: #727272;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor {
+  width: 100%;
+  height: auto;
+  margin-top: 30rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_firstline .ReservationSet_content_userinfor_firstline_title {
+  background-color: #f4f7f6;
+  padding: 15rem 10rem;
+  width: 20%;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_firstline .ReservationSet_content_userinfor_firstline_title p {
+  text-align: start;
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_firstline .ReservationSet_content_userinfor_firstline_content {
+  background-color: white;
+  padding: 15rem 10rem;
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_firstline .ReservationSet_content_userinfor_firstline_content p {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_secondline .ReservationSet_content_userinfor_secondline_title {
+  background-color: #f4f7f6;
+  padding: 15rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_secondline .ReservationSet_content_userinfor_secondline_title p {
+  text-align: start;
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_secondline .ReservationSet_content_userinfor_secondline_content {
+  background-color: white;
+  padding: 15rem 10rem;
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_secondline .ReservationSet_content_userinfor_secondline_content p {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_thirdline .ReservationSet_content_userinfor_thirdline_title {
+  background-color: #f4f7f6;
+  padding: 15rem 10rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_thirdline .ReservationSet_content_userinfor_thirdline_title p {
+  text-align: start;
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_thirdline .ReservationSet_content_userinfor_thirdline_content {
+  background-color: white;
+  padding: 15rem 10rem;
+  display: flex;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_userinfor .ReservationSet_content_userinfor_thirdline .ReservationSet_content_userinfor_thirdline_content p {
+  color: #727272;
+  font-size: 15rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor_btn .ReservationSet_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.ReservationSet .ReservationSet_content .ReservationSet_content_information .ReservationSet_content_information_personalInfor_btn .ReservationSet_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.Reservationtest {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.Reservationtest .Reservationtest_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 132rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_firststep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_firststep_circle .Reservationtest_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_firststep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_secondstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_secondstep_circle .Reservationtest_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_secondstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #0045FF;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_thirdstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_thirdstep_circle .Reservationtest_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_thirdstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_Header .Reservationtest_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20rem;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_title .Reservationtest_content_information_title_symbol {
+  width: 8rem;
+  height: 20rem;
+  border-left: 2rem solid #0045FF;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_title .Reservationtest_content_information_title_text {
+  font-size: 20rem;
+  margin-top: -5rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_partname .Reservationtest_content_information_content_partname_title {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_partname .Reservationtest_content_information_content_partname_title .Reservationtest_content_information_content_partname_title_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_partname .Reservationtest_content_information_content_partname_content {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_partname .Reservationtest_content_information_content_partname_content .Reservationtest_content_information_content_partname_content_txt {
+  height: 30rem;
+  font-size: 15rem;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_name .Reservationtest_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_name .Reservationtest_content_information_content_name_content .Reservationtest_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_name .Reservationtest_content_information_content_name_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_name .Reservationtest_content_information_content_name_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_phonenum .Reservationtest_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_phonenum .Reservationtest_content_information_content_phonenum_content .Reservationtest_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_phonenum .Reservationtest_content_information_content_phonenum_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_phonenum .Reservationtest_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_address .Reservationtest_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_address .Reservationtest_content_information_content_address_content p {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_address .Reservationtest_content_information_content_address_input {
+  padding: 15rem 10rem;
+  width: 70%;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_address .Reservationtest_content_information_content_address_input .Reservationtest_content_information_content_address_input_box1 p {
+  font-size: 15rem;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_emailaddress {
+  display: flex;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_emailaddress .Reservationtest_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_emailaddress .Reservationtest_content_information_content_emailaddress_content .Reservationtest_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_emailaddress .Reservationtest_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_content .Reservationtest_content_information_content_emailaddress .Reservationtest_content_information_content_emailaddress_input .Reservationtest_content_information_content_emailaddress_inputtag {
+  font-size: 15rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor {
+  margin-top: 50rem;
+  display: flex;
+  justify-content: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor p {
+  width: 10rem;
+  height: 18rem;
+  margin-top: 2rem;
+  border-left: 2rem solid #0045FF;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor .Reservationtest_content_information_personalInfor_text {
+  font-size: 15rem;
+  font-weight: bold;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_textarea {
+  margin-top: 20rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_textarea div {
+  width: 100%;
+  height: 300rem;
+  padding: 10rem 10rem;
+  font-size: 15rem;
+  border: 1rem groove gray;
+  overflow-y: scroll;
+  text-align: start;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_textbox {
+  margin-top: 30rem;
+  width: 200rem;
+  margin: auto;
+  margin-top: 30rem;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_textbox input {
+  width: 15rem;
+  height: 15rem;
+  margin-left: 10rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_textbox p {
+  margin-left: 5rem;
+  font-size: 15rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .margin {
+  margin-top: 30rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_btn .Reservationtest_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.Reservationtest .Reservationtest_content .Reservationtest_content_information .Reservationtest_content_information_personalInfor_btn .Reservationtest_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.ReservationSetfinish {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.ReservationSetfinish .ReservationSetfinish_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 366rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 30rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_firststep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_firststep_circle .ReservationSetfinish_content_Header_firststep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_firststep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_firststep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_secondstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_secondstep_circle .ReservationSetfinish_content_Header_secondstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_secondstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_secondstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_thirdstep_circle {
+  width: 40rem;
+  height: 80rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_thirdstep_circle .ReservationSetfinish_content_Header_thirdstep_circle_num {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 30px;
+  font-size: 22rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0045FF;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_thirdstep_circle p {
+  margin-top: 10rem;
+  font-size: 15rem;
+  color: #0045FF;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_Header .ReservationSetfinish_content_Header_thirdstep_line {
+  width: 240rem;
+  height: 3rem;
+  margin-top: -20rem;
+  background-color: #0045FF;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20rem;
+  padding: 50rem 20rem;
+  background-color: #ffffff;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_title {
+  width: 100%;
+  height: auto;
+  text-align: start;
+  font-size: 15rem;
+  color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_ID {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_ID .ID_title {
+  font-size: 30rem;
+  font-weight: bold;
+  color: #727272;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_ID .ID_num {
+  font-size: 35rem;
+  font-weight: bold;
+  color: red;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.ReservationSetfinish .ReservationSetfinish_content .ReservationSetfinish_content_information .ReservationSetfinish_content_information_personalInfor_btn .ReservationSetfinish_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+
+.reservationhistory {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.reservationhistory .reservationhistory_content {
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 376rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart {
+  background-color: white;
+  padding: 30rem 20rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_hearder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_hearder .reservationhistory_content_firstpart_hearder_text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_hearder .reservationhistory_content_firstpart_hearder_text div {
+  width: 10rem;
+  height: 20rem;
+  border-left: 2px solid #0045FF;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_hearder .reservationhistory_content_firstpart_hearder_text .reservationhistory_content_firstpart_hearder_text_content {
+  font-size: 17rem;
+  font-weight: bold;
+  color: #727272;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_search {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_search p {
+  font-size: 15rem;
+  color: #727272;
+  padding-right: 100rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_search span {
+  font-size: 15rem;
+  color: #727272;
+  padding: 0 10rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_search input {
+  height: 30rem;
+  width: 200rem;
+  border-radius: 3px;
+  border: 1px solid #727272;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_line {
+  margin: 30rem 0;
+  border-top: 1px solid #727272;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_checkbox_line {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_checkbox_line .reservationhistory_content_firstpart_checkbox_text {
+  font-size: 15rem;
+  color: #727272;
+  margin-right: 50rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_checkbox_line .reservationhistory_content_firstpart_checkbox_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddfde;
+  padding: 5rem 8rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_checkbox_line .reservationhistory_content_firstpart_checkbox_content input {
+  margin-right: 7rem;
+  width: 15rem;
+  height: 15rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_checkbox_line .reservationhistory_content_firstpart_checkbox_content span {
+  font-size: 15rem;
+  color: #727272;
+  margin-right: 10rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_btnbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_btnbox .reservationhistory_content_firstpart_btnbox_back {
+  background-color: #727272;
+  color: white;
+  padding: 10rem 15rem;
+  border: none;
+  border-radius: 3px;
+  margin-right: 15rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_firstpart .reservationhistory_content_firstpart_btnbox .reservationhistory_content_firstpart_btnbox_next {
+  background-color: #0045FF;
+  color: white;
+  padding: 13rem 15rem;
+  border: none;
+  border-radius: 3px;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart {
+  background-color: white;
+  padding: 50rem 20rem;
+  margin-top: 50rem;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table {
+  width: 100%;
+  height: auto;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table thead tr {
+  background-color: #727272;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table thead tr .td1 {
+  width: 15%;
+  padding: 15rem 0;
+  font-size: 15rem;
+  color: white;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table thead tr .td2 {
+  width: 40%;
+  padding: 15rem 0;
+  font-size: 15rem;
+  color: white;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table thead tr .td3 {
+  width: 30%;
+  padding: 15rem 0;
+  font-size: 15rem;
+  color: white;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table thead tr .td4 {
+  width: 15%;
+  padding: 15rem 0;
+  font-size: 15rem;
+  color: white;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table tbody tr .td1 {
+  font-size: 15rem;
+  color: white;
+  padding: 15rem 0;
+  background-color: #9dca6d;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table tbody tr .td2 {
+  font-size: 15rem;
+  text-align: start;
+  color: #727272;
+  padding: 15rem 10rem;
+  background-color: white;
+}
+.reservationhistory .reservationhistory_content .reservationhistory_content_secondpart table tbody tr .td4 button {
+  font-size: 15rem;
+  color: white;
+  padding: 10rem 45rem;
+  background-color: #0045FF;
+  border: none;
+  border-radius: 3px;
+}
+
+.undisplay {
+  display: none !important;
+}
+
+.RsvDetail {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.RsvDetail .RsvDetail_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 132rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information {
+  width: 100%;
+  height: auto;
+  padding: 50rem 20rem;
+  background-color: white;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_IDnum {
+  width: 100%;
+  height: auto;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_IDnum tbody tr .RsvDetail_content_information_IDnum_label {
+  font-size: 15rem;
+  width: 30%;
+  color: #727272;
+  text-align: start;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_IDnum tbody tr .RsvDetail_content_information_IDnum_num {
+  font-size: 15rem;
+  color: #727272;
+  text-align: start;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 40rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_title .RsvDetail_content_information_title_symbol {
+  width: 8rem;
+  height: 20rem;
+  border-left: 2rem solid #0045FF;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_title .RsvDetail_content_information_title_text {
+  font-size: 20rem;
+  margin-top: -5rem;
+  font-weight: bold;
+  color: #727272;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+  color: #727272;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_partname .RsvDetail_content_information_content_partname_title {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_partname .RsvDetail_content_information_content_partname_title .RsvDetail_content_information_content_partname_title_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_partname .RsvDetail_content_information_content_partname_content {
+  padding: 0 10rem;
+  width: 70%;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_partname .RsvDetail_content_information_content_partname_content .RsvDetail_content_information_content_partname_content_txt {
+  height: 30rem;
+  font-size: 15rem;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_name .RsvDetail_content_information_content_name_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_name .RsvDetail_content_information_content_name_content .RsvDetail_content_information_content_name_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_name .RsvDetail_content_information_content_name_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_name .RsvDetail_content_information_content_name_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_phonenum .RsvDetail_content_information_content_phonenum_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_phonenum .RsvDetail_content_information_content_phonenum_content .RsvDetail_content_information_content_phonenum_content_txt {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_phonenum .RsvDetail_content_information_content_phonenum_input {
+  padding: 0 10rem;
+  width: 70%;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_phonenum .RsvDetail_content_information_content_phonenum_input p {
+  font-size: 15rem;
+  margin-right: 10rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_address .RsvDetail_content_information_content_address_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_address .RsvDetail_content_information_content_address_content p {
+  color: #727272;
+  font-size: 15rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_address .RsvDetail_content_information_content_address_input {
+  padding: 15rem 10rem;
+  width: 70%;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_address .RsvDetail_content_information_content_address_input .RsvDetail_content_information_content_address_input_box1 p {
+  font-size: 15rem;
+  text-align: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_emailaddress {
+  display: flex;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_emailaddress .RsvDetail_content_information_content_emailaddress_content {
+  width: 30%;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 10rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_emailaddress .RsvDetail_content_information_content_emailaddress_content .RsvDetail_content_information_content_emailaddress_content_txt {
+  color: #727272;
+  font-size: 15rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_emailaddress .RsvDetail_content_information_content_emailaddress_input {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10rem;
+  width: 70%;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_content .RsvDetail_content_information_content_emailaddress .RsvDetail_content_information_content_emailaddress_input .RsvDetail_content_information_content_emailaddress_inputtag {
+  font-size: 15rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor {
+  margin-top: 50rem;
+  display: flex;
+  justify-content: start;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor p {
+  width: 10rem;
+  height: 18rem;
+  margin-top: 2rem;
+  border-left: 2rem solid #0045FF;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor .RsvDetail_content_information_personalInfor_text {
+  font-size: 15rem;
+  font-weight: bold;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .margin {
+  margin-top: 30rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor_btn .RsvDetail_content_information_personalInfor_btn_back {
+  font-size: 15rem;
+  color: white;
+  background-color: #727272;
+  padding: 10rem 20rem;
+  border: none;
+  border-radius: 5px;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor_btn .RsvDetail_content_information_personalInfor_btn_next {
+  font-size: 15rem;
+  color: white;
+  background-color: #0045FF;
+  padding: 12rem 23rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 5px;
+}
+.RsvDetail .RsvDetail_content .RsvDetail_content_information .RsvDetail_content_information_personalInfor_btn .RsvDetail_content_information_personalInfor_btn_cancel {
+  font-size: 15rem;
+  color: white;
+  background-color: red;
+  padding: 10rem 20rem;
+  border: none;
+  margin-left: 30rem;
+  border-radius: 25px;
+}
+
+.RsvCancel {
+  width: 100%;
+  background: #00B3FF;
+  height: 100%;
+}
+.RsvCancel .RsvCancel_content {
+  position: relative;
+  max-width: 1366px;
+  padding: 10rem 110rem;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 366rem;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information {
+  width: 100%;
+  height: auto;
+  margin-top: 20rem;
+  padding: 50rem 20rem;
+  background-color: #ffffff;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_title {
+  width: 100%;
+  height: auto;
+  text-align: start;
+  font-size: 15rem;
+  color: #727272;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_ID {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_ID .ID_title {
+  font-size: 30rem;
+  font-weight: bold;
+  color: #727272;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_ID .ID_num {
+  font-size: 35rem;
+  font-weight: bold;
+  color: red;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_personalInfor_btn {
+  margin-top: 50rem;
+}
+.RsvCancel .RsvCancel_content .RsvCancel_content_information .RsvCancel_content_information_personalInfor_btn .RsvCancel_content_information_personalInfor_btn_next {
   font-size: 15rem;
   color: white;
   background-color: #0045FF;

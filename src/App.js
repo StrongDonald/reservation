@@ -24,7 +24,14 @@ import Userinfor from "./components/User/Userpage/Userinfor";
 import Reservationstatus from "./components/User/Userpage/Reservationstatus";
 import Usermessage from "./components/User/Userpage/Usermessage";
 import Sendemailconf from "./components/User/Userpage/Sendemail_conf";
-import Sendemail_finish from "./components/User/Userpage/Sendemail_finish";
+import Sendemailfinish from "./components/User/Userpage/Sendemail_finish";
+
+import ReservationSet from "./components/User/Userpage/ReservationSet";
+import Reservationtest from "./components/User/Userpage/Reservationtest";
+import ReservationSetfinish from "./components/User/Userpage/ReservationSetfinish";
+import ReservationHistory from "./components/User/Userpage/ReservationHistory";
+import RsvDetail from "./components/User/Userpage/RsvDetail";
+import RsvCancel from "./components/User/Userpage/RsvCancel";
 
 function App() {
   return (
@@ -50,8 +57,14 @@ function App() {
             <Route exact path="/user/rule" element={<Rule />} />
             <Route exact path="/user/message" element={<Usermessage />} />
             <Route exact path="/user/sendemail-conf" element={<Sendemailconf />} />
-            <Route exact path="/user/emailsend-finish" element={<Sendemail_finish />} />
+            <Route exact path="/user/emailsend-finish" element={<Sendemailfinish />} />
             <Route exact path="/user/rsvStatus" element={<Reservationstatus />} />
+            <Route exact path="/user/reservationSet" element={<ReservationSet />} />
+            <Route exact path="/user/reservationset-conf" element={<Reservationtest />} />
+            <Route exact path="/user/reservation-finish" element={<ReservationSetfinish />} />
+            <Route exact path="/user/reservationHistory" element={<ReservationHistory />} />
+            <Route exact path="/user/rsvdetail" element={<RsvDetail />} />
+            <Route exact path="/user/reservation-cancel" element={<RsvCancel />} />
           </Routes>
           <Footer />
         </div>

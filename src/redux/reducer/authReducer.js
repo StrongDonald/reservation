@@ -1,4 +1,4 @@
-const initialization = { Title: "ログイン", isAuthenticated: 0 };
+const initialization = { Title: "ログイン", isAuthenticated: 0,reservationDate:"", reservationContent:"", reservationFee:"", reservationTime:""};
 
 function reducer(state = initialization, action) {
   switch (action.type) {
@@ -26,6 +26,82 @@ function reducer(state = initialization, action) {
     return {
       isAuthenticated: 1,
       Title: ">お問い合わせ",
+    };
+    case "reservationhistory":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約履歴",
+    };
+    case "rsvdetail":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約詳細",
+    };
+    case "rsvSet1":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "朝と夕方（男性）",
+      reservationTime: "05:00 ～ 19:00",
+      reservationFee: "1日 12000円",
+      reservationDate: action.date,
+    };
+    case "rsvSet2":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "朝と夕方（女性）",
+      reservationTime: "05:00 ～ 19:00",
+      reservationFee: "1日 9000円",
+      reservationDate: action.date,
+    };
+    case "rsvSet3":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "朝のみ（男性）",
+      reservationTime: "05:00 ～ 12:00",
+      reservationFee: "1日 6000円",
+      reservationDate: action.date,
+    };
+    case "rsvSet4":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "朝のみ（女性）",
+      reservationTime: "05:00 ～ 12:00",
+      reservationFee: "1日 4500円",
+      reservationDate: action.date,
+    };
+    case "rsvSet5":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "朝夕方のみ（男性）",
+      reservationTime: "12:00 ～ 19:00",
+      reservationFee: "1日 6000円",
+      reservationDate: action.date,
+    };
+    case "rsvSet6":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: "夕方のみ（女性）",
+      reservationTime: "12:00 ～ 19:00",
+      reservationFee: "1日 4500円",
+      reservationDate: action.date,
+    };
+    case "rsvSetconf":
+    return {
+      isAuthenticated: 1,
+      Title: ">予約登録",
+      reservationContent: action.content,
+      reservationTime: action.time,
+      reservationFee: action.fee,
+      reservationDate: action.date,
+      finishdate: action.finishdate,
+      finishtime: action.finishtime,
+      message: action.message,
     };
     case "login-register":
       return {
@@ -67,10 +143,19 @@ function reducer(state = initialization, action) {
       return {
         Title: ">パスワードリマインダー",
       };
+    case "rsvCancel":
+    return {
+      Title: ">予約キャンセル完了",
+      isAuthenticated: 1,
+    };
     case "rsvStatus":
       return {
         Title: ">予約状況",
         isAuthenticated: 1,
+        reservationContent: action.content,
+        reservationTime: action.time,
+        reservationFee: action.fee,
+        reservationDate: action.date,
       };
     case "userRule":
     return {
