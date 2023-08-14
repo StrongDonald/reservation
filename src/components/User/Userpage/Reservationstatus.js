@@ -64,6 +64,21 @@ function Reservationstatus() {
   const [cur_year_month, setcur_year_month] = useState();
   const [flag, setflag] = useState([]);
   const [rsv_status, setrsv_status] = useState([1, 1, 1, 1, 1, 1, 1]);
+  
+  const selected_month = {
+    Jan: "01",
+    Feb: "02",
+    Mar: "03",
+    Apr: "04",
+    May: "05",
+    Jun: "06",
+    Jul: "07",
+    Aug: "08",
+    Sep: "09",
+    Oct: "10",
+    Nov: "11",
+    Dec: "12",
+  };
 
   useEffect(() => {
     console.log("This code will execute when the component is mounted");
@@ -117,7 +132,10 @@ function Reservationstatus() {
       let arr = [];
       for (let i = 0; i < 42; i++) {
         if (i < Day_calc(D.toDateString()) + Number(D_temp[2])) arr[i] = 0;
-        else if (i >= Day_calc(D.toDateString()) + Number(D_temp[2]) && i < Date_cntCalc(D.toDateString()) + Day_calc(D.toDateString()))
+        else if (
+          i >= Day_calc(D.toDateString()) + Number(D_temp[2]) &&
+          i < Date_cntCalc(D.toDateString()) + Day_calc(D.toDateString())
+        )
           arr[i] = 1;
         else arr[i] = 0;
       }
@@ -285,49 +303,19 @@ function Reservationstatus() {
     setDate(new_date);
   }
 
-  const rsv_list = (
-    <div className="rsv_box">
-      <div className={rsv_status[0]?"rsv_1 display":"undisplay"}>
-        <p>朝と夕方（男性）</p>
-        <p>◉</p>
-      </div>
-      <div className={rsv_status[1]?"rsv_2 display":"undisplay"}>
-        <p>朝と夕方（女性）</p>
-        <p>○</p>
-      </div>
-      <div className={rsv_status[2]?"rsv_3 display":"undisplay"}>
-        <p>朝のみ（男性）</p>
-        <p>△</p>
-      </div>
-      <div className={rsv_status[3]?"rsv_4 display":"undisplay"}>
-        <p>朝のみ（女性）</p>
-        <p>×</p>
-      </div>
-      <div className={rsv_status[4]?"rsv_5 display":"undisplay"}>
-        <p>夕方のみ（男性）</p>
-        <p>@</p>
-      </div>
-      <div className={rsv_status[5]?"rsv_6 display":"undisplay"}>
-        <p>夕方のみ（女性）</p>
-        <p>&</p>
-      </div>
-    </div>
-  );
-
   const space = <div className="space_box"></div>;
 
   function selected_func(e) {
     let arr = [];
-    for(let i = 0 ; i < 7; i++) arr[i] = 0;
+    for (let i = 0; i < 7; i++) arr[i] = 0;
 
-    if(e.target.value === "1") {
-        for(let i = 0 ; i < 7; i++) arr[i] = 1;
+    if (e.target.value === "1") {
+      for (let i = 0; i < 7; i++) arr[i] = 1;
+    } else {
+      console.log(arr);
+      arr[e.target.value - 2] = 1;
     }
-    else {
-        console.log(arr);
-        arr[e.target.value - 2] = 1;
-    }
-    
+
     setrsv_status(arr);
   }
 
@@ -395,7 +383,10 @@ function Reservationstatus() {
                 </Box>
               </div>
             </div>
-            <select className="Resevationstatus_content_form_nav_filter" onChange={(e) => selected_func(e)}>
+            <select
+              className="Resevationstatus_content_form_nav_filter"
+              onChange={(e) => selected_func(e)}
+            >
               <option value={1}>全ての枠</option>
               <option value={2}>朝と夕方（男性）</option>
               <option value={3}>朝と夕方（女性）</option>
@@ -447,191 +438,4601 @@ function Reservationstatus() {
                 <tr>
                   <td>
                     <div className="calendar_date">{datenum[0]}</div>
-                    {flag[0]?rsv_list:space}
+                    {flag[0] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1] + "/" + datenum[0]],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[1]}</div>
-                    {flag[1]?rsv_list:space}
+                    {flag[1] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[1],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[2]}</div>
-                    {flag[2]?rsv_list:space}
+                    {flag[2] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[2],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[3]}</div>
-                    {flag[3]?rsv_list:space}
+                    {flag[3] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[3],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[4]}</div>
-                    {flag[4]?rsv_list:space}
+                    {flag[4] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[4],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[5]}</div>
-                    {flag[5]?rsv_list:space}
+                    {flag[5] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[5],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[6]}</div>
-                    {flag[6]?rsv_list:space}
+                    {flag[6] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[6],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                 </tr>
 
                 <tr>
                   <td>
                     <div className="calendar_date">{datenum[7]}</div>
-                    {flag[7]?rsv_list:space}
+                    {flag[7] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[7],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[8]}</div>
-                    {flag[8]?rsv_list:space}
+                    {flag[8] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[8],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[9]}</div>
-                    {flag[9]?rsv_list:space}
+                    {flag[9] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[9],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[10]}</div>
-                    {flag[10]?rsv_list:space}
+                    {flag[10] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[10],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[11]}</div>
-                    {flag[11]?rsv_list:space}
+                    {flag[11] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[11],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[12]}</div>
-                    {flag[12]?rsv_list:space}
+                    {flag[12] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[12],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[13]}</div>
-                    {flag[13]?rsv_list:space}
+                    {flag[13] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[13],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                 </tr>
 
                 <tr>
                   <td>
                     <div className="calendar_date">{datenum[14]}</div>
-                    {flag[14]?rsv_list:space}
+                    {flag[14] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[14],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[15]}</div>
-                    {flag[15]?rsv_list:space}
+                    {flag[15] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[15],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[15],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[15],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[15],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[15],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1] + "/" + datenum[15]],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[16]}</div>
-                    {flag[16]?rsv_list:space}
+                    {flag[16] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[16],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[17]}</div>
-                    {flag[17]?rsv_list:space}
+                    {flag[17] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[17],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[18]}</div>
-                    {flag[18]?rsv_list:space}
+                    {flag[18] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[18],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[19]}</div>
-                    {flag[19]?rsv_list:space}
+                    {flag[19] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[19],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[19],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[19],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[19],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[19],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1] + "/" + datenum[19]],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[20]}</div>
-                    {flag[20]?rsv_list:space}
+                    {flag[20] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                 </tr>
 
                 <tr>
                   <td>
                     <div className="calendar_date">{datenum[21]}</div>
-                    {flag[21]?rsv_list:space}
+                    {flag[21] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[21],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[22]}</div>
-                    {flag[22]?rsv_list:space}
+                    {flag[22] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[0],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[22],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[22],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[22],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[22],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[22],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[23]}</div>
-                    {flag[23]?rsv_list:space}
+                    {flag[23] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[23],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[24]}</div>
-                    {flag[24]?rsv_list:space}
+                    {flag[24] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[24],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[25]}</div>
-                    {flag[25]?rsv_list:space}
+                    {flag[25] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[25],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[26]}</div>
-                    {flag[26]?rsv_list:space}
+                    {flag[26] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[26],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                   <td>
                     <div className="calendar_date">{datenum[27]}</div>
-                    {flag[27]?rsv_list:space}
+                    {flag[27] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[27],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                   </td>
                 </tr>
 
                 {date_cnt + Day_status > 28 ? (
-                <tr>
-                  <td>
-                    <div className="calendar_date">{datenum[28]}</div>
-                    {flag[28]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[29]}</div>
-                    {flag[29]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[30]}</div>
-                    {flag[30]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[31]}</div>
-                    {flag[31]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[32]}</div>
-                    {flag[32]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[33]}</div>
-                    {flag[33]?rsv_list:space}
-                  </td>
-                  <td>
-                    <div className="calendar_date">{datenum[34]}</div>
-                    {flag[34]?rsv_list:space}
-                  </td>
-                </tr>
+                  <tr>
+                    <td>
+                      <div className="calendar_date">{datenum[28]}</div>
+                      {flag[28] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[28],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[29]}</div>
+                      {flag[29] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[29],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[30]}</div>
+                      {flag[30] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[30],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[31]}</div>
+                      {flag[31] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[31],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[32]}</div>
+                      {flag[32] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[32],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[33]}</div>
+                      {flag[33] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[33],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                    <td>
+                      <div className="calendar_date">{datenum[34]}</div>
+                      {flag[34] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[34],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
+                    </td>
+                  </tr>
                 ) : (
-                    ""
+                  ""
                 )}
 
                 {date_cnt + Day_status > 35 ? (
                   <tr>
                     <td>
                       <div className="calendar_date">{datenum[35]}</div>
-                      {flag[35]?rsv_list:space}
+                      {flag[35] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[35],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[35],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[35],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[35],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[35],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1] + "/" + datenum[35]],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[36]}</div>
-                      {flag[36]?rsv_list:space}
+                      {flag[36] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[36],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[37]}</div>
-                      {flag[37]?rsv_list:space}
+                      {flag[37] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[37],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[38]}</div>
-                      {flag[38]?rsv_list:space}
+                      {flag[38] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[38],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[39]}</div>
-                      {flag[39]?rsv_list:space}
+                      {flag[39] ?(
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[39],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[40]}</div>
-                      {flag[40]?rsv_list:space}
+                      {flag[40] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[40],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                     <td>
                       <div className="calendar_date">{datenum[41]}</div>
-                      {flag[41]?rsv_list:space}
+                      {flag[41] ? (
+                      <div className="rsv_box">
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[0] ? "rsv_1 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet1",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（男性）</p>
+                            <p>◉</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[1] ? "rsv_2 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet2",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>朝と夕方（女性）</p>
+                            <p>○</p>
+                          </div>
+                        </Link>
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[2] ? "rsv_3 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet3",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>朝のみ（男性）</p>
+                            <p>△</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[3] ? "rsv_4 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet4",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>朝のみ（女性）</p>
+                            <p>×</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[4] ? "rsv_5 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet5",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（男性）</p>
+                            <p>@</p>
+                          </div>
+                        </Link>
+
+                        <Link to="/user/reservationSet">
+                          <div
+                            className={
+                              rsv_status[5] ? "rsv_6 display" : "undisplay"
+                            }
+                            onClick={() =>
+                              dispatch({
+                                type: "rsvSet6",
+                                date: date.toDateString().split(" ")[3] + "/" + selected_month[date.toDateString().split(" ")[1]] + "/" + datenum[41],
+                              })
+                            }
+                          >
+                            <p>夕方のみ（女性）</p>
+                            <p>&</p>
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
+                      space
+                    )}
                     </td>
                   </tr>
                 ) : (
