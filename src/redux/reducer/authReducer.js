@@ -4,7 +4,7 @@ function reducer(state = initialization, action) {
   switch (action.type) {
     case "login":
       return {
-        Title: "",
+        Title: ">予約状況",
         isAuthenticated: 1,
       };
     case "logout":
