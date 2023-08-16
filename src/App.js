@@ -6,7 +6,6 @@ import store from "./redux/store";
 import "./App.css";
 import Navbar from "./components/User/Navbar";
 import Layer from "./components/User/Layer";
-import Footer from "./components/User/Footer";
 import Login from "./components/User/Login";
 import Register from "./components/User/Register";
 import Registerfinish from "./components/User/Registerfinish";
@@ -18,7 +17,6 @@ import Useraddfinish from "./components/User/Useraddfinish";
 import Newpass from "./components/User/Newpass";
 import Newpassfinish from "./components/User/Newpassfinish";
 
-import UserHome from "./components/User/Userpage/UserHome";
 import Rule from "./components/User/Userpage/Rule";
 import Userinfor from "./components/User/Userpage/Userinfor";
 import Reservationstatus from "./components/User/Userpage/Reservationstatus";
@@ -52,7 +50,7 @@ function App() {
             <Route exact path="/user/newpass" element={<Newpass />} />
             <Route exact path="/user/newpass/finish" element={<Newpassfinish />} />
 
-            <Route exact path="/user/login" element={<UserHome />} />
+            <Route exact path="/user/login" element={<Reservationstatus />} />
             <Route exact path="/user/infor" element={<Userinfor />} />
             <Route exact path="/user/rule" element={<Rule />} />
             <Route exact path="/user/message" element={<Usermessage />} />
@@ -66,7 +64,6 @@ function App() {
             <Route exact path="/user/rsvdetail" element={<RsvDetail />} />
             <Route exact path="/user/reservation-cancel" element={<RsvCancel />} />
           </Routes>
-          <Footer />
         </div>
       </Router>
     </Provider>

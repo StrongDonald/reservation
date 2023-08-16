@@ -681,10 +681,11 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 22rem;
                     color: white;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color:#0045FF;
+                    background-color: #0045FF;
                 }
                 .Sendemail_content_Header_firststep_circle_label {
                     position: absolute;
@@ -693,6 +694,7 @@ table, th, td {
                     font-size: 15rem;
                     width: 100rem;
                     color: #0045FF;
+                    font-weight: bold;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -715,11 +717,12 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                     margin-top: 10rem;
                 }
                 .Sendemail_content_Header_secondstep_circle_label {
@@ -728,7 +731,8 @@ table, th, td {
                     position: absolute;
                     left: -30rem;
                     width: 100rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -739,7 +743,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .Sendemail_content_Header_thirdstep_circle {
@@ -751,12 +755,13 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     margin-top: 10rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white
                 }
                 .Sendemail_content_Header_thirdstep_circle_label {
                     margin-top: 10rem;
@@ -764,7 +769,8 @@ table, th, td {
                     position: absolute;
                     left: -30rem;
                     width: 100rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -775,7 +781,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
         }
 
@@ -952,12 +958,13 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     margin-top: 10rem;
                     align-items: center;
                     justify-content: center;
-                    background-color:#727272;
+                    background-color: white;
                 }
                 .Sendemail_conf_content_Header_firststep_circle_label {
                     position: absolute;
@@ -965,7 +972,8 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     width: 100rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -973,7 +981,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .Sendemail_conf_content_Header_secondstep_circle {
@@ -986,6 +994,7 @@ table, th, td {
                     border-radius: 30px;
                     font-size: 22rem;
                     color: white;
+                    font-weight: bold;
                     display: flex;
                     margin-top: 10rem;
                     align-items: center;
@@ -996,6 +1005,7 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     color: #0045FF;
+                    font-weight: bold;
                     width: 100rem;
                     position: absolute;
                     left: -30rem;
@@ -1018,19 +1028,21 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     margin-top: 10rem;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 .Sendemail_conf_content_Header_thirdstep_circle_label {
                     position: absolute;
                     left: -30rem;
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                     width: 100rem;
 
                 }
@@ -1040,7 +1052,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
         }
 
@@ -1297,12 +1309,13 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     margin-top: 10rem;
                     align-items: center;
                     justify-content: center;
-                    background-color:#727272;
+                    background-color:white;
                 }
                 .Sendemailfinish_content_Header_firststep_circle_label {
                     position: absolute;
@@ -1311,7 +1324,8 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1319,7 +1333,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .Sendemailfinish_content_Header_secondstep_circle {
@@ -1332,11 +1346,12 @@ table, th, td {
                     border-radius: 30px;
                     font-size: 22rem;
                     margin-top: 10rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 .Sendemailfinish_content_Header_secondstep_circle_label {
                     position: absolute;
@@ -1345,7 +1360,8 @@ table, th, td {
                     font-size: 15rem;
                     width: 100rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1353,7 +1369,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .Sendemailfinish_content_Header_thirdstep_circle {
@@ -1367,6 +1383,7 @@ table, th, td {
                     font-size: 22rem;
                     margin-top: 10rem;
                     color: white;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1380,6 +1397,7 @@ table, th, td {
                     width: 100rem;
                     font-size: 15rem;
                     color: #0045FF;
+                    font-weight: bold;
                 }
             }
 
@@ -1458,6 +1476,7 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     color: #0045FF;
+                    font-weight: bold;
                 }
             }
 
@@ -1476,16 +1495,18 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1493,7 +1514,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .ReservationSet_content_Header_thirdstep_circle {
@@ -1504,16 +1525,18 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1521,7 +1544,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
         }
 
@@ -1583,7 +1606,6 @@ table, th, td {
                         width: 100%;
                         .ReservationSet_content_information_content_partname_inputtag {
                             font-size: 15rem;
-                            font-weight: bold;
                             color: #727272;
                         }
                         .addTag {
@@ -1619,7 +1641,6 @@ table, th, td {
                         p {
                             font-size: 15rem;
                             margin-right: 10rem;
-                            font-weight: bold;
                             color: #727272;
                         }
                     }
@@ -1648,7 +1669,6 @@ table, th, td {
                         width: 100%;
                         p {
                             font-size: 15rem;
-                            font-weight: bold;
                             margin-right: 10rem;
                             color: #727272;
                         }
@@ -1859,16 +1879,18 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color:#727272;
+                    background-color:white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1876,7 +1898,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .Reservationtest_content_Header_secondstep_circle {
@@ -1888,6 +1910,7 @@ table, th, td {
                     border-radius: 30px;
                     font-size: 22rem;
                     color: white;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1897,6 +1920,7 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     color: #0045FF;
+                    font-weight: bold;
                 }
             }
 
@@ -1915,16 +1939,18 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -1932,7 +1958,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
         }
 
@@ -2192,16 +2218,18 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color:#727272;
+                    background-color:white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -2209,7 +2237,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .ReservationSetfinish_content_Header_secondstep_circle {
@@ -2220,16 +2248,17 @@ table, th, td {
                     height: 40rem;
                     border-radius: 30px;
                     font-size: 22rem;
-                    color: white;
+                    color: #727272;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #727272;
+                    background-color: white;
                 }
                 p {
                     margin-top: 10rem;
                     font-size: 15rem;
-                    color: #727272;
+                    color: white;
+                    font-weight: bold;
                 }
             }
 
@@ -2237,7 +2266,7 @@ table, th, td {
                 width: 240rem;
                 height: 3rem;
                 margin-top: -20rem;
-                background-color: #727272;
+                background-color: white;
             }
 
             .ReservationSetfinish_content_Header_thirdstep_circle {
@@ -2249,6 +2278,7 @@ table, th, td {
                     border-radius: 30px;
                     font-size: 22rem;
                     color: white;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -2258,6 +2288,7 @@ table, th, td {
                     margin-top: 10rem;
                     font-size: 15rem;
                     color: #0045FF;
+                    font-weight: bold;
                 }
             }
 
