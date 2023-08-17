@@ -38,6 +38,8 @@ import AdminToppage from "./components/Admin/AdminToppage";
 import AdminResetpass from "./components/Admin/Resetpass";
 import AdminResetpassSend from "./components/Admin/AdminResetpassSend";
 import AdminResetpassSendconf from "./components/Admin/AdminResetpassSendconf";
+import AdminrsvList from "./components/Admin/AdminrsvList";
+
 
 function App() {
   return (
@@ -75,6 +77,7 @@ function App() {
             <Route exact path="/admin/passRecover" element={[(<AdminNavbar />), (<AdminResetpass />)]} />
             <Route exact path="/admin/ResetpassSend" element={[(<AdminNavbar />), (<AdminResetpassSend />)]} />
             <Route exact path="/admin/ResetpassSend-conf" element={[(<AdminNavbar />), (<AdminResetpassSendconf />)]} />
+            <Route exact path="/admin/rsvList" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminrsvList />)]} />
           </Routes>
         </div>
       </Router>

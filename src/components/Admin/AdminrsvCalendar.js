@@ -52,7 +52,7 @@ function Date_cntCalc(str) {
   }
 }
 
-function Reservationstatus() {
+function AdminrsvCalendar() {
   const dispatch = useDispatch();
   const [display, setdisplay] = useState(0);
   const [displaycls, setdisplaycls] = useState("undisplay");
@@ -113,13 +113,12 @@ function Reservationstatus() {
 
     let D = new Date();
     let D_temp = D.toDateString().split(" ");
-    console.log(temp[3]);
-    if (Number(D_temp[3]) > Number(temp[3]) || (Number(D_temp[3]) === Number(temp[3]) && num[D_temp[1]] > cur_month))
+    if (Number(D_temp[3]) > Number(temp[3]) || num[D_temp[1]] > cur_month)
       setflag([
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       ]);
-    if (Number(D_temp[3]) < Number(temp[3]) || (Number(D_temp[3]) === Number(temp[3]) && num[D_temp[1]] < cur_month)) {
+    if (Number(D_temp[3]) < Number(temp[3]) || num[D_temp[1]] < cur_month) {
       let arr = [];
       for (let i = 0; i < 42; i++) {
         if (i < Day_status) arr[i] = 0;
@@ -321,13 +320,13 @@ function Reservationstatus() {
   }
 
   return (
-    <div className="Reservationstatus">
-      <div className="Reservationstatus_content">
-        <div className="Resevationstatus_content_form">
-          <div className="Resevationstatus_content_form_nav">
-            <div className="Resevationstatus_content_form_nav_calendar">
+    <div className="AdminrsvCalendar">
+      <div className="AdminrsvCalendar_content">
+        <div className="AdminrsvCalendar_content_form">
+          <div className="AdminrsvCalendar_content_form_nav">
+            <div className="AdminrsvCalendar_content_form_nav_calendar">
               <div
-                className="Resevationstatus_content_form_nav_calendar_leftArrow"
+                className="AdminrsvCalendar_content_form_nav_calendar_leftArrow"
                 onClick={prev_func}
               >
                 <Box
@@ -348,7 +347,7 @@ function Reservationstatus() {
                 className="tooltip"
               >
                 <button
-                  className="Resevationstatus_content_form_nav_calendar_body"
+                  className="AdminrsvCalendar_content_form_nav_calendar_body"
                   onClick={displayfunc}
                 >
                   <span>
@@ -368,7 +367,7 @@ function Reservationstatus() {
                 </button>
               </Tooltip>
               <div
-                className="Resevationstatus_content_form_nav_calendar_rightArrow"
+                className="AdminrsvCalendar_content_form_nav_calendar_rightArrow"
                 onClick={next_func}
               >
                 <Box
@@ -385,7 +384,7 @@ function Reservationstatus() {
               </div>
             </div>
             <select
-              className="Resevationstatus_content_form_nav_filter"
+              className="AdminrsvCalendar_content_form_nav_filter"
               onChange={(e) => selected_func(e)}
             >
               <option value={1}>全ての枠</option>
@@ -402,8 +401,8 @@ function Reservationstatus() {
             <Calendar onChange={setDate} value={date} />
           </div>
 
-          <div className="Resevationstatus_content_form_calendar">
-            <div className="Resevationstatus_content_form_calendar_colors">
+          <div className="AdminrsvCalendar_content_form_calendar">
+            <div className="AdminrsvCalendar_content_form_calendar_colors">
               <div className="rsv_color1"></div>
               <p>空きなし</p>
               <div className="rsv_color2"></div>
@@ -422,7 +421,7 @@ function Reservationstatus() {
               <p>夕方のみ（女性）</p>
             </div>
 
-            <table className="Resevationstatus_content_form_calendar_table">
+            <table className="AdminrsvCalendar_content_form_calendar_table">
               <thead>
                 <tr>
                   <th>月</th>
@@ -5048,4 +5047,4 @@ function Reservationstatus() {
   );
 }
 
-export default Reservationstatus;
+export default AdminrsvCalendar;

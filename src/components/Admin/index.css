@@ -93,6 +93,35 @@ table, th, td {
   width: 100%;
   height: 60px;
   background-color: #ededed;
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+}
+.adminLayer .adminLayer_rsvlist {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.adminLayer .adminLayer_rsvlist .adminLayer_rsvlist_toHome {
+  background-color: #0045FF;
+  padding: 7px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.adminLayer .adminLayer_rsvlist .adminLayer_rsvlist_toHome p {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.adminLayer .adminLayer_rsvlist .adminLayer_rsvlist_title {
+  font-size: 20px;
+  color: #727272;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .adminLogin {
@@ -405,11 +434,11 @@ table, th, td {
 .AdminToppage .AdminToppage_firsttable .AdminToppage_firsttable_title {
   font-size: 20px;
   font-weight: bold;
-  border-left: 2px solid #727272;
+  border-left: 2px solid #0045FF;
   display: flex;
   justify-content: start;
   align-items: center;
-  color: #727272;
+  color: #5180ff;
   height: 25px;
   padding-left: 10px;
 }
@@ -419,14 +448,14 @@ table, th, td {
 }
 .AdminToppage .AdminToppage_firsttable table thead tr td {
   font-size: 20px;
-  background-color: #727272;
+  background-color: #5180ff;
   color: white;
   padding: 5px;
   width: 33%;
 }
 .AdminToppage .AdminToppage_firsttable table tbody tr td {
   font-size: 17px;
-  color: #727272;
+  color: #0045FF;
   padding: 15px;
 }
 .AdminToppage .AdminToppage_secondtable {
@@ -435,11 +464,11 @@ table, th, td {
 .AdminToppage .AdminToppage_secondtable .AdminToppage_secondtable_title {
   font-size: 20px;
   font-weight: bold;
-  border-left: 2px solid #727272;
+  border-left: 2px solid #0045FF;
   display: flex;
   justify-content: start;
   align-items: center;
-  color: #727272;
+  color: #5180ff;
   height: 25px;
   padding-left: 10px;
 }
@@ -449,13 +478,93 @@ table, th, td {
 }
 .AdminToppage .AdminToppage_secondtable table thead tr td {
   font-size: 20px;
-  background-color: #727272;
+  background-color: #5180ff;
   color: white;
   padding: 5px;
   width: 33%;
 }
 .AdminToppage .AdminToppage_secondtable table tbody tr td {
   font-size: 17px;
-  color: #727272;
+  color: #0045FF;
   padding: 15px;
+}
+
+.AdminrsvList {
+  width: 100%;
+  height: auto;
+  padding: 40px 80px;
+}
+.AdminrsvList .AdminrsvList_firsttable {
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_title {
+  width: 100%;
+  background-color: #5180ff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 20px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_title div {
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  border-left: 2px solid white;
+  padding-left: 10px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_table {
+  width: 100%;
+  padding: 50px 20px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_table table {
+  border: 1px solid #727272;
+  width: 100%;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_table table tbody tr .AdminrsvList_firsttable_table_label {
+  font-size: 15px;
+  color: #727272;
+  width: 30%;
+  text-align: start;
+  padding: 15px 10px;
+  font-weight: bold;
+  background-color: #eee;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_table table tbody tr div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  padding: 10px 20px;
+  background-color: #fefefe;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_table table tbody tr div input {
+  width: 300px;
+  height: 30px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_btnGroup {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_btnGroup .AdminrsvList_firsttable_btnGroup_back {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #727272;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+.AdminrsvList .AdminrsvList_firsttable .AdminrsvList_firsttable_btnGroup .AdminrsvList_firsttable_btnGroup_next {
+  padding: 15px 30px;
+  background-color: #5180ff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-left: 30px;
 }/*# sourceMappingURL=index.css.map */
