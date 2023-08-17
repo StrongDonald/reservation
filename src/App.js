@@ -31,38 +31,50 @@ import ReservationHistory from "./components/User/Userpage/ReservationHistory";
 import RsvDetail from "./components/User/Userpage/RsvDetail";
 import RsvCancel from "./components/User/Userpage/RsvCancel";
 
+import AdminLayer from "./components/Admin/Layer";
+import AdminNavbar from "./components/Admin/Navbar";
+import AdminLogin from "./components/Admin/Login";
+import AdminToppage from "./components/Admin/AdminToppage";
+import AdminResetpass from "./components/Admin/Resetpass";
+import AdminResetpassSend from "./components/Admin/AdminResetpassSend";
+import AdminResetpassSendconf from "./components/Admin/AdminResetpassSendconf";
+
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Navbar />
-          <Layer />
           <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route exact path="/user/register" element={<Register />} />
-            <Route exact path="/user/register/finish" element={<Registerfinish />} />
-            <Route exact path="/user/passRecover" element={<Passreminder />} />
-            <Route exact path="/user/passInform" element={<Passwordinform />} />
-            <Route exact path="/user/add" element={<Useradd />} />
-            <Route exact path="/user/add-conf" element={<Userconf />} />
-            <Route exact path="/user/add-finish" element={<Useraddfinish />} />
-            <Route exact path="/user/newpass" element={<Newpass />} />
-            <Route exact path="/user/newpass/finish" element={<Newpassfinish />} />
+            <Route exact path="/" element={[(<Navbar />), (<Layer />), (<Login />)]} />
+            <Route exact path="/user/register" element={[(<Navbar />), (<Layer />), (<Register />)]} />
+            <Route exact path="/user/register/finish" element={[(<Navbar />), (<Layer />), (<Registerfinish />)]} />
+            <Route exact path="/user/passRecover" element={[(<Navbar />), (<Layer />), (<Passreminder />)]} />
+            <Route exact path="/user/passInform" element={[(<Navbar />), (<Layer />), (<Passwordinform />)]} />
+            <Route exact path="/user/add" element={[(<Navbar />), (<Layer />), (<Useradd />)]} />
+            <Route exact path="/user/add-conf" element={[(<Navbar />), (<Layer />), (<Userconf />)]} />
+            <Route exact path="/user/add-finish" element={[(<Navbar />), (<Layer />), (<Useraddfinish />)]} />
+            <Route exact path="/user/newpass" element={[(<Navbar />), (<Layer />), (<Newpass />)]} />
+            <Route exact path="/user/newpass/finish" element={[(<Navbar />), (<Layer />), (<Newpassfinish />)]} />
 
-            <Route exact path="/user/login" element={<Reservationstatus />} />
-            <Route exact path="/user/infor" element={<Userinfor />} />
-            <Route exact path="/user/rule" element={<Rule />} />
-            <Route exact path="/user/message" element={<Usermessage />} />
-            <Route exact path="/user/sendemail-conf" element={<Sendemailconf />} />
-            <Route exact path="/user/emailsend-finish" element={<Sendemailfinish />} />
-            <Route exact path="/user/rsvStatus" element={<Reservationstatus />} />
-            <Route exact path="/user/reservationSet" element={<ReservationSet />} />
-            <Route exact path="/user/reservationset-conf" element={<Reservationtest />} />
-            <Route exact path="/user/reservation-finish" element={<ReservationSetfinish />} />
-            <Route exact path="/user/reservationHistory" element={<ReservationHistory />} />
-            <Route exact path="/user/rsvdetail" element={<RsvDetail />} />
-            <Route exact path="/user/reservation-cancel" element={<RsvCancel />} />
+            <Route exact path="/user/login" element={[(<Navbar />), (<Layer />), (<Reservationstatus />)]} />
+            <Route exact path="/user/infor" element={[(<Navbar />), (<Layer />), (<Userinfor />)]} />
+            <Route exact path="/user/rule" element={[(<Navbar />), (<Layer />), (<Rule />)]} />
+            <Route exact path="/user/message" element={[(<Navbar />), (<Layer />), (<Usermessage />)]} />
+            <Route exact path="/user/sendemail-conf" element={[(<Navbar />), (<Layer />), (<Sendemailconf />)]} />
+            <Route exact path="/user/emailsend-finish" element={[(<Navbar />), (<Layer />), (<Sendemailfinish />)]} />
+            <Route exact path="/user/rsvStatus" element={[(<Navbar />), (<Layer />), (<Reservationstatus />)]} />
+            <Route exact path="/user/reservationSet" element={[(<Navbar />), (<Layer />), (<ReservationSet />)]} />
+            <Route exact path="/user/reservationset-conf" element={[(<Navbar />), (<Layer />), (<Reservationtest />)]} />
+            <Route exact path="/user/reservation-finish" element={[(<Navbar />), (<Layer />), (<ReservationSetfinish />)]} />
+            <Route exact path="/user/reservationHistory" element={[(<Navbar />), (<Layer />), (<ReservationHistory />)]} />
+            <Route exact path="/user/rsvdetail" element={[(<Navbar />), (<Layer />), (<RsvDetail />)]} />
+            <Route exact path="/user/reservation-cancel" element={[(<Navbar />), (<Layer />), (<RsvCancel />)]} />
+
+            <Route exact path="/admin" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminLogin />)]} />
+            <Route exact path="/admin/login" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminToppage />)]} />
+            <Route exact path="/admin/passRecover" element={[(<AdminNavbar />), (<AdminResetpass />)]} />
+            <Route exact path="/admin/ResetpassSend" element={[(<AdminNavbar />), (<AdminResetpassSend />)]} />
+            <Route exact path="/admin/ResetpassSend-conf" element={[(<AdminNavbar />), (<AdminResetpassSendconf />)]} />
           </Routes>
         </div>
       </Router>
