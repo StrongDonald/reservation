@@ -1,0 +1,461 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1rem solid rgb(202, 199, 199);
+  border-collapse: collapse;
+}
+
+.adminNavbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #0045FF;
+}
+.adminNavbar .adminNavbar_logo {
+  margin-left: 15px;
+}
+.adminNavbar .adminNavbar_logo img {
+  height: 30px;
+  width: 200px;
+}
+
+.admin_logoutnav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0045FF;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv {
+  height: 70px;
+  width: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part {
+  border-right: 1px groove rgb(118, 118, 118);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part img {
+  height: 30px;
+  width: 200px;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part a {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0 10px;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .rightMg {
+  border-right: 0 !important;
+  border-left: 1px groove rgb(118, 118, 118) !important;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .rightMg .box {
+  margin-top: 4px;
+}
+.admin_logoutnav .admin_logoutnav_firstDiv .rightMg p {
+  margin-left: 5px;
+}
+
+.navIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adminLayer {
+  width: 100%;
+  height: 60px;
+  background-color: #ededed;
+}
+
+.adminLogin {
+  width: 100%;
+  height: 500px;
+}
+.adminLogin .adminLogin_part {
+  width: 420px;
+  height: 340px;
+  margin: auto;
+  margin-top: 230px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.adminLogin .adminLogin_part .adminLogin_part_text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 25px 20px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_text div {
+  width: 10px;
+  height: 25px;
+  border-left: 2px solid #d8d8d8;
+}
+.adminLogin .adminLogin_part .adminLogin_part_text p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #727272;
+}
+.adminLogin .adminLogin_part .adminLogin_part_ID {
+  width: 100%;
+  padding: 0 20px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_ID p {
+  text-align: start;
+  font-size: 15px;
+  color: #727272;
+  margin-bottom: 10px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_ID input {
+  width: 100%;
+  height: 30px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_Pass {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 25px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_Pass p {
+  text-align: start;
+  font-size: 15px;
+  color: #727272;
+  margin-bottom: 10px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_Pass input {
+  width: 100%;
+  height: 30px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_btn {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_btn button {
+  margin: auto;
+  padding: 10px 50px;
+  font-size: 15px;
+  color: white;
+  background-color: #5180ff;
+  border: none;
+  border-radius: 3px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_passlost {
+  margin-top: 10px;
+}
+.adminLogin .adminLogin_part .adminLogin_part_passlost p {
+  font-size: 15px;
+  color: #0045FF;
+}
+
+.adminResetpass {
+  width: 100%;
+  height: 800px;
+}
+.adminResetpass .adminResetpass_part {
+  width: 420px;
+  height: 500px;
+  margin: auto;
+  margin-top: 230px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 25px 20px;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_text .adminResetpass_part_text_content {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-weight: bold;
+  color: #727272;
+  border: 1px solid #ff8c2f;
+  background-color: #ffddc1;
+  padding: 15px 20px;
+  text-align: start;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_text .adminResetpass_part_text_content .paddingleft {
+  padding-left: 30px;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_ID {
+  width: 100%;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_ID p {
+  text-align: start;
+  font-size: 15px;
+  color: #727272;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_ID div {
+  display: flex;
+  justify-content: start;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_ID div input {
+  width: 80%;
+  height: 30px;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_Pass {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #f7f7f7;
+  color: #727272;
+  font-size: 15px;
+  text-align: start;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_btn {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_btn .adminResetpass_part_btn_back {
+  margin: auto;
+  padding: 5px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: #727272;
+  border: none;
+  border-radius: 3px;
+}
+.adminResetpass .adminResetpass_part .adminResetpass_part_btn .adminResetpass_part_btn_send {
+  margin: auto;
+  padding: 10px 50px;
+  font-size: 15px;
+  color: white;
+  margin-left: 30px;
+  background-color: #5180ff;
+  border: none;
+  border-radius: 3px;
+}
+
+.adminResetpassSend {
+  width: 100%;
+  height: 600px;
+}
+.adminResetpassSend .adminResetpassSend_part {
+  width: 420px;
+  height: 540px;
+  margin: auto;
+  margin-top: 230px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 25px 20px;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_text .adminResetpassSend_part_text_content {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-weight: bold;
+  color: #727272;
+  border: 1px solid #02d849;
+  background-color: #dcffc3;
+  padding: 15px 20px;
+  text-align: start;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_text .adminResetpassSend_part_text_content .paddingleft {
+  margin-top: -25px;
+  padding-left: 30px;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_ID {
+  width: 100%;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_ID p {
+  text-align: start;
+  font-size: 15px;
+  color: #727272;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_ID div {
+  display: flex;
+  justify-content: start;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_ID div input {
+  width: 80%;
+  height: 30px;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_Pass {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #f7f7f7;
+  color: #727272;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: start;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_btn {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_btn .adminResetpassSend_part_btn_back {
+  margin: auto;
+  padding: 5px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: #727272;
+  border: none;
+  border-radius: 3px;
+}
+.adminResetpassSend .adminResetpassSend_part .adminResetpassSend_part_btn .adminResetpassSend_part_btn_send {
+  margin: auto;
+  padding: 10px 50px;
+  font-size: 15px;
+  color: white;
+  margin-left: 30px;
+  background-color: #5180ff;
+  border: none;
+  border-radius: 3px;
+}
+
+.adminResetpassSendconf {
+  width: 100%;
+  height: 400px;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part {
+  width: 420px;
+  height: 240px;
+  margin: auto;
+  margin-top: 230px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 25px 20px;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part .adminResetpassSendconf_part_text {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part .adminResetpassSendconf_part_text .adminResetpassSendconf_part_text_content {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-weight: bold;
+  color: #727272;
+  border: 1px solid #02d849;
+  background-color: #dcffc3;
+  padding: 15px 20px;
+  text-align: start;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part .adminResetpassSendconf_part_text .adminResetpassSendconf_part_text_content .paddingleft {
+  margin-top: -25px;
+  padding-left: 30px;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part .adminResetpassSendconf_part_btn {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminResetpassSendconf .adminResetpassSendconf_part .adminResetpassSendconf_part_btn .adminResetpassSendconf_part_btn_back {
+  margin: auto;
+  padding: 5px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: #727272;
+  border: none;
+  border-radius: 3px;
+}
+
+.AdminToppage {
+  width: 100%;
+  height: 100%;
+  padding: 80px 100px;
+}
+.AdminToppage .AdminToppage_firsttable .AdminToppage_firsttable_title {
+  font-size: 20px;
+  font-weight: bold;
+  border-left: 2px solid #727272;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #727272;
+  height: 25px;
+  padding-left: 10px;
+}
+.AdminToppage .AdminToppage_firsttable table {
+  margin-top: 30px;
+  width: 100%;
+}
+.AdminToppage .AdminToppage_firsttable table thead tr td {
+  font-size: 20px;
+  background-color: #727272;
+  color: white;
+  padding: 5px;
+  width: 33%;
+}
+.AdminToppage .AdminToppage_firsttable table tbody tr td {
+  font-size: 17px;
+  color: #727272;
+  padding: 15px;
+}
+.AdminToppage .AdminToppage_secondtable {
+  margin-top: 70px;
+}
+.AdminToppage .AdminToppage_secondtable .AdminToppage_secondtable_title {
+  font-size: 20px;
+  font-weight: bold;
+  border-left: 2px solid #727272;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #727272;
+  height: 25px;
+  padding-left: 10px;
+}
+.AdminToppage .AdminToppage_secondtable table {
+  margin-top: 30px;
+  width: 100%;
+}
+.AdminToppage .AdminToppage_secondtable table thead tr td {
+  font-size: 20px;
+  background-color: #727272;
+  color: white;
+  padding: 5px;
+  width: 33%;
+}
+.AdminToppage .AdminToppage_secondtable table tbody tr td {
+  font-size: 17px;
+  color: #727272;
+  padding: 15px;
+}/*# sourceMappingURL=index.css.map */
