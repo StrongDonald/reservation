@@ -96,6 +96,36 @@ table, th, td {
     width: 100%;
     height: 60px;
     background-color: #ededed;
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+    .adminLayer_rsvlist {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .adminLayer_rsvlist_toHome {
+            background-color: #0045FF;
+            padding: 7px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            p {
+                font-size: 13px;
+                font-weight: bold;
+                color: white;
+                border-radius: 3px;
+                margin-left: 5px;
+            }
+        }
+
+        .adminLayer_rsvlist_title {
+            font-size: 20px;
+            color: #727272;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
 }
 
 .adminLogin {
@@ -424,11 +454,11 @@ table, th, td {
         .AdminToppage_firsttable_title {
             font-size: 20px;
             font-weight: bold;
-            border-left: 2px solid #727272;
+            border-left: 2px solid #0045FF;
             display: flex;
             justify-content: start;
             align-items: center;
-            color: #727272;
+            color: #5180ff;
             height: 25px;
             padding-left: 10px;
         }
@@ -440,7 +470,7 @@ table, th, td {
                 tr {
                     td {
                         font-size: 20px;
-                        background-color: #727272;
+                        background-color: #5180ff;
                         color: white;
                         padding: 5px;
                         width: 33%;
@@ -452,7 +482,7 @@ table, th, td {
                 tr {
                     td {
                         font-size: 17px;
-                        color: #727272;
+                        color: #0045FF;
                         padding: 15px;
                     }
                 }
@@ -465,11 +495,11 @@ table, th, td {
         .AdminToppage_secondtable_title {
             font-size: 20px;
             font-weight: bold;
-            border-left: 2px solid #727272;
+            border-left: 2px solid #0045FF;
             display: flex;
             justify-content: start;
             align-items: center;
-            color: #727272;
+            color: #5180ff;
             height: 25px;
             padding-left: 10px;
         }
@@ -481,7 +511,7 @@ table, th, td {
                 tr {
                     td {
                         font-size: 20px;
-                        background-color: #727272;
+                        background-color: #5180ff;
                         color: white;
                         padding: 5px;
                         width: 33%;
@@ -493,8 +523,288 @@ table, th, td {
                 tr {
                     td {
                         font-size: 17px;
-                        color: #727272;
+                        color: #0045FF;
                         padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.AdminrsvList {
+    width: 100%;
+    height: auto;
+    padding: 40px 80px;
+
+    .AdminrsvList_firsttable {
+        border: none;
+        border-radius: 5px;
+        background-color: #f3f3f3;
+        .AdminrsvList_firsttable_title {
+            width: 100%;
+            background-color: #5180ff;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 10px 20px;
+            div {
+                font-size: 17px;
+                color: white;
+                font-weight: bold;
+                border-left: 2px solid white;
+                padding-left: 10px;
+            }
+        }
+
+        .AdminrsvList_firsttable_table {
+            width: 100%;
+            padding: 50px 20px;
+            table {
+                border: 1px solid #727272;
+                width: 100%;
+                tbody {
+                    tr {
+                        .AdminrsvList_firsttable_table_label {
+                            font-size: 15px;
+                            color: #727272;
+                            width: 30%;
+                            text-align: start;
+                            padding: 15px 10px;
+                            font-weight: bold;
+                            background-color: #eee;
+                        }
+
+                        div {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            height: 100%;
+                            padding: 10px 20px;
+                            background-color: #fefefe;
+                            input {
+                                width: 300px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .AdminrsvList_firsttable_btnGroup {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+
+            .AdminrsvList_firsttable_btnGroup_back {
+                padding: 10px 20px;
+                font-size: 15px;
+                background-color: #727272;
+                color: white;
+                border: none;
+                border-radius: 3px;
+            }
+
+            .AdminrsvList_firsttable_btnGroup_next {
+                padding: 15px 30px;
+                background-color: #5180ff;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.AdminrsvCalendar {
+    width: 100%;
+    background: #00B3FF;
+    height: 100%;
+    .AdminrsvCalendar_content {
+        max-width: $pc;
+        height: 100%;
+        margin: auto;
+        padding: 10rem 110rem;
+        padding-bottom: 100rem;
+
+        .AdminrsvCalendar_content_form {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 40rem 30rem;
+            background-color: white;
+
+            .undisplay {
+                display: none;
+            }
+            .display {
+                display: block;
+            }
+
+            .AdminrsvCalendar_content_form_nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .AdminrsvCalendar_content_form_nav_calendar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    .AdminrsvCalendar_content_form_nav_calendar_body {
+                        border: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 130px;
+                        .re_span {
+                            font-size: 20rem;
+                            color: #727272;
+                            font-weight: bold;
+                            margin-left: 5rem;
+                            margin-right: -5rem;
+                        }
+                        margin-left: -10rem;
+                    }
+                }
+
+                .AdminrsvCalendar_content_form_nav_filter {
+                    font-size: 15rem;
+                    width: 300rem;
+                    height: 30rem;
+                }
+            }
+
+            .AdminrsvCalendar_content_form_calendar {
+                width: 1088rem;
+                height: auto;
+                border: 2px solid #dddfde;
+
+                .AdminrsvCalendar_content_form_calendar_colors {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    font-size: 13px;
+                    color: #727272;
+                    padding: 7px 7px;
+
+                    .rsv_color1 {background-color: #727272; width: 20px; height: 13px;}
+                    .rsv_color2 {background-color: yellow; width: 20px; height: 13px;}
+                    .rsv_color3 {background-color: rgba(255, 183, 0, 0.413); width: 20px; height: 13px;}
+                    .rsv_color4 {background-color: #59f63657; width: 20px; height: 13px;}
+                    .rsv_color5 {background-color: #06c9df6f; width: 20px; height: 13px;}
+                    .rsv_color6 {background-color: #0c84f47a; width: 20px; height: 13px;}
+                    .rsv_color7 {background-color: #8524fb6c; width: 20px; height: 13px;}
+                    .rsv_color8 {background-color: #ef15777f; width: 20px; height: 13px;}
+
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    thead {
+                        tr {
+                            th {
+                                background-color: #dddfde;
+                                width: 14.28571428571429rem;
+                                font-size: 15px;
+                                padding: 15px 0;
+                                color: #727272;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                .calendar_date {
+                                    font-size: 15px;
+                                    padding: 10px 10px;
+                                    text-align: start;
+                                }
+                                .space_box {
+                                    width: 100%;
+                                    height: 30rem;
+                                }
+                                .rsv_box {
+                                    width: 100%;
+                                    height: auto;
+                                    font-size: 10px;
+                                    padding-bottom: 10rem;
+                                    .undisplay {
+                                        display: none;
+                                    }
+                                    .display {
+                                        display: block;
+                                    }
+                                    .rsv_1 {
+                                        background-color:rgba(255, 183, 0, 0.413);
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_2 {
+                                        background-color: #59f63657;
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_3 {
+                                        background-color: #06c9df6f;
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_4 {
+                                        background-color: #0c84f47a;
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_5 {
+                                        background-color: #8524fb6c;
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_6 {
+                                        background-color: #ef15777f;
+                                        border-bottom: 2px solid white;
+                                        color: #727272;
+                                        cursor: pointer;
+                                    }
+                                    .rsv_1:hover {
+                                        background-color:rgba(255, 183, 0, 0.259);
+                                    }
+                                    .rsv_2:hover {
+                                        background-color: #59f6363a;
+                                    }
+                                    .rsv_3:hover {
+                                        background-color:#06c9df45;
+                                    }
+                                    .rsv_4:hover {
+                                        background-color:#0c84f446;
+                                    }
+                                    .rsv_5:hover {
+                                        background-color:#8524fb44;
+                                    }
+                                    .rsv_6:hover {
+                                        background-color:#ef157753;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

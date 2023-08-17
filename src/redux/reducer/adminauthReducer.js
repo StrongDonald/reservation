@@ -1,4 +1,4 @@
-const initialization = { Title: "", isAuthenticated: 0};
+const initialization = { Title: 0, isAuthenticated: 0};
 
 function reducer(state = initialization, action) {
   switch (action.type) {
@@ -12,6 +12,11 @@ function reducer(state = initialization, action) {
     };
     case "admin-login-front":
         return {
+        isAuthenticated: 1,
+    };
+    case "adminrsvList":
+        return {
+        Title: 1,
         isAuthenticated: 1,
     };
     default:

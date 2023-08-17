@@ -31,10 +31,10 @@ function Navbar() {
         <div className="admin_logoutnav_firstDiv_part">
           <Link
             className="navIcons"
-            to="/admin/infor"
+            to="/admin/rsvList"
             onClick={() =>
               dispatch({
-                type: "admin-infor",
+                type: "adminrsvList",
               })
             }
           >
