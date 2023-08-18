@@ -66,7 +66,8 @@ table, th, td {
   height: 30px;
   width: 200px;
 }
-.admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part a {
+.admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part p, .admin_logoutnav .admin_logoutnav_firstDiv .admin_logoutnav_firstDiv_part a {
+  cursor: default;
   color: white;
   font-weight: bold;
   font-size: 15px;
@@ -814,4 +815,46 @@ table, th, td {
   border-radius: 25px;
   color: white;
   background-color: #e71173;
+}
+
+.Menu-Modal-header {
+  padding-left: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+.Menu-Modal-header p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #727272;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: default;
+}
+
+.Menu-Modal-body {
+  padding: 30px 20px;
+}
+.Menu-Modal-body .Menu-Modal-body-firstdiv-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.Menu-Modal-body .Menu-Modal-body-firstdiv-settings p {
+  color: #727272;
+  font-size: 15px;
+  cursor: default;
+}
+.Menu-Modal-body .fontbold {
+  font-weight: bold;
+  justify-content: start !important;
+}
+.Menu-Modal-body .fontbold p {
+  margin-left: 10px;
+}
+.Menu-Modal-body .line {
+  margin-top: 20px;
+  border-bottom: 1px groove #727272;
 }/*# sourceMappingURL=index.css.map */

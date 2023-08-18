@@ -11,8 +11,6 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import Tooltip from "@mui/material/Tooltip";
 import Calendar from "react-calendar";
 import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 function Day_calc(str) {
   let arr = str.split(" ");
