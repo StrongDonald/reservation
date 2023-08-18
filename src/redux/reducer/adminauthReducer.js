@@ -1,4 +1,4 @@
-const initialization = { Title: 0, isAuthenticated: 0};
+const initialization = { Title: 0, isAuthenticated: 0,reservationDate:"", reservationContent:"", reservationstatus:"", reservationTime:""};
 
 function reducer(state = initialization, action) {
   switch (action.type) {
@@ -18,6 +18,54 @@ function reducer(state = initialization, action) {
         return {
         Title: 1,
         isAuthenticated: 1,
+    };
+    case "rsvSet1":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "朝と夕方（男性）",
+      reservationTime: "05:00 ～ 19:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残5/5"
+    };
+    case "rsvSet2":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "朝と夕方（女性）",
+      reservationTime: "05:00 ～ 19:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残2/2"
+    };
+    case "rsvSet3":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "朝のみ（男性）",
+      reservationTime: "05:00 ～ 12:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残2/2"
+    };
+    case "rsvSet4":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "朝のみ（女性）",
+      reservationTime: "05:00 ～ 12:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残2/2"
+    };
+    case "rsvSet5":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "朝夕方のみ（男性）",
+      reservationTime: "12:00 ～ 19:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残5/5"
+    };
+    case "rsvSet6":
+    return {
+      isAuthenticated: 1,
+      reservationContent: "夕方のみ（女性）",
+      reservationTime: "12:00 ～ 19:00",
+      reservationDate: action.date,
+      reservationstatus: "0件 残5/5"
     };
     default:
       return "No";
