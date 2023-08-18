@@ -567,4 +567,251 @@ table, th, td {
   border: none;
   border-radius: 3px;
   margin-left: 30px;
+}
+
+.AdminrsvCalendar_content_form {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.AdminrsvCalendar_content_form .undisplay {
+  display: none;
+}
+.AdminrsvCalendar_content_form .display {
+  display: block;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_calendar .AdminrsvCalendar_content_form_nav_calendar_body {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  margin-left: -10rem;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_calendar .AdminrsvCalendar_content_form_nav_calendar_body .re_span {
+  font-size: 20rem;
+  color: #727272;
+  font-weight: bold;
+  margin-left: 5rem;
+  margin-right: -5rem;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_filter {
+  font-size: 15rem;
+  padding: 7px 15px;
+  border-radius: 5px;
+  background-color: #e71173;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_filter p {
+  cursor: default;
+  color: white;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_nav .AdminrsvCalendar_content_form_nav_filter .AdminrsvCalendar_content_form_nav_filter_box {
+  margin-top: 5px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar {
+  width: 100%;
+  height: auto;
+  border: 2px solid #dddfde;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 13px;
+  color: #727272;
+  padding: 7px 7px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color1 {
+  background-color: #727272;
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color2 {
+  background-color: yellow;
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color3 {
+  background-color: rgba(255, 183, 0, 0.413);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color4 {
+  background-color: rgba(89, 246, 54, 0.3411764706);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color5 {
+  background-color: rgba(6, 201, 223, 0.4352941176);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color6 {
+  background-color: rgba(12, 132, 244, 0.4784313725);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color7 {
+  background-color: rgba(133, 36, 251, 0.4235294118);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors .rsv_color8 {
+  background-color: rgba(239, 21, 119, 0.4980392157);
+  width: 20px;
+  height: 13px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar .AdminrsvCalendar_content_form_calendar_colors p {
+  margin: 0 10px;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table thead tr th {
+  background-color: #dddfde;
+  width: 14.2857142857rem;
+  font-size: 15px;
+  padding: 15px 0;
+  color: #727272;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .calendar_date {
+  font-size: 15px;
+  padding: 10px 10px;
+  text-align: start;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .space_box {
+  width: 100%;
+  height: 30rem;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box {
+  width: 100%;
+  height: auto;
+  font-size: 10px;
+  padding-bottom: 10rem;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .undisplay {
+  display: none;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .display {
+  display: block;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_1 {
+  background-color: rgba(255, 183, 0, 0.413);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_2 {
+  background-color: rgba(89, 246, 54, 0.3411764706);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_3 {
+  background-color: rgba(6, 201, 223, 0.4352941176);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_4 {
+  background-color: rgba(12, 132, 244, 0.4784313725);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_5 {
+  background-color: rgba(133, 36, 251, 0.4235294118);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_6 {
+  background-color: rgba(239, 21, 119, 0.4980392157);
+  border-bottom: 2px solid white;
+  color: #727272;
+  cursor: pointer;
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_1:hover {
+  background-color: rgba(255, 183, 0, 0.259);
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_2:hover {
+  background-color: rgba(89, 246, 54, 0.2274509804);
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_3:hover {
+  background-color: rgba(6, 201, 223, 0.2705882353);
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_4:hover {
+  background-color: rgba(12, 132, 244, 0.2745098039);
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_5:hover {
+  background-color: rgba(133, 36, 251, 0.2666666667);
+}
+.AdminrsvCalendar_content_form .AdminrsvCalendar_content_form_calendar table tbody tr td .rsv_box .rsv_6:hover {
+  background-color: rgba(239, 21, 119, 0.3254901961);
+}
+
+.Modal-header {
+  height: 50px;
+  background-color: #0045FF;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.Modal-header span {
+  font-size: 35px;
+  color: white;
+  margin-right: 20px;
+  cursor: default;
+}
+
+.Modal-body {
+  padding: 30px 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Modal-body .Modal-firstdiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Modal-body .Modal-firstdiv div {
+  margin-left: 30px;
+}
+.Modal-body .Modal-firstdiv div .boldfont {
+  font-size: 18px;
+  font-weight: bold;
+  color: #727272;
+  text-align: start;
+}
+.Modal-body .Modal-firstdiv div p {
+  font-size: 18px;
+  color: #727272;
+  text-align: start;
+}
+.Modal-body .Modal-btndiv {
+  margin-left: 50px;
+}
+.Modal-body .Modal-btndiv button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: #e71173;
 }/*# sourceMappingURL=index.css.map */
