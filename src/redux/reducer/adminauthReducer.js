@@ -19,8 +19,14 @@ function reducer(state = initialization, action) {
         Title: 1,
         isAuthenticated: 1,
     };
+    case "adminrsvframesetAdd":
+        return {
+        Title: 3,
+        isAuthenticated: 1,
+    }
     case "rsvSet1":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "朝と夕方（男性）",
       reservationTime: "05:00 ～ 19:00",
@@ -29,6 +35,7 @@ function reducer(state = initialization, action) {
     };
     case "rsvSet2":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "朝と夕方（女性）",
       reservationTime: "05:00 ～ 19:00",
@@ -37,6 +44,7 @@ function reducer(state = initialization, action) {
     };
     case "rsvSet3":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "朝のみ（男性）",
       reservationTime: "05:00 ～ 12:00",
@@ -45,6 +53,7 @@ function reducer(state = initialization, action) {
     };
     case "rsvSet4":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "朝のみ（女性）",
       reservationTime: "05:00 ～ 12:00",
@@ -53,6 +62,7 @@ function reducer(state = initialization, action) {
     };
     case "rsvSet5":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "朝夕方のみ（男性）",
       reservationTime: "12:00 ～ 19:00",
@@ -61,11 +71,17 @@ function reducer(state = initialization, action) {
     };
     case "rsvSet6":
     return {
+        Title: 1,
       isAuthenticated: 1,
       reservationContent: "夕方のみ（女性）",
       reservationTime: "12:00 ～ 19:00",
       reservationDate: action.date,
       reservationstatus: "0件 残5/5"
+    };
+    case "rsvframeset":
+    return {
+        Title: 2,
+      isAuthenticated: 1
     };
     default:
       return "No";

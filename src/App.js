@@ -39,6 +39,9 @@ import AdminResetpass from "./components/Admin/Resetpass";
 import AdminResetpassSend from "./components/Admin/AdminResetpassSend";
 import AdminResetpassSendconf from "./components/Admin/AdminResetpassSendconf";
 import AdminrsvList from "./components/Admin/AdminrsvList";
+import Adminrsvframset from "./components/Admin/Adminrsvframset";
+import AdminrsvAdd from "./components/Admin/AdminrsvAdd";
+import Adminrsvcopy from "./components/Admin/Adminrsvcopy";
 
 
 function App() {
@@ -78,6 +81,11 @@ function App() {
             <Route exact path="/admin/ResetpassSend" element={[(<AdminNavbar />), (<AdminResetpassSend />)]} />
             <Route exact path="/admin/ResetpassSend-conf" element={[(<AdminNavbar />), (<AdminResetpassSendconf />)]} />
             <Route exact path="/admin/rsvList" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminrsvList />)]} />
+            <Route exact path="/admin/reservationframeset" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvframset />)]} />
+            <Route exact path="/admin/adminrsvframesetAdd" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminrsvAdd />)]} />
+            <Route exact path="/admin/adminrsvcopy" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvcopy />)]} />
+            <Route exact path="/admin/adminrsvedit" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvcopy />)]} />
+            
           </Routes>
         </div>
       </Router>
