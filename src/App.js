@@ -51,6 +51,14 @@ import Adminautomailsendedit from "./components/Admin/Adminautomailsendedit";
 import Adminmainsetting from "./components/Admin/Adminmainsetting";
 import Admintagsetting from "./components/Admin/Admintagsetting";
 import Admidetailset from "./components/Admin/Admidetailset";
+import Admincolorsetting from "./components/Admin/Admincolorsetting";
+import AdminrsvView from "./components/Admin/AdminrsvView";
+import Admincustomerlist from "./components/Admin/Admincustomerlist";
+import Adminadminregister from "./components/Admin/Adminadminregister";
+import Adminnotice from "./components/Admin/Adminnotice";
+import Adminnoticeedit from "./components/Admin/Adminnoticeedit";
+import Adminfilemanage from "./components/Admin/Adminfilemanage";
+import Adminoperatelog from "./components/Admin/Adminoperatelog";
 
 function App() {
   return (
@@ -102,6 +110,16 @@ function App() {
             <Route exact path="/admin/mainsetting" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminmainsetting />)]} />
             <Route exact path="/admin/tagsetting" element={[(<AdminNavbar />), (<AdminLayer />), (<Admintagsetting />)]} />
             <Route exact path="/admin/detailset" element={[(<AdminNavbar />), (<AdminLayer />), (<Admidetailset />)]} />
+            <Route exact path="/admin/colorsetting" element={[(<AdminNavbar />), (<AdminLayer />), (<Admincolorsetting />)]} />
+
+            
+            <Route exact path="/admin/rsvView" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminrsvView />)]} />
+            <Route exact path="/admin/customerlist" element={[(<AdminNavbar />), (<AdminLayer />), (<Admincustomerlist />)]} />
+            <Route exact path="/admin/adminregister" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminadminregister />)]} />
+            <Route exact path="/admin/notice" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminnotice />)]} />
+            <Route exact path="/admin/noticeedit" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminnoticeedit />)]} />
+            <Route exact path="/admin/filemanage" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminfilemanage />)]} />
+            <Route exact path="/admin/operatelog" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminoperatelog />)]} />
 
           </Routes>
         </div>

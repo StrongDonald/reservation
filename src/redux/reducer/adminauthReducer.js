@@ -128,6 +128,46 @@ function reducer(state = initialization, action) {
         Title: 12,
         isAuthenticated: 1
     };
+    case "colorsetting":
+    return {
+        Title: 13,
+        isAuthenticated: 1
+    };
+    case "rsvView":
+    return {
+        Title: 14,
+        isAuthenticated: 1
+    };
+    case "customerlist":
+    return {
+        Title: 15,
+        isAuthenticated: 1
+    };
+    case "adminregister":
+    return {
+        Title: 16,
+        isAuthenticated: 1
+    };
+    case "notice":
+    return {
+        Title: 17,
+        isAuthenticated: 1
+    };
+    case "noticeedit":
+    return {
+        Title: 18,
+        isAuthenticated: 1
+    };
+    case "filemanage":
+    return {
+        Title: 19,
+        isAuthenticated: 1
+    };
+    case "operatelog":
+    return {
+        Title: 20,
+        isAuthenticated: 1
+    };
     default:
       return "No";
   }

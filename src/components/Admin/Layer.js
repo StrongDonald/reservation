@@ -383,10 +383,263 @@ const Layer = () => {
         </div>
       </Link>
 
-      <div className="adminLayer_rsvlist_title"> > 利用規約・個人情報取り扱い・特商法 設定</div>
+      <div className="adminLayer_rsvlist_title">
+        {" "}
+        > 利用規約・個人情報取り扱い・特商法 設定
+      </div>
     </div>
   );
 
+  const colorsetting = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > 予約枠のカラー設定</div>
+    </div>
+  );
+
+  const rsvView = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > 予約 一覧</div>
+    </div>
+  );
+
+  const customerlist = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > 顧客一覧</div>
+    </div>
+  );
+
+  const adminregister = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvset_title">
+        {" "}
+        <Link
+          to="/admin/customerlist"
+          onClick={() =>
+            dispatch({
+              type: "customerlist",
+            })
+          }
+        >
+          {" "}
+          > 顧客一覧
+        </Link>
+        <span> > 会員登録</span>
+      </div>
+    </div>
+  );
+
+  const notice = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > お知らせ</div>
+    </div>
+  );
+
+  const noticeedit = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvset_title">
+        {" "}
+        <Link
+          to="/admin/notice"
+          onClick={() =>
+            dispatch({
+              type: "notice",
+            })
+          }
+        >
+          {" "}
+          > お知らせ
+        </Link>
+        <span> > 新規登録</span>
+      </div>
+    </div>
+  );
+
+  const filemanage = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > ファイル管理</div>
+    </div>
+  );
+  const operatelog = (
+    <div className="adminLayer_rsvlist">
+      <Link
+        to="/admin/login"
+        onClick={() =>
+          dispatch({
+            type: "adminlogin",
+          })
+        }
+      >
+        <div className="adminLayer_rsvlist_toHome">
+          <Box
+            sx={{
+              "& > :not(style)": {
+                m: 0,
+              },
+            }}
+          >
+            <HomeIcon sx={{ color: "white", fontSize: 20 }} />
+          </Box>
+          <p>各種設定メニューTOP</p>
+        </div>
+      </Link>
+
+      <div className="adminLayer_rsvlist_title"> > 操作ログ</div>
+    </div>
+  );
   return (
     <div className="adminLayer">
       {stData.adminauth.Title === 1 ? rsvlist : ""}
@@ -401,6 +654,14 @@ const Layer = () => {
       {stData.adminauth.Title === 10 ? mainsetting : ""}
       {stData.adminauth.Title === 11 ? tagsetting : ""}
       {stData.adminauth.Title === 12 ? detailset : ""}
+      {stData.adminauth.Title === 13 ? colorsetting : ""}
+      {stData.adminauth.Title === 14 ? rsvView : ""}
+      {stData.adminauth.Title === 15 ? customerlist : ""}
+      {stData.adminauth.Title === 16 ? adminregister : ""}
+      {stData.adminauth.Title === 17 ? notice : ""}
+      {stData.adminauth.Title === 18 ? noticeedit : ""}
+      {stData.adminauth.Title === 19 ? filemanage : ""}
+      {stData.adminauth.Title === 20 ? operatelog : ""}
     </div>
   );
 };
