@@ -83,6 +83,51 @@ function reducer(state = initialization, action) {
         Title: 2,
       isAuthenticated: 1
     };
+    case "restset":
+    return {
+        Title: 4,
+        isAuthenticated: 1
+    };
+    case "restsetpage":
+    return {
+        Title: 5,
+        isAuthenticated: 1
+    };
+    case "rsvitemset":
+    return {
+        Title: 6,
+        isAuthenticated: 1
+    };
+    case "customerset":
+    return {
+        Title: 7,
+        isAuthenticated: 1
+    };
+    case "automailsend":
+    return {
+        Title: 8,
+        isAuthenticated: 1
+    };
+    case "automailsendedit":
+    return {
+        Title: 9,
+        isAuthenticated: 1
+    };
+    case "mainsetting":
+    return {
+        Title: 10,
+        isAuthenticated: 1
+    };
+    case "tagsetting":
+    return {
+        Title: 11,
+        isAuthenticated: 1
+    };
+    case "detailset":
+    return {
+        Title: 12,
+        isAuthenticated: 1
+    };
     default:
       return "No";
   }

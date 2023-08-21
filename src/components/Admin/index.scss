@@ -2898,3 +2898,1074 @@ table, th, td {
         }
     }
 }
+
+.Adminrestset {
+    width: 100%;
+    height: auto;
+    padding: 30px 50px;
+    .Adminrestset_btnGroup {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        span {
+            font-size: 15px;
+            background-color: #eee;
+            color: #727272;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 5px 7px;
+            margin-right: 5px;
+        }
+
+        .Adminrestset_btnGroup_edit {
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            padding: 7px 10px;
+            background-color: #5180ff;
+            margin-left: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .Adminrestset_btnGroup_create {
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            padding: 7px 10px;
+            background-color: #e71173;
+            margin-left: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+    }
+
+    table {
+        margin-top: 20px;
+        width: 100%;
+        thead {
+            tr {
+                td {
+                    background-color: #5180ff;
+                    padding: 15px;
+                    font-size: 15px;
+                    color: white;
+                    .Adminrestset_filter {
+                        position: relative;
+                        p {
+                            font-size: 15px;
+                            color: white;
+                        }
+                        div {
+                            position: absolute;
+                            top: -10px;
+                            right: 0;
+                            button {
+                                 background-color: #5180ff;
+                                color: white;
+                                border: none;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 15px;
+                    color: #727272;
+                    padding: 20px 0;
+                    button {
+                        padding: 10px 30px;
+                        background-color: #0045FF;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Adminrestsetpage {
+    width: 90%;
+    height: auto;
+    border: 1px groove gray;
+    margin: auto;
+    margin-top: 50px;
+    .Adminrestsetpage_header {
+        font-size: 15px;
+        text-align: start;
+        padding-left: 10px;
+        background-color: #727272;
+        color: white;
+        padding: 10px;
+    }
+
+    .Adminrestsetpage_title1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px; 
+        span {
+            font-size: 15px;
+            color: #727272;
+        }
+    }
+
+    .Adminrestsetpage_date {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0 10px;
+        span {
+            margin: 0 10px;
+            font-size: 15px;
+            color: #727272;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+        }
+    }
+
+    .Adminrestsetpage_title2 {
+        font-size: 15px;
+        color: #727272;
+        text-align: start;
+        padding: 10px 10px;
+    }
+
+    .Adminrestsetpage_day {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        div {
+            background-color: #d8d8d8;
+            margin-left: 10px;
+            padding: 3px 5px;
+            border-radius: 3px;
+            span {
+                margin-left: 5px;
+                font-size: 15px;
+                color: #727272;
+            }
+        }
+    }
+
+    .Adminrestsetpage_title3 {
+        font-size: 15px;
+        color: #727272;
+        padding: 0 10px;
+        text-align: start;
+        margin-top: 10px;
+    }
+
+    .Adminrestsetpage_time {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px 10px;
+        input {
+            width: 200px;
+            height: 30px;
+        }
+        span {
+            margin: 0 10px;
+            font-size: 15px;
+            color: #727272;
+        }
+    }
+
+    .Adminrestsetpage_title4 {
+        font-size: 15px;
+        color: #727272;
+        margin-left: 10px;
+        text-align: start;
+    }
+
+    .Adminrestsetpage_btndiv {
+        margin-left: 10px;
+        display: flex;
+        justify-content: start;
+        button {
+            background-color: #e71173;
+            color: white;
+            font-size: 15px;
+            padding: 10px 10px;
+            border:none;
+            margin: 20px 10px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.Adminrestpage_addbtn {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    button {
+        margin: 20px 10px;
+        padding: 10px 10px;
+        background-color: #e71173;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+   
+}
+
+.Adminrestpage_finishbtn {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   .Adminrestpage_finishbtn_back {
+        background-color: #727272;
+        font-size: 15px;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .Adminrestpage_finishbtn_nxt {
+        background-color: #0045FF;
+        font-size: 15px;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
+}
+
+.Adminrsvitemset {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    table {
+        width: 90%;
+        margin-top: 50px;
+        thead {
+            tr {
+                .Adminrsvitemset_td1 {
+                    background-color: #727272;
+                    width: 10%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+                .Adminrsvitemset_td2 {
+                    background-color: #727272;
+                    width: 40%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+                .Adminrsvitemset_td4 {
+                    background-color: #727272;
+                    width: 10%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 15px;
+                    color: #727272;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .Adminrsvitemset_addbtn {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        button {
+            font-size: 15px;
+            background-color: #e71173;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+
+    .Adminrsvitemset_editbtn {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        button {
+            font-size: 15px;
+            background-color: #0045FF;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+}
+
+.Admincustomerset {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    table {
+        width: 90%;
+        margin-top: 50px;
+        thead {
+            tr {
+                .Admincustomerset_td1 {
+                    background-color: #727272;
+                    width: 10%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+                .Admincustomerset_td2 {
+                    background-color: #727272;
+                    width: 35%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+                .Admincustomerset_td4 {
+                    background-color: #727272;
+                    width: 10%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+                .Admincustomerset_td5{
+                    background-color: #727272;
+                    width: 10%;
+                    padding: 10px;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 15px;
+                    color: #727272;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .Admincustomerset_addbtn {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        button {
+            font-size: 15px;
+            background-color: #e71173;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+
+    .Admincustomerset_editbtn {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        button {
+            font-size: 15px;
+            background-color: #0045FF;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+}
+
+.customerModal-header {
+    background-color: #0045FF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.customerModal-body {
+    display: flex;
+    border-bottom: 1px groove gainsboro;
+    .customerModal-body-div1 {
+        width: 200px;
+        background-color: #fbfbfb;
+        p {
+            font-size: 15px;
+            color: #727272;
+            border-top: 1px groove #727272;
+            padding: 10px 10px;
+        }
+    }
+
+    .customerModal-body-div2 {
+        width: 600px;
+        padding: 20px 20px;
+        .customerModal-body-div2-title {
+            display: flex;
+            p {
+                font-size: 15px;
+                font-weight: bold;
+                padding: 20px 40px;
+                border-left: 1px groove gainsboro;
+                border-top: 1px groove gainsboro;
+                border-right: 1px groove gainsboro;
+            }
+            span {
+                width: 415px;
+                border-bottom: 1px groove gainsboro;
+            }
+        }
+
+        .customerModal-body-div2-first {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            p {
+                font-size: 15px;
+                color: #727272;
+                padding-right: 120px;
+            }
+            input {
+                width: 300px;
+                height: 30px;
+            }
+            border-bottom: 1px groove gainsboro;
+        }
+
+        .customerModal-body-div2-second {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            border-bottom: 1px groove gainsboro;
+
+            .customerModal-body-div2-second-title {
+                font-size: 15px;
+                color: #727272;
+                padding: 10px;
+                padding-right: 90px;
+            }
+            .customerModal-body-div2-second-p {
+                padding: 3px 5px;
+                background-color: red;
+                color: white;
+                font-size: 12px;
+            }
+            .customerModal-body-div2-second-div {
+                background-color: #d8d8d8;
+                margin-left: 10px;
+                padding: 5px 0;
+                border-radius: 3px;
+                span {
+                    font-size: 13px;
+                    color: #727272;
+                    margin: 0 5px;
+                }
+                input {
+                    margin-left: 3px;
+                }
+            }
+        }
+        .add {
+            padding-right: 30px !important;
+        }
+    }
+}
+
+.customerModal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    button {
+        font-size: 15px;
+        color: white;
+        padding: 10px 40px;
+        background-color: #0045FF;
+        border: none;
+        border-radius: 5px;
+    }
+}
+.Adminautomailsend {
+    width: 100%;
+    height: auto;
+    padding: 30px 50px;
+    .Adminautomailsend_btnGroup {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        span {
+            font-size: 15px;
+            background-color: #eee;
+            color: #727272;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 5px 7px;
+            margin-right: 5px;
+        }
+
+        .Adminautomailsend_btnGroup_edit {
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            padding: 7px 10px;
+            background-color: #5180ff;
+            margin-left: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .Adminautomailsend_btnGroup_create {
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            padding: 7px 10px;
+            background-color: #e71173;
+            margin-left: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+    }
+
+    table {
+        margin-top: 20px;
+        width: 100%;
+        thead {
+            tr {
+                td {
+                    background-color: #5180ff;
+                    padding: 15px;
+                    font-size: 15px;
+                    color: white;
+                    .Adminautomailsend_filter {
+                        position: relative;
+                        p {
+                            font-size: 15px;
+                            color: white;
+                        }
+                        div {
+                            position: absolute;
+                            top: -10px;
+                            right: 0;
+                            button {
+                                 background-color: #5180ff;
+                                color: white;
+                                border: none;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 15px;
+                    color: #727272;
+                    padding: 20px 0;
+                    button {
+                        padding: 10px 30px;
+                        background-color: #0045FF;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Adminautomailsendedit {
+    margin-top: 20px;
+    padding: 50px;
+    table {
+        width: 100%;
+        height: auto;
+        border: 1px groove gainsboro;
+        tr {
+            .Adminautomailsendedit_normal {
+                width: 100%;
+                background-color: #d8d8d8;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
+                align-items: center;
+                p {
+                    font-size: 15px;
+                    color: #727272;
+                }
+                div {
+                    background-color: red;
+                    color: white;
+                    font-size: 13px;
+                    padding: 3px 5px;
+                }
+            }
+
+            .Adminautomailsendedit_select {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-left: 10px;
+                select {
+                    width: 300px;
+                    height: 30px;
+                }
+            }
+
+            .Adminautomailsendedit_input {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-left: 10px;
+                input {
+                    width: 300px;
+                    height: 30px;
+                }
+            }
+
+            .Adminautomailsendedit__ {
+                width: 100%;
+                background-color: #d8d8d8;
+                display: flex;
+                justify-content: space-between;
+                padding: 160px 10px;
+                align-items: center;
+                p {
+                    font-size: 15px;
+                    color: #727272;
+                }
+                div {
+                    background-color: red;
+                    color: white;
+                    font-size: 13px;
+                    padding: 3px 5px;
+                }
+            }
+
+            .Adminautomailsendedit_textarea {
+                div {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    padding: 20px;
+                    textarea {
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+            }
+            .Adminautomailsendedit_end {
+                div {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    input {
+                        margin-left: 20px;
+                        width: 300px;
+                        height: 30px;
+                    }
+                    button {
+                        margin-left: 20px;
+                        font-size: 15px;
+                        background-color: #0045FF;
+                        color: white;
+                        padding: 5px 30px ;
+                        border: none;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Adminautomailsendedit_btngroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .Adminautomailsendedit_back {
+            font-size: 15px;
+            color: white;
+            background-color: #727272;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .Adminautomailsendedit_nxt {
+            font-size: 15px;
+            color: white;
+            background-color: #0045FF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 50px;
+        }
+    }
+}
+
+.Adminmainsetting {
+    padding: 50px 80px;
+    .Adminmainsetting_title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #727272;
+        border-left: 2px solid gainsboro;
+        padding: 0 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Adminmainsetting_table1 {
+        width: 100%;
+        margin-top: 20px;
+        border: 1px groove gainsboro;
+        tr {
+            .Adminmainsetting_table1_title {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
+                align-items: center;
+                background-color: #d8d8d8;
+                p {
+                    color: #727272;
+                    font-size: 15px;
+                }
+                div {
+                    padding: 3px 5px;
+                    background-color: red;
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+            .Adminmainsetting_table1_td {
+                width: 80%;
+            }
+
+            .Adminmainsetting_table1_content {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                div {
+                    background-color: #d8d8d8;
+                    margin-left: 10px;
+                    border-radius: 3px;
+                    input {
+                        margin-left: 5px;
+                    }
+                    span {
+                        font-size: 13px;
+                        color: #727272;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Adminmainsetting_table2 {
+        width: 100%;
+        margin-top: 20px;
+        border: 1px groove gainsboro;
+        tr {
+            .Adminmainsetting_table2_title {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
+                align-items: center;
+                background-color: #d8d8d8;
+                p {
+                    color: #727272;
+                    font-size: 15px;
+                }
+                div {
+                    padding: 3px 5px;
+                    background-color: red;
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+            .Adminmainsetting_table2_td {
+                width: 80%;
+            }
+
+            .Adminmainsetting_table2_content {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                div {
+                    background-color: #d8d8d8;
+                    margin-left: 10px;
+                    border-radius: 3px;
+                    input {
+                        margin-left: 5px;
+                    }
+                    span {
+                        font-size: 13px;
+                        color: #727272;
+                        margin: 0 10px;
+                    }
+                    select {
+                        width: 100px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Adminmainsetting_table3 {
+        width: 100%;
+        margin-top: 20px;
+        border: 1px groove gainsboro;
+        tr {
+            .Adminmainsetting_table3_title {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
+                align-items: center;
+                background-color: #d8d8d8;
+                p {
+                    color: #727272;
+                    font-size: 15px;
+                }
+                div {
+                    padding: 3px 5px;
+                    background-color: red;
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+            .Adminmainsetting_table3_td {
+                width: 80%;
+            }
+
+            .Adminmainsetting_table3_content {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                .Adminmainsetting_table3_content_firstspan {
+                    font-size: 15px;
+                    color: #727272;
+                    margin: 0 10px;
+                }
+                .Adminmainsetting_table3_content_firstinput {
+                    width: 100px;
+                    height: 30px;
+                }
+                .Adminmainsetting_table3_content_secondinput {
+                    width: 200px;
+                    height: 30px;
+                    margin-left: 10px;
+                }
+                .Adminmainsetting_table3_content_secondspan {
+                    font-size: 15px;
+                    color: #727272;
+                    margin: 0 10px;
+                }
+
+                .Adminmainsetting_table3_content_thirdinput {
+                    width: 100px;
+                    height: 30px;
+                    margin-left: 10px;
+                }
+                .Adminmainsetting_table3_content_forthinput {
+                    width: 200px;
+                    height: 30px;
+                    margin-left: 10px;
+                }
+                .Adminmainsetting_table3_content_forthsapn {
+                    font-size: 15px;
+                    margin-left: 10px;
+                    color: #727272;
+                }
+                .Adminmainsetting_table3_content_fifthdiv {
+                    background-color: #d8d8d8;
+                    margin-left: 10px;
+                    padding: 5px 5px;
+                    border-radius: 3px;
+                    input {
+                        margin-left: 5px;
+                    }
+                    span {
+                        font-size: 13px;
+                        color: #727272;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Adminmainsetting_btn {
+        margin-top: 30px;
+        button {
+            color: white;
+            background-color: #0045FF;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+
+.Admintagsetting {
+    padding: 20px 70px;
+    table {
+        width: 100%;
+        tr {
+            .Admintagsetting_title {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding: 60px 10px;
+                background-color: #d8d8d8;
+                p {
+                    font-size: 15px;
+                    color: #727272;
+                }
+            }
+
+            .Admintagsetting_content {
+                width: 80%;
+                padding: 10px;
+                textarea {
+                    width: 100%;
+                    height: 120px;
+                }
+            }
+        }
+    }
+
+    .Admintagsetting_btn {
+        margin-top: 30px;
+        button {
+            font-size: 15px;
+            color: white;
+            background-color: #0045FF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+
+.Admindetailset {
+    padding: 20px 70px;
+    table {
+        width: 100%;
+        tr {
+            .Admindetailset_title {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding: 150px 10px;
+                background-color: #d8d8d8;
+                p {
+                    font-size: 15px;
+                    color: #727272;
+                }
+            }
+
+            .Admindetailset_content {
+                width: 80%;
+                padding: 10px;
+                textarea {
+                    width: 100%;
+                    height: 300px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .Admindetailset_btn {
+        margin-top: 30px;
+        button {
+            font-size: 15px;
+            color: white;
+            background-color: #0045FF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    .Admindetailset_btn {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        button {
+            font-size: 15px;
+            color: white;
+            background-color: #0045FF;
+            padding: 10px 20px;
+        }
+
+    }
+}

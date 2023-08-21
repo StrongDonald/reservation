@@ -42,7 +42,15 @@ import AdminrsvList from "./components/Admin/AdminrsvList";
 import Adminrsvframset from "./components/Admin/Adminrsvframset";
 import AdminrsvAdd from "./components/Admin/AdminrsvAdd";
 import Adminrsvcopy from "./components/Admin/Adminrsvcopy";
-
+import Adminrestset from "./components/Admin/Adminrestset";
+import Adminrestsetpage from "./components/Admin/Adminrestsetpage";
+import Adminrsvitemset from "./components/Admin/Adminrsvitemset";
+import Admincustomerset from "./components/Admin/Admincustomerset";
+import Adminautomailsend from "./components/Admin/Adminautomailsend";
+import Adminautomailsendedit from "./components/Admin/Adminautomailsendedit";
+import Adminmainsetting from "./components/Admin/Adminmainsetting";
+import Admintagsetting from "./components/Admin/Admintagsetting";
+import Admidetailset from "./components/Admin/Admidetailset";
 
 function App() {
   return (
@@ -85,7 +93,16 @@ function App() {
             <Route exact path="/admin/adminrsvframesetAdd" element={[(<AdminNavbar />), (<AdminLayer />), (<AdminrsvAdd />)]} />
             <Route exact path="/admin/adminrsvcopy" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvcopy />)]} />
             <Route exact path="/admin/adminrsvedit" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvcopy />)]} />
-            
+            <Route exact path="/admin/restset" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrestset />)]} />
+            <Route exact path="/admin/restsetpage" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrestsetpage />)]} />
+            <Route exact path="/admin/rsvitemset" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminrsvitemset />)]} />
+            <Route exact path="/admin/customerset" element={[(<AdminNavbar />), (<AdminLayer />), (<Admincustomerset />)]} />
+            <Route exact path="/admin/automailsend" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminautomailsend />)]} />
+            <Route exact path="/admin/automailsendedit" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminautomailsendedit />)]} />
+            <Route exact path="/admin/mainsetting" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminmainsetting />)]} />
+            <Route exact path="/admin/tagsetting" element={[(<AdminNavbar />), (<AdminLayer />), (<Admintagsetting />)]} />
+            <Route exact path="/admin/detailset" element={[(<AdminNavbar />), (<AdminLayer />), (<Admidetailset />)]} />
+
           </Routes>
         </div>
       </Router>
