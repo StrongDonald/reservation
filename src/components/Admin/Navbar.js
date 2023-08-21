@@ -15,7 +15,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
-import BuildIcon from '@mui/icons-material/Build';
+import BuildIcon from "@mui/icons-material/Build";
 
 const style = {
   position: "absolute",
@@ -121,7 +121,6 @@ function Navbar() {
       </div>
 
       <div className="admin_logoutnav_firstDiv">
-
         <div className="admin_logoutnav_firstDiv_part rightMg">
           <Link
             className="navIcons"
@@ -218,14 +217,20 @@ function Navbar() {
               <p>予約設定</p>
             </div>
 
-            <Link to="/admin/reservationframeset" 
-            onClick={() =>
-              dispatch({
-                type: "rsvframeset",
-              })
-            }
+            <Link
+              to="/admin/reservationframeset"
+              onClick={() =>
+                dispatch({
+                  type: "rsvframeset",
+                })
+              }
             >
-              <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
+                }}
+              >
                 <p>予約枠設定</p>
                 <Box
                   className="box"
@@ -242,36 +247,65 @@ function Navbar() {
               </div>
             </Link>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
-              <p>休業設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+            <Link
+              to="/admin/restset"
+              onClick={() =>
+                dispatch({
+                  type: "restset",
+                })
+              }
+            >
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
-              <p>予約内容の項目設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+                <p>休業設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
+
+            <Link
+              to="/admin/rsvitemset"
+              onClick={() =>
+                dispatch({
+                  type: "rsvitemset",
+                })
+              }
+            >
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>予約内容の項目設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
             <div className="line"></div>
 
@@ -289,21 +323,35 @@ function Navbar() {
               <p>顧客設定</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
-              <p>顧客情報の項目設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+            <Link
+              to="/admin/customerset"
+              onClick={() =>
+                dispatch({
+                  type: "customerset",
+                })
+              }
+            >
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>顧客情報の項目設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
             <div className="line"></div>
 
@@ -321,21 +369,37 @@ function Navbar() {
               <p>メール設定</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
-              <p>自動返信メール設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+
+            <Link
+            to="/admin/automailsend"
+            onClick={() =>
+              dispatch({
+                type: "automailsend",
+              })
+            }
+            >  
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>自動返信メール設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
+
 
             <div className="line"></div>
 
@@ -353,7 +417,20 @@ function Navbar() {
               <p>予約サイト設定</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
+            <Link
+            to="/admin/mainsetting"
+            onClick={() =>
+              dispatch({
+                type: "mainsetting",
+              })
+            }
+            >  
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setfirstOpen(false);
+              }}
+            >
               <p>基本設定</p>
               <Box
                 className="box"
@@ -367,9 +444,22 @@ function Navbar() {
                   sx={{ color: "#727272", fontSize: 20 }}
                 />
               </Box>
-            </div>
+            </div></Link>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
+            <Link
+            to="/admin/tagsetting"
+            onClick={() =>
+              dispatch({
+                type: "tagsetting",
+              })
+            }
+            > 
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setfirstOpen(false);
+              }}
+            >
               <p>計測タグ設定</p>
               <Box
                 className="box"
@@ -383,9 +473,14 @@ function Navbar() {
                   sx={{ color: "#727272", fontSize: 20 }}
                 />
               </Box>
-            </div>
+            </div></Link>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setfirstOpen(false);
+              }}
+            >
               <p>予約枠のカラー設定</p>
               <Box
                 className="box"
@@ -401,7 +496,21 @@ function Navbar() {
               </Box>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setfirstOpen(false)}}>
+
+            <Link
+            to="/admin/detailset"
+            onClick={() =>
+              dispatch({
+                type: "detailset",
+              })
+            }
+            >
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setfirstOpen(false);
+              }}
+            >
               <p>利用規約・個人情報取り扱い・特商法 設定</p>
               <Box
                 className="box"
@@ -416,6 +525,7 @@ function Navbar() {
                 />
               </Box>
             </div>
+            </Link>
           </div>
         </Box>
       </Modal>
@@ -469,7 +579,12 @@ function Navbar() {
               <p>予約管理</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>予約一覧</p>
               <Box
                 className="box"
@@ -494,14 +609,17 @@ function Navbar() {
                   },
                 }}
               >
-                <GroupIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
+                <GroupIcon sx={{ color: "#727272", fontSize: 20 }} />
               </Box>
               <p>顧客管理</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>顧客一覧</p>
               <Box
                 className="box"
@@ -517,7 +635,12 @@ function Navbar() {
               </Box>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>会員登録</p>
               <Box
                 className="box"
@@ -543,14 +666,17 @@ function Navbar() {
                   },
                 }}
               >
-                <BuildIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
+                <BuildIcon sx={{ color: "#727272", fontSize: 20 }} />
               </Box>
               <p>CMS管理</p>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>お知らせ</p>
               <Box
                 className="box"
@@ -566,7 +692,12 @@ function Navbar() {
               </Box>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>操作ログ</p>
               <Box
                 className="box"
@@ -582,7 +713,12 @@ function Navbar() {
               </Box>
             </div>
 
-            <div className="Menu-Modal-body-firstdiv-settings" onClick={() => {setsecondOpen(false)}}>
+            <div
+              className="Menu-Modal-body-firstdiv-settings"
+              onClick={() => {
+                setsecondOpen(false);
+              }}
+            >
               <p>ファイル管理</p>
               <Box
                 className="box"
