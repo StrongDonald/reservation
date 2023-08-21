@@ -369,15 +369,14 @@ function Navbar() {
               <p>メール設定</p>
             </div>
 
-
             <Link
-            to="/admin/automailsend"
-            onClick={() =>
-              dispatch({
-                type: "automailsend",
-              })
-            }
-            >  
+              to="/admin/automailsend"
+              onClick={() =>
+                dispatch({
+                  type: "automailsend",
+                })
+              }
+            >
               <div
                 className="Menu-Modal-body-firstdiv-settings"
                 onClick={() => {
@@ -400,7 +399,6 @@ function Navbar() {
               </div>
             </Link>
 
-
             <div className="line"></div>
 
             <div className="Menu-Modal-body-firstdiv-settings fontbold">
@@ -418,113 +416,123 @@ function Navbar() {
             </div>
 
             <Link
-            to="/admin/mainsetting"
-            onClick={() =>
-              dispatch({
-                type: "mainsetting",
-              })
-            }
-            >  
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setfirstOpen(false);
-              }}
+              to="/admin/mainsetting"
+              onClick={() =>
+                dispatch({
+                  type: "mainsetting",
+                })
+              }
             >
-              <p>基本設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div></Link>
+                <p>基本設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
             <Link
-            to="/admin/tagsetting"
-            onClick={() =>
-              dispatch({
-                type: "tagsetting",
-              })
-            }
-            > 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setfirstOpen(false);
-              }}
+              to="/admin/tagsetting"
+              onClick={() =>
+                dispatch({
+                  type: "tagsetting",
+                })
+              }
             >
-              <p>計測タグ設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div></Link>
-
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setfirstOpen(false);
-              }}
-            >
-              <p>予約枠のカラー設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
-                }}
-              >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
-
+                <p>計測タグ設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
             <Link
-            to="/admin/detailset"
-            onClick={() =>
-              dispatch({
-                type: "detailset",
-              })
-            }
+              to="/admin/colorsetting"
+              onClick={() =>
+                dispatch({
+                  type: "colorsetting",
+                })
+              }
             >
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setfirstOpen(false);
-              }}
-            >
-              <p>利用規約・個人情報取り扱い・特商法 設定</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>予約枠のカラー設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
+
+            <Link
+              to="/admin/detailset"
+              onClick={() =>
+                dispatch({
+                  type: "detailset",
+                })
+              }
+            >
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setfirstOpen(false);
+                }}
+              >
+                <p>利用規約・個人情報取り扱い・特商法 設定</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
             </Link>
           </div>
         </Box>
@@ -579,26 +587,36 @@ function Navbar() {
               <p>予約管理</p>
             </div>
 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setsecondOpen(false);
-              }}
+            <Link
+              to="/admin/rsvView"
+              onClick={() =>
+                dispatch({
+                  type: "rsvView",
+                })
+              }
             >
-              <p>予約一覧</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setsecondOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>予約一覧</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
+
             <div className="line"></div>
             <div className="Menu-Modal-body-firstdiv-settings fontbold">
               <Box
@@ -614,47 +632,65 @@ function Navbar() {
               <p>顧客管理</p>
             </div>
 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setsecondOpen(false);
-              }}
+            <Link
+              to="/admin/customerlist"
+              onClick={() =>
+                dispatch({
+                  type: "customerlist",
+                })
+              }
             >
-              <p>顧客一覧</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setsecondOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>顧客一覧</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setsecondOpen(false);
-              }}
+            <Link
+              to="/admin/adminregister"
+              onClick={() =>
+                dispatch({
+                  type: "adminregister",
+                })
+              }
             >
-              <p>会員登録</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setsecondOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>会員登録</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
             <div className="line"></div>
             <div className="Menu-Modal-body-firstdiv-settings fontbold">
@@ -671,27 +707,44 @@ function Navbar() {
               <p>CMS管理</p>
             </div>
 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setsecondOpen(false);
-              }}
+            <Link
+              to="/admin/notice"
+              onClick={() =>
+                dispatch({
+                  type: "notice",
+                })
+              }
             >
-              <p>お知らせ</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setsecondOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>お知らせ</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
 
+            <Link
+              to="/admin/operatelog"
+              onClick={() =>
+                dispatch({
+                  type: "operatelog",
+                })
+              }
+            >
             <div
               className="Menu-Modal-body-firstdiv-settings"
               onClick={() => {
@@ -711,28 +764,37 @@ function Navbar() {
                   sx={{ color: "#727272", fontSize: 20 }}
                 />
               </Box>
-            </div>
+            </div></Link>
 
-            <div
-              className="Menu-Modal-body-firstdiv-settings"
-              onClick={() => {
-                setsecondOpen(false);
-              }}
+            <Link
+              to="/admin/filemanage"
+              onClick={() =>
+                dispatch({
+                  type: "filemanage",
+                })
+              }
             >
-              <p>ファイル管理</p>
-              <Box
-                className="box"
-                sx={{
-                  "& > :not(style)": {
-                    m: 0,
-                  },
+              <div
+                className="Menu-Modal-body-firstdiv-settings"
+                onClick={() => {
+                  setsecondOpen(false);
                 }}
               >
-                <KeyboardArrowRightIcon
-                  sx={{ color: "#727272", fontSize: 20 }}
-                />
-              </Box>
-            </div>
+                <p>ファイル管理</p>
+                <Box
+                  className="box"
+                  sx={{
+                    "& > :not(style)": {
+                      m: 0,
+                    },
+                  }}
+                >
+                  <KeyboardArrowRightIcon
+                    sx={{ color: "#727272", fontSize: 20 }}
+                  />
+                </Box>
+              </div>
+            </Link>
           </div>
         </Box>
       </Modal>
