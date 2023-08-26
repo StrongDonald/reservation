@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+text-decoration: none !important;
+}
+
+img {
+width: 100%;
+}
+
+table, th, td {
+    border: 1px solid rgb(202, 199, 199);
+    border-collapse: collapse;
+}
+
+.manageNavbar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #0045FF;
+
+    .manageNavbar_logo {
+        margin-left: 15px;
+        img {
+            height: 30px;
+            width: 200px;
+        }
+    }
+}
+    
+.manage_logoutnav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0045FF;
+
+    .manage_logoutnav_firstDiv {
+        height: 70px;
+        width: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .manage_logoutnav_firstDiv_part {
+            border-right: 1px groove rgb(118, 118, 118);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            img {
+                height: 30px;
+                width: 200px;
+            }
+            p, a{
+                cursor: default;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                padding: 0 10px;
+            }
+            
+        }
+        .rightMg {
+            border-right: 0 !important;
+            border-left: 1px groove rgb(118, 118, 118) !important;
+            .box {
+                margin-top: 4px;
+            }
+            p {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.navIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manageLayer {
+    width: 100%;
+    height: 60px;
+    background-color: #ededed;
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+    .manageLayer_rsvlist {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .manageLayer_rsvlist_toHome {
+            background-color: #0045FF;
+            padding: 7px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            p {
+                font-size: 13px;
+                font-weight: bold;
+                color: white;
+                border-radius: 3px;
+                margin-left: 5px;
+            }
+        }
+
+        .manageLayer_rsvlist_title {
+            font-size: 20px;
+            color: #727272;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .manageLayer_rsvset_title {
+            font-size: 15px;
+            color: #727272;
+            margin-left: 10px;
+            span {
+                font-size: 20px;
+                font-weight: 20px;
+                color: #727272;
+            }
+        }
+    }
+}
+
+.manageLogin {
+    width: 100%;
+    height: 500px;
+    
+    .manageLogin_part {
+        width: 420px;
+        height: 340px;
+        margin: auto;
+        margin-top: 230px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        .manageLogin_part_text {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 25px 20px;
+            div {
+                width: 10px;
+                height: 25px;
+                border-left: 2px solid #d8d8d8;
+            }
+            p {
+                font-size: 17px;
+                font-weight: bold;
+                color: #727272;
+            }
+        }
+
+        .manageLogin_part_ID {
+            width: 100%;
+            padding: 0 20px;
+            p {
+                text-align: start;
+                font-size: 15px;
+                color: #727272;
+                margin-bottom: 10px;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+            }
+        }
+
+        .manageLogin_part_Pass {
+            width: 100%;
+            padding: 0 20px;
+            margin-top: 25px;
+            p {
+                text-align: start;
+                font-size: 15px;
+                color: #727272;
+                margin-bottom: 10px;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+            }
+        }
+
+        .manageLogin_part_btn {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            button {
+                margin: auto;
+                padding: 10px 50px;
+                font-size: 15px;
+                color: white;
+                background-color: #5180ff;
+                border: none;
+                border-radius: 3px;
+            }
+        }
+
+        .manageLogin_part_passlost {
+            margin-top: 10px;
+            p {
+                font-size: 15px;
+                color: #0045FF;
+            }
+        }
+    }
+}

@@ -60,6 +60,11 @@ import Adminnoticeedit from "./components/Admin/Adminnoticeedit";
 import Adminfilemanage from "./components/Admin/Adminfilemanage";
 import Adminoperatelog from "./components/Admin/Adminoperatelog";
 
+import ManageNavbar from "./components/Manage/Navbar";
+import ManageLayer from "./components/Manage/Layer";
+import ManageLogin from "./components/Manage/Login";
+
+
 function App() {
   return (
     <Provider store={store}>
@@ -120,6 +125,8 @@ function App() {
             <Route exact path="/admin/noticeedit" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminnoticeedit />)]} />
             <Route exact path="/admin/filemanage" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminfilemanage />)]} />
             <Route exact path="/admin/operatelog" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminoperatelog />)]} />
+
+            <Route exact path="/manage" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageLogin />)]} />
 
           </Routes>
         </div>
