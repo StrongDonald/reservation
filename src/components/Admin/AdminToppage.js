@@ -19,9 +19,9 @@ function AdminToppage() {
         <table>
           <thead>
             <tr>
-              <td>ご契約プラン</td>
-              <td>会員登録数</td>
-              <td>メール配信数（月）</td>
+              <td>該当管理アカウントの契約年数・アカウント開設⽇</td>
+              <td>該当管理アカウントの累計会員数</td>
+              <td>該当管理アカウントのヘルパー予約累計申込数</td>
             </tr>
           </thead>
 
@@ -43,9 +43,9 @@ function AdminToppage() {
         <table className="AdminToppage_secondtable_table">
           <thead>
             <tr>
-              <td>会員登録数</td>
-              <td>予約数</td>
-              <td>カレンダー画面表示数</td>
+              <td>該当管理アカウントの新規会員登録数</td>
+              <td>該当管理アカウントのヘルパー予約申込数</td>
+              <td>該当管理アカウントのヘルパー予約キャンセル数</td>
             </tr>
           </thead>
 
