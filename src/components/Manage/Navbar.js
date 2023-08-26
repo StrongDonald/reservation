@@ -1,0 +1,56 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import "./index.css";
+import logo from "../../img/Adminlogo.jpg";
+
+import Box from "@mui/material/Box";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+
+function Navbar() {
+  const dispatch = useDispatch();
+
+  const logout_nav = (
+    <div className="manage_logoutnav">
+      <div className="managr_logoutnav_firstDiv">
+        <div className="manage_logoutnav_firstDiv_part">
+          <Link
+            to="/manage/login"
+            onClick={() =>
+              dispatch({
+                type: "manage-login-front",
+              })
+            }
+          >
+            <img src={logo} alt="Logo" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  const login_nav = (
+    <div className="manageNavbar">
+      <div className="manageNavbar_logo">
+        <Link
+          to="/manage"
+          onClick={() =>
+            dispatch({
+              type: "frontmanage",
+            })
+          }
+        >
+          <img src={logo} alt="Logo" />
+        </Link>
+      </div>
+    </div>
+  );
+  const stData = useSelector((state) => state);
+  return (
+    <>
+      {stData.manageauth.isAuthenticated ? logout_nav : login_nav}
+    </>
+  );
+}
+
+export default Navbar;
