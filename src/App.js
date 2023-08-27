@@ -63,6 +63,7 @@ import Adminoperatelog from "./components/Admin/Adminoperatelog";
 import ManageNavbar from "./components/Manage/Navbar";
 import ManageLayer from "./components/Manage/Layer";
 import ManageLogin from "./components/Manage/Login";
+import ManageLoginscreen from "./components/Manage/Loginscreen";
 
 
 function App() {
@@ -127,7 +128,7 @@ function App() {
             <Route exact path="/admin/operatelog" element={[(<AdminNavbar />), (<AdminLayer />), (<Adminoperatelog />)]} />
 
             <Route exact path="/manage" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageLogin />)]} />
-
+            <Route exact path="/manage/login" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageLoginscreen />)]} />
           </Routes>
         </div>
       </Router>
