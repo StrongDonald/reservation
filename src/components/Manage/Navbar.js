@@ -28,22 +28,12 @@ function Navbar() {
         </div>
 
         <div className="manage_logoutnav_firstDiv_part">
-          <Box
-            style={{ marginLeft: "10px" }}
-            sx={{
-              "& > :not(style)": {
-                m: 0,
-              },
-            }}
-          >
-            <AssignmentTurnedInIcon sx={{ color: "white", fontSize: 20 }} />
-          </Box>
           <Link
             className="navIcons"
-            to="/manage/rsvList"
+            to="/manage/IDcreate"
             onClick={() =>
               dispatch({
-                type: "managersvList",
+                type: "IDcreate",
               })
             }
           >
@@ -52,22 +42,12 @@ function Navbar() {
         </div>
 
         <div className="manage_logoutnav_firstDiv_part">
-          <Box
-            style={{ marginLeft: "10px" }}
-            sx={{
-              "& > :not(style)": {
-                m: 0,
-              },
-            }}
-          >
-            <AssignmentTurnedInIcon sx={{ color: "white", fontSize: 20 }} />
-          </Box>
           <Link
             className="navIcons"
-            to="/manage/rsvList"
+            to="/manage/userinforView"
             onClick={() =>
               dispatch({
-                type: "managersvList",
+                type: "userinforView",
               })
             }
           >
@@ -76,22 +56,12 @@ function Navbar() {
         </div>
 
         <div className="manage_logoutnav_firstDiv_part">
-          <Box
-            style={{ marginLeft: "10px" }}
-            sx={{
-              "& > :not(style)": {
-                m: 0,
-              },
-            }}
-          >
-            <AssignmentTurnedInIcon sx={{ color: "white", fontSize: 20 }} />
-          </Box>
           <Link
             className="navIcons"
-            to="/manage/rsvList"
+            to="/manage/rsvstatusView"
             onClick={() =>
               dispatch({
-                type: "managersvList",
+                type: "rsvstatusView",
               })
             }
           >
@@ -100,22 +70,12 @@ function Navbar() {
         </div>
 
         <div className="manage_logoutnav_firstDiv_part">
-          <Box
-            style={{ marginLeft: "10px" }}
-            sx={{
-              "& > :not(style)": {
-                m: 0,
-              },
-            }}
-          >
-            <AssignmentTurnedInIcon sx={{ color: "white", fontSize: 20 }} />
-          </Box>
           <Link
             className="navIcons"
-            to="/manage/rsvList"
+            to="/manage/advmanage"
             onClick={() =>
               dispatch({
-                type: "managersvList",
+                type: "advmanage",
               })
             }
           >
@@ -124,22 +84,12 @@ function Navbar() {
         </div>
 
         <div className="manage_logoutnav_firstDiv_part">
-          <Box
-            style={{ marginLeft: "10px" }}
-            sx={{
-              "& > :not(style)": {
-                m: 0,
-              },
-            }}
-          >
-            <AssignmentTurnedInIcon sx={{ color: "white", fontSize: 20 }} />
-          </Box>
           <Link
             className="navIcons"
-            to="/manage/rsvList"
+            to="/manage/advreport"
             onClick={() =>
               dispatch({
-                type: "managersvList",
+                type: "advreport",
               })
             }
           >

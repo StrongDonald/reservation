@@ -100,41 +100,21 @@ table, th, td {
     padding: 10px 80px;
     display: flex;
     align-items: center;
-    .manageLayer_rsvlist {
+    .manageLayer_content{
+        padding: 20px 110px;
+        height: 100%;
         display: flex;
         justify-content: start;
-        align-items: center;
-        .manageLayer_rsvlist_toHome {
-            background-color: #0045FF;
-            padding: 7px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-            p {
-                font-size: 13px;
-                font-weight: bold;
-                color: white;
-                border-radius: 3px;
-                margin-left: 5px;
-            }
-        }
 
-        .manageLayer_rsvlist_title {
-            font-size: 20px;
-            color: #727272;
-            font-weight: bold;
-            margin-left: 10px;
+        .homeIcon {
+            margin-top: -6px;
+            margin-left: -80px;
         }
-        .manageLayer_rsvset_title {
-            font-size: 15px;
-            color: #727272;
-            margin-left: 10px;
-            span {
-                font-size: 20px;
-                font-weight: 20px;
-                color: #727272;
-            }
+        .pageTitle {
+            font-size: 20px;
+            margin-top: -13px;
+            color: white;
+            color: #0045FF;
         }
     }
 }
@@ -217,6 +197,144 @@ table, th, td {
             p {
                 font-size: 15px;
                 color: #0045FF;
+            }
+        }
+    }
+}
+
+.IDcreate {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+
+    .IDcreate_div {
+        display: flex;
+        justify-content: start;
+        button {
+            background-color: #e71173;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 30px;
+        thead {
+            tr {
+                .IDcreate_td1 {
+                    width: 10%;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        background-color: #5180ff;
+                        padding: 15px;
+                    }
+                }
+
+                .IDcreate_td2 {
+                    width: 30%;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        background-color: #5180ff;
+                        padding: 15px;
+                    }
+                }
+
+                .IDcreate_td3 {
+                    width: 60%;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        background-color: #5180ff;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    p {
+                        font-size: 15px;
+                        color: #727272;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.UserinforView {
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    table {
+        width: 100%;
+        margin-top: 100px;
+        tbody {
+            .UserinforView_oganize {
+                .UserinforView_oganizename {
+                    width: 30%;
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        padding: 15px;
+                        background-color: #5180ff;
+                    }
+                }
+
+                .UserinforView_oganizeinfor {
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        padding: 15px;
+                        background-color: #5180ff;
+                    }
+                }
+            }
+
+            .UserinforView_admin {
+                .UserinforView_adminname {
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        padding: 15px;
+                        background-color: #b5b5b5;
+                    }
+                }
+                .UserinforView_admininfor { 
+                    p {
+                        font-size: 15px;
+                        color: white;
+                        padding: 15px;
+                        background-color: #b5b5b5;
+                    }
+                }
+            }
+
+            .UserinforView_users {
+                .UserinforView_usersname {
+                    p {
+                        font-size: 15px;
+                        color: #727272;
+                        background-color: white;
+                        padding: 15px;
+                    }
+                }
+                .UserinforView_usersinfor {
+                    p {
+                        font-size: 15px;
+                        color: #727272;
+                        background-color: white;
+                        padding: 15px;
+                    }
+                }
             }
         }
     }
