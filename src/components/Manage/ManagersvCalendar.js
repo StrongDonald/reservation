@@ -54,7 +54,7 @@ function Date_cntCalc(str) {
   }
 }
 
-function AdminrsvCalendar() {
+function ManagersvCalendar() {
   const dispatch = useDispatch();
   const [display, setdisplay] = useState(0);
   const [displaycls, setdisplaycls] = useState("undisplay");
@@ -135,7 +135,6 @@ function AdminrsvCalendar() {
     }
     console.log(arr);
     setflag(arr);
-
     ////////////////////////////////////////////////////
 
     arr = [
@@ -314,11 +313,11 @@ function AdminrsvCalendar() {
   }
 
   return (
-    <div className="AdminrsvCalendar_content_form">
-      <div className="AdminrsvCalendar_content_form_nav">
-        <div className="AdminrsvCalendar_content_form_nav_calendar">
+    <div className="ManagersvCalendar_content_form">
+      <div className="ManagersvCalendar_content_form_nav">
+        <div className="ManagersvCalendar_content_form_nav_calendar">
           <div
-            className="AdminrsvCalendar_content_form_nav_calendar_leftArrow"
+            className="ManagersvCalendar_content_form_nav_calendar_leftArrow"
             onClick={prev_func}
           >
             <Box
@@ -337,7 +336,7 @@ function AdminrsvCalendar() {
             className="tooltip"
           >
             <button
-              className="AdminrsvCalendar_content_form_nav_calendar_body"
+              className="ManagersvCalendar_content_form_nav_calendar_body"
               onClick={displayfunc}
             >
               <span>
@@ -355,7 +354,7 @@ function AdminrsvCalendar() {
             </button>
           </Tooltip>
           <div
-            className="AdminrsvCalendar_content_form_nav_calendar_rightArrow"
+            className="ManagersvCalendar_content_form_nav_calendar_rightArrow"
             onClick={next_func}
           >
             <Box
@@ -370,11 +369,11 @@ function AdminrsvCalendar() {
           </div>
         </div>
         <div
-          className="AdminrsvCalendar_content_form_nav_filter"
+          className="ManagersvCalendar_content_form_nav_filter"
           onChange={(e) => selected_func(e)}
         >
           <Box
-            className="AdminrsvCalendar_content_form_nav_filter_box"
+            className="ManagersvCalendar_content_form_nav_filter_box"
             sx={{
               "& > :not(style)": {
                 m: 0,
@@ -391,8 +390,8 @@ function AdminrsvCalendar() {
         <Calendar onChange={setDate} value={date} />
       </div>
 
-      <div className="AdminrsvCalendar_content_form_calendar">
-        <div className="AdminrsvCalendar_content_form_calendar_colors">
+      <div className="ManagersvCalendar_content_form_calendar">
+        <div className="ManagersvCalendar_content_form_calendar_colors">
           <div className="rsv_color1"></div>
           <p>空きなし</p>
           <div className="rsv_color2"></div>
@@ -411,7 +410,7 @@ function AdminrsvCalendar() {
           <p>夕方のみ（女性）</p>
         </div>
 
-        <table className="AdminrsvCalendar_content_form_calendar_table">
+        <table className="ManagersvCalendar_content_form_calendar_table">
           <thead>
             <tr>
               <th>月</th>
@@ -425,7 +424,7 @@ function AdminrsvCalendar() {
           </thead>
 
           <tbody>
-          {Day_status < 7 ? (
+            {Day_status < 7 ? (
             <tr>
               <td>
                 <div className="calendar_date">{datenum[0]}</div>
@@ -1406,6 +1405,7 @@ function AdminrsvCalendar() {
                 )}
               </td>
             </tr>) : ""}
+
             <tr>
               <td>
                 <div className="calendar_date">{datenum[7]}</div>
@@ -6059,15 +6059,11 @@ function AdminrsvCalendar() {
                     </div>
 
                     <div>
-                        <Link><p>{stData.adminauth.reservationContent}</p></Link>
-                        <p>{stData.adminauth.reservationDate}</p>
-                        <p>{stData.adminauth.reservationTime}</p>
-                        <p>{stData.adminauth.reservationstatus}</p>
+                        {/* <Link><p>{stData.Manageauth.reservationContent}</p></Link>
+                        <p>{stData.Manageauth.reservationDate}</p>
+                        <p>{stData.Manageauth.reservationTime}</p>
+                        <p>{stData.Manageauth.reservationstatus}</p> */}
                     </div>
-                </div>
-
-                <div className="Modal-btndiv">
-                    <button>予約登録</button>
                 </div>
             </div>
           </Box>
@@ -6077,4 +6073,4 @@ function AdminrsvCalendar() {
   );
 }
 
-export default AdminrsvCalendar;
+export default ManagersvCalendar;

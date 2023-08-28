@@ -274,6 +274,7 @@ table, th, td {
     width: 100%;
     height: 100%;
     padding: 0 50px;
+    padding-bottom: 50px;
     table {
         width: 100%;
         margin-top: 100px;
@@ -317,7 +318,7 @@ table, th, td {
                     }
                 }
             }
-
+            
             .UserinforView_users {
                 .UserinforView_usersname {
                     p {
@@ -338,4 +339,373 @@ table, th, td {
             }
         }
     }
+}
+
+.RsvstatusView {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .RsvstatusView_organize {
+        width: 25%;
+        height: 100%;
+        margin-top: 10px;
+        .RsvstatusView_organize_title {
+            width: 100%;
+            height: 28px;
+            font-size: 20px;
+            color: #0045FF;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            padding-left: 10px;
+            border-left: 2px solid #0045FF;
+        }
+
+        .RsvstatusView_organize_btndiv {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 30px;
+            button {
+                font-size: 15px;
+                border: 1px groove grey;
+                color: #727272;
+                width: 100%;
+                height: 50px;
+            }
+            button:hover {
+                background-color: #b5b5b5;
+                color: white;
+            }
+        }
+    }
+
+    .RsvstatusView_reservation {
+        width: 70%;
+        height: 100%;
+    }
+}
+
+.ManagersvCalendar_content_form {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: white;
+
+    .undisplay {
+        display: none;
+    }
+    .display {
+        display: block;
+    }
+
+    .ManagersvCalendar_content_form_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .ManagersvCalendar_content_form_nav_calendar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            
+            .ManagersvCalendar_content_form_nav_calendar_body {
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 130px;
+                .re_span {
+                    font-size: 20rem;
+                    color: #727272;
+                    font-weight: bold;
+                    margin-left: 5rem;
+                    margin-right: -5rem;
+                }
+                margin-left: -10rem;
+            }
+        }
+
+        .ManagersvCalendar_content_form_nav_filter {
+            font-size: 15rem;
+            padding: 7px 15px;
+            border-radius: 5px;
+            background-color: #e71173;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                cursor: default;
+                color: white;
+            }
+            .ManagersvCalendar_content_form_nav_filter_box {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .ManagersvCalendar_content_form_calendar {
+        width: 100%;
+        height: auto;
+        border: 2px solid #dddfde;
+
+        .ManagersvCalendar_content_form_calendar_colors {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-size: 13px;
+            color: #727272;
+            padding: 7px 7px;
+
+            .rsv_color1 {background-color: #727272; width: 20px; height: 13px;}
+            .rsv_color2 {background-color: yellow; width: 20px; height: 13px;}
+            .rsv_color3 {background-color: rgba(255, 183, 0, 0.413); width: 20px; height: 13px;}
+            .rsv_color4 {background-color: #59f63657; width: 20px; height: 13px;}
+            .rsv_color5 {background-color: #06c9df6f; width: 20px; height: 13px;}
+            .rsv_color6 {background-color: #0c84f47a; width: 20px; height: 13px;}
+            .rsv_color7 {background-color: #8524fb6c; width: 20px; height: 13px;}
+            .rsv_color8 {background-color: #ef15777f; width: 20px; height: 13px;}
+
+            p {
+                margin: 0 10px;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            thead {
+                tr {
+                    th {
+                        background-color: #dddfde;
+                        width: 14.28571428571429rem;
+                        font-size: 15px;
+                        padding: 15px 0;
+                        color: #727272;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        .calendar_date {
+                            font-size: 15px;
+                            padding: 10px 10px;
+                            text-align: start;
+                        }
+                        .space_box {
+                            width: 100%;
+                            height: 30rem;
+                        }
+                        .rsv_box {
+                            width: 100%;
+                            height: auto;
+                            font-size: 10px;
+                            padding-bottom: 10rem;
+                            .undisplay {
+                                display: none;
+                            }
+                            .display {
+                                display: block;
+                            }
+                            .rsv_1 {
+                                background-color:rgba(255, 183, 0, 0.413);
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_2 {
+                                background-color: #59f63657;
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_3 {
+                                background-color: #06c9df6f;
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_4 {
+                                background-color: #0c84f47a;
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_5 {
+                                background-color: #8524fb6c;
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_6 {
+                                background-color: #ef15777f;
+                                border-bottom: 2px solid white;
+                                color: #727272;
+                                cursor: pointer;
+                            }
+                            .rsv_1:hover {
+                                background-color:rgba(255, 183, 0, 0.259);
+                            }
+                            .rsv_2:hover {
+                                background-color: #59f6363a;
+                            }
+                            .rsv_3:hover {
+                                background-color:#06c9df45;
+                            }
+                            .rsv_4:hover {
+                                background-color:#0c84f446;
+                            }
+                            .rsv_5:hover {
+                                background-color:#8524fb44;
+                            }
+                            .rsv_6:hover {
+                                background-color:#ef157753;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Loginscreen {
+    width: 100%;
+    height: 700px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b5b5b5;
+}
+
+.Advmanage {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .Advmanage_organize {
+        width: 25%;
+        height: 100%;
+        margin-top: 10px;
+        .Advmanage_organize_title {
+            width: 100%;
+            height: 28px;
+            font-size: 20px;
+            color: #0045FF;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-left: 10px;
+            border-left: 2px solid #0045FF;
+        }
+
+        .Advmanage_organize_btndiv {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 30px;
+            button {
+                font-size: 15px;
+                border: 1px groove grey;
+                color: #727272;
+                width: 100%;
+                height: 50px;
+            }
+            button:hover {
+                background-color: #b5b5b5;
+                color: white;
+            }
+        }
+    }
+
+    .Advmanage_reservation {
+        width: 70%;
+        height: 100%;
+        margin-top: 50px;
+        div {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .Advmanage_reservation_urldiv {
+            margin-top: 30px;
+            input {
+                width: 300px;
+                height: 30px;
+                font-size: 15px;
+                padding-left: 5px;
+            }
+        }
+        .Advmanage_reservation_previewdiv {
+            margin-top: 30px;
+            button {
+                width: 300px;
+                height: 50px;
+                font-size: 15px;
+                color: white;
+                background-color: #0045FF;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        .Advmanage_reservation_statusdiv {
+            margin-top: 30px;
+            .Advmanage_reservation_statusdiv_activated {
+                width: 300px;
+                height: 50px;
+                font-size: 15px;
+                color: white;
+                background-color: #727272;
+                border: none;
+                border-radius: 5px;
+            }
+            .Advmanage_reservation_statusdiv_paused {
+                width: 300px;
+                height: 50px;
+                font-size: 15px;
+                color: white;
+                background-color: #727272;
+                border: none;
+                border-radius: 5px;
+                margin-left: 30px;
+            }
+
+            .Advmanage_reservation_statusdiv_delete {
+                width: 300px;
+                height: 50px;
+                font-size: 15px;
+                color: white;
+                background-color: red;
+                border: none;
+                border-radius: 5px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.btnColor {
+    background-color: #727272 !important;
+    color: white !important;
+}
+
+.activateColor {
+    background-color: #0045FF !important;
+}
+
+.pausedColor {
+    background-color: #727272;
 }
