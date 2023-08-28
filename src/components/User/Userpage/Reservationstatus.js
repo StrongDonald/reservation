@@ -436,6 +436,7 @@ function Reservationstatus() {
               </thead>
 
               <tbody>
+                { Day_status < 7 ? (
                 <tr>
                   <td>
                     <div className="calendar_date">{datenum[0]}</div>
@@ -1200,7 +1201,7 @@ function Reservationstatus() {
                       space
                     )}
                   </td>
-                </tr>
+                </tr>) : ""}
 
                 <tr>
                   <td>

@@ -29,6 +29,46 @@ function reducer(state = initialization, action) {
         Title: ">会員情報閲覧",
         isAuthenticated: 1,
     };
+    case "rsvstatusView":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "advmanage":
+        return {
+        Title: ">広告出稿管理",
+        isAuthenticated: 1,
+    };
+    case "rsvSet1":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "rsvSet2":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "rsvSet3":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "rsvSet4":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "rsvSet5":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
+    case "rsvSet6":
+        return {
+        Title: ">予約状況閲覧",
+        isAuthenticated: 1,
+    };
     default:
       return "No";
   }
