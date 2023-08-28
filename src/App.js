@@ -64,7 +64,8 @@ import ManageNavbar from "./components/Manage/Navbar";
 import ManageLayer from "./components/Manage/Layer";
 import ManageLogin from "./components/Manage/Login";
 import ManageLoginscreen from "./components/Manage/Loginscreen";
-
+import ManageIDcreate from "./components/Manage/IDcreate";
+import ManageuserinforView from "./components/Manage/UserinforView";
 
 function App() {
   return (
@@ -129,6 +130,8 @@ function App() {
 
             <Route exact path="/manage" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageLogin />)]} />
             <Route exact path="/manage/login" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageLoginscreen />)]} />
+            <Route exact path="/manage/IDcreate" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageIDcreate />)]} />
+            <Route exact path="/manage/userinforView" element={[(<ManageNavbar />), (<ManageLayer />), (<ManageuserinforView />)]} />
           </Routes>
         </div>
       </Router>

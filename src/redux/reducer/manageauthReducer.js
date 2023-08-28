@@ -19,6 +19,16 @@ function reducer(state = initialization, action) {
         return {
         isAuthenticated: 1,
     };
+    case "IDcreate":
+        return {
+        Title: ">組織ID管理",
+        isAuthenticated: 1,
+    };
+    case "userinforView":
+        return {
+        Title: ">会員情報閲覧",
+        isAuthenticated: 1,
+    };
     default:
       return "No";
   }
