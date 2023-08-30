@@ -20,7 +20,7 @@ const IDcreate = () => {
             </td>
 
             <td className="IDcreate_td3">
-              <p>機構名稱</p>
+              <p>機構</p>
             </td>
           </tr>
         </thead>
@@ -46,7 +46,7 @@ const IDcreate = () => {
               <p>business0507i</p>
             </td>
             <td>
-              <p>機構名稱</p>
+              <p>機構1</p>
             </td>
           </tr>
 
@@ -70,7 +70,7 @@ const IDcreate = () => {
               <p>daiki36x</p>
             </td>
             <td>
-              <p>機構名稱</p>
+              <p>機構2</p>
             </td>
           </tr>
         </tbody>
